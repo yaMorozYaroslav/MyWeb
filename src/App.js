@@ -3,33 +3,30 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
+  Redirect
 } from 'react-router-dom'
 
-import { Navbar } from './app/Navbar'
+import {Navbar} from './app/Navbar'
+import {PostsList} from './features/posts/PostsList'
 
-function App() {
+export function App(){
   return (
     <Router>
-      <Navbar />
+     <Navbar />
       <div className="App">
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <React.Fragment>
-              
-              </React.Fragment>
+       <Switch>
+        <Route 
+          exact 
+           path="/"
+           render={()=>(
+        <React.Fragment>
+         <PostsList />
+        </React.Fragment>
             )}
-          />
-      <Route exact path="posts/:postId" component={SinglePostPage}/>
-      <Route exact path="/editPost/:postId" component={EditPostForm}/>
-          <Redirect to="/" />
-        </Switch>
-      </div>
-    </Router>
-  )
+            />
+            <Redirect to="/"/>
+          </Switch
+        </div>
+      </Router>
+    )
 }
-
-export default App
