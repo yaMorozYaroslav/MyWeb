@@ -9,4 +9,8 @@ export const PostsList =()=> {
         <h3>{post.title}</h3> <p className="post-content">{post.content.substring(0,100)}</p>
        </article>
 		))
+	  return (
+    <section className="posts-list"><h1>Posts</h1>{renderedPosts}</section>
+	  )
+    }
 }
