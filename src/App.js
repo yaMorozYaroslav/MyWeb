@@ -25,7 +25,7 @@ export function App(){
             )}
             />
             <Redirect to="/"/>
-          </Switch
+          </Switch>
         </div>
       </Router>
     )
