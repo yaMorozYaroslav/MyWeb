@@ -1,14 +1,12 @@
-
 import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = [
-  {id: "0", title: "eyes", content: "gits"}
-]
+    {id: "1", title: "Name", content: "Something inside"}
+ ]
+ const postsSlice = createSlice({
+ 	name: 'posts',
+ 	initialState,
+ 	reducers:{}
+ })
 
-const postsSlice = createSlice({
-	name: 'posts',
-	initialState,
-	reducers:{}
-})
-
-export default postsSlice.reducer
+ export default postsSlice.reducer
