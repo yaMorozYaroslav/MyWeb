@@ -13,4 +13,3 @@ export const PostsList =()=> {
     <section className="posts-list"><h1>Posts</h1>{renderedPosts}</section>
 	  )
     }
-}
