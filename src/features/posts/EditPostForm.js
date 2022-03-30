@@ -13,7 +13,7 @@ export const EditPostForm=({match})=>{
    const [title, setHead] = React.useState(post.title)
    const [content, setBody] = React.useState(post.content)
 
-   const handHead =tit=> setHead(tit.target.value)
+   const handHead =tic=> setHead(tic.target.value)
    const handBody =pit=> setBody(pit.target.value)
 
    const handClick =()=>{
