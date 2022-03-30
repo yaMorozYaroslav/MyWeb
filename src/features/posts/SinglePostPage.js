@@ -6,7 +6,7 @@ export const SinglePostPage = ({match}) =>{
 	const {postId} = match.params
 
 	const post = useSelector(
-       state=>post.state.find(
+       state=>state.posts.find(
        	      post=>post.id===postId))
 
 	if(!post){return(<section><h2>Not Found</h2></section>)}
