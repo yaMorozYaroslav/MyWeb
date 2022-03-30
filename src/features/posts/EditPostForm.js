@@ -8,18 +8,43 @@ export const EditPostForm=({match})=>{
    const storage = useHistory()
 
    const {postId} = match.params
-   const post = state=>state.posts.find(post=>post.id===postId)
+   const post = useSelector(state=>state.posts.find(post=>post.id===postId))
 
-   const [head, setHead] = React.useState(post.title)
-   const [body, setBody] = React.useState(post.content)
+   const [title, setHead] = React.useState(post.title)
+   const [content, setBody] = React.useState(post.content)
 
    const handHead =tit=> setHead(tit.target.value)
    const handBody =pit=> setBody(pit.target.value)
 
    const handClick =()=>{
-    if(head&&body){
-      send(postUpdated({id:postId, head, body}))
+    if(title&&content){
+      send(postUpdated({id:postId, title, content}))
       storage.push(`/posts/${postId}`)
     }
    }
+   return(
+ <section>
+  <h2>Edit Post</h2>
+  <form>
+
+      <label htmlFor="postTitle">Title:</label>
+       <input
+           type="text"
+           id="postTitle"
+           name="postTitle"
+           placeholder="sheep"
+           value={title}
+           onChange={handHead} />
+
+      <label htmlFor="postContent">Content:</label>
+        <textarea
+           id="postContent"
+           name="postContent"
+           value={content}
+           onChange={handBody} />
+      <button type="button" onClick={handClick}>Save</button>
+
+   </form>
+  </section>
+    )
 }
