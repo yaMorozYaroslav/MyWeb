@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Routes,
 
 import {Panel} from './Panel'
 import {PostsList} from './features/posts/PostsList'
+import {Single} from './features/posts/Single'
 
 export function App(){
   return(
@@ -13,6 +14,7 @@ export function App(){
     <div className="bodier">
      <Routes>
        <Route exact path="/" element={<PostsList/>}  />
+       <Route exact path="/posts/:postId" element={<Single/>} />
             </Routes>
           </div>
         </Router>

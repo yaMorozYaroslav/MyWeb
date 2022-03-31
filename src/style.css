@@ -7,15 +7,29 @@
 
 }
 .panLink{text-decoration:  none}
+.panLink:hover{color: green}
 .bodier{}
-.postsList{}
-.excerpt{
-
+.postsList{
+	margin-left: 50px;
+}
+.postTitle{
+	background-color: dodgerblue;
+	font-size: 25px;
 }
 .postConten{
-color:  red;
+background-color: green;
+color: white;
+font-size: 20px;
 }
-.linkView{
-    font-size: 20px;
-    margin-left: 50px; 
+.linkView{font-size: 20px}
+.linkView:hover{color: darkgreen}
+.addPost{
+   width: 300px;
+   margin-left: 30px;
+
 }
+.addPost label{
+	margin-left: 30px;
+}
+.addPost textarea{height:100px;width:300px}
+.addPost input{height: 100px;width:300px}
