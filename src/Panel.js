@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {PostsList} from './features/posts/PostsList'
 
 export const Panel =()=>{
 	return(
