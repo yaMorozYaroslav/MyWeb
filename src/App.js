@@ -10,7 +10,7 @@ export function App(){
   return(
  <Router>
    <Panel/>
-    <div className="App">
+    <div className="bodier">
      <Routes>
        <Route exact path="/" element={<PostsList/>}  />
             </Routes>
