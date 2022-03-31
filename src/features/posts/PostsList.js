@@ -7,8 +7,8 @@ export const PostsList =()=>{
 
    const renderedPosts = posts.map(post=>(
 
- <article className="excerpt" key={post.id}>
-          <h3>{post.title}</h3>
+ <article key={post.id}>
+          <h3 className="postTitle">{post.title}</h3>
           <p className="postConten">{post.content.substring(0,100)}</p>
 
      <Link to={`posts/${post.id}`} className="linkView">
