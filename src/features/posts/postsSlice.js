@@ -11,7 +11,7 @@ const postsSlice = createSlice({
 		postAdded(state, action){
 			state.push(action.payload)
 		},
-		preapare(title, content, userId){
+		prepare(title, content, userId){
 			return{
 				payload: {
 					id: nanoid(),
