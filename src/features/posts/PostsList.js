@@ -5,8 +5,8 @@ import {AddPost} from './AddPost'
 
 export const PostsList =()=>{
    const posts = useSelector(state=>state.posts)
-
-   const renderedPosts = posts.map(post=>(
+   const orderedPosts = posts.slice().sort((a, b)=>b.date.localeCompare(a.date))
+   const renderedPosts = orderedPosts.map(post=>(
 
  <article key={post.id}>
           <h3 className="postTitle">{post.title}</h3>
