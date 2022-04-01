@@ -1,5 +1,4 @@
 import {createSlice} from '@reduxjs/toolkit'
-import {nanoid} from '@reduxjs/toolkit'
 
 const initialState = [{id: '1', title: 'text', content: 'something'}]
 const postsSlice = createSlice({
@@ -9,12 +8,13 @@ const postsSlice = createSlice({
 		postAdded(state, action){
 			state.push(action.payload)
 		},
-		preapare(title, content){
+		preapare(title, content, userId){
 			return{
 				payload: {
-					id: nanoid(),
+					date: new Date().toISOString(),
 					title,
-					content
+					content,
+					user: userId
 			   }
 			}
 		 }

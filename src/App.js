@@ -9,6 +9,7 @@ import {Single} from './features/posts/Single'
 
 export function App(){
   return(
+    <div className="main">
  <Router>
    <Panel/>
     <div className="bodier">
@@ -18,5 +19,6 @@ export function App(){
             </Routes>
           </div>
         </Router>
+      </div>
       )
       }

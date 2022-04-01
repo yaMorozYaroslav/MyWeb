@@ -1,25 +1,35 @@
 import React from 'react'
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {nanoid} from '@reduxjs/toolkit'
-
 import {postAdded} from './postsSlice'
 
 export const AddPost =()=>{
-	const [title, setTitle] = React.useState('')
-	const [content, setContent] = React.useState('')
-
 	const dispatch = useDispatch()
+  
+	const [title, setTitle] = React.useState('')
+	const [content, setCont] = React.useState('')
+	const [userId, setId] = React.useState('')
+
+	const users = useSelector(state=>state.users)
 
 	const handTitle =e=> setTitle(e.target.value)
-	const handContent =e=> setContent(e.target.value)
+	const handContent =e=> setCont(e.target.value)
+	const handAuthor =a=> setId(a.target.value)
 
 	const onSave =()=>{
 		        if(title&&content){
-			     dispatch(postAdded({id: nanoid(), title, content}))
+			     dispatch(postAdded({ id: nanoid(),title, content, userId}))
 			           setTitle('')
-			           setContent('')
+			           setCont('')
 		}
 	}
+	const allRight = Boolean(title)&&Boolean(content) && Boolean(userId)
+
+	const usersOptions = users.map(user=>(
+		<option key={user.id} value={user.id}>
+   {user.name}
+    </option>
+		))
   return(
       <section className="addPost">
        <form>
@@ -28,13 +38,17 @@ export const AddPost =()=>{
             <input
                    type="text" id="title" name="title"
                    value={title} onChange={handTitle} />
-
+          <label htmlFor="author">Author:</label>
+          <select id="author" value={userId} onChange={handAuthor}>
+             <option value=""></option>
+             {usersOptions}
+          </select>
           <label htmlFor="content">Content:</label>
             <textarea
                      id="content"
                      value={content}
                      onChange={handContent} />
-      <button type="button" onClick={onSave}>Save</button>
+      <button type="button" onClick={onSave} disabled={!allRight}>Save</button>
 
         </form>
       </section>
