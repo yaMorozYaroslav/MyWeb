@@ -2,7 +2,7 @@ import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = [{id:"0",name:"Example"}]
 
-const nodeSlc = createSlice({name: "nodes", 
+const nodeSlcs = createSlice({name: "nodes", 
 	                         initialState, 
 	            reducers:{added(state,action){state.push(action.payload)}}
 	                       })
