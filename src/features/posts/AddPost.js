@@ -8,10 +8,13 @@ export const AddPost =()=>{
   
 	const [title, setTitle] = React.useState('')
 	const [content, setCont] = React.useState('')
+	const [userId, setId] = React.useState('')
+  
+  const users = useSelector(state=>state.users)
 
 	const handTitle =e=> setTitle(e.target.value)
 	const handContent =e=> setCont(e.target.value)
-
+  const handAuthor =a=> setId(a.target.value)
 	const onSave =()=>{
 		        if(title&&content){
 			     dispatch(postAdded({ id: nanoid(),title, content}))
@@ -19,7 +22,13 @@ export const AddPost =()=>{
 			           setCont('')
 		}
 	}
-	const allRight = Boolean(title)&&Boolean(content)
+	const allRight = Boolean(title)&&Boolean(content)&&Boolean(userId)
+
+	const usersOptions = users.map(user =>(
+ <option key={user.id} value={user.id}>
+    {user.name}</option>
+	))
+  
 
   return(
       <section className="addPost">
@@ -35,6 +44,11 @@ export const AddPost =()=>{
                      id="content"
                      value={content}
                      onChange={handContent} />
+          <label htmlFor="author">author:</label>
+          <select id="postAuthor" value={userId} onChange={handAuthor}>
+            <option value=""></option>
+            {usersOptions}
+          </select>
       <button type="button" onClick={onSave} disabled={!allRight}>Save</button>
 
         </form>
