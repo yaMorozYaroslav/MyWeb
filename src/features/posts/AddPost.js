@@ -17,7 +17,7 @@ export const AddPost =()=>{
   const handAuthor =a=> setId(a.target.value)
 	const onSave =()=>{
 		        if(title&&content){
-			     dispatch(postAdded({ id: nanoid(),title, content}))
+			     dispatch(postAdded({ id: nanoid(),title, content, userId}))
 			           setTitle('')
 			           setCont('')
 		}

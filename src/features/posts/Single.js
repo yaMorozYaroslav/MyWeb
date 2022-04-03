@@ -15,13 +15,13 @@ export const Single =()=>{
        </section>
 	 )
 	}
-
+  
    return(
   <section>
      <article className="post">
        <h2>{post.title}</h2>
        <p className="post-content">{post.content}</p>
-       <Author userId={post.user}/>
+       <Author userId={post.userId} />
      </article>
    </section>
    	)
