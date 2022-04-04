@@ -14,14 +14,15 @@ const postsSlice = createSlice({
 			return{
 				payload: {
 					id: nanoid(),
-					date: new Date().toISOString(),
 					title,
 					content,
+					date: new Date().toISOString(),
 					user: userId
 			   }
 			}
 		 }
-	  }
+		}
+	  
 	})
   export const {postAdded} = postsSlice.actions
 export default postsSlice.reducer

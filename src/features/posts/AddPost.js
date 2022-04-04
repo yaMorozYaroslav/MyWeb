@@ -43,6 +43,7 @@ export const AddPost =()=>{
           <label htmlFor="content">Content:</label>
             <textarea
                      id="content"
+                     name="content"
                      value={content}
                      onChange={handContent} />
           

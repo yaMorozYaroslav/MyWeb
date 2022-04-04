@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import {parseISO, formatDistanceToNow} from 'date-fns'
 
 export const TimeAgo = ({timestamp})=>{
@@ -13,5 +13,5 @@ export const TimeAgo = ({timestamp})=>{
      	  &nbsp; <i>{timeAgo}</i>
      </span>
 		)
-     }
+     }*/
     
