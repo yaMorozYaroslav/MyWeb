@@ -23,17 +23,17 @@
 .postConten{
 background-color: green;
 color: white;
-font-size: 20px;
-}
+font-size: 20px;}
+
 .linkView{font-size: 20px}
 .linkView:hover{color: darkgreen}
 .addPost{
-   width: 300px;
+   width: 1000px;
    margin-left: 30px;
-
+   display:  flex;
 }
-.addPost label{
-	margin-left: 30px;
-}
+.addPost label{margin-left: 30px;}
 .addPost textarea{height:100px;width:300px}
 .addPost input{height: 100px;width:300px}
+.post{background:  black; color: dodgerblue}
+.noPost{background: maroon; color: white}
