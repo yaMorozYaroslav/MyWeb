@@ -1,6 +1,5 @@
 import React from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {nanoid} from '@reduxjs/toolkit'
 import {postAdded} from './postsSlice'
 
 export const AddPost =()=>{
@@ -17,7 +16,7 @@ export const AddPost =()=>{
   const handAuthor =a=> setId(a.target.value)
 	const onSave =()=>{
 		        if(title&&content){
-			     dispatch(postAdded({ id: nanoid(),title, content, userId}))
+			     dispatch(postAdded({ title, content, userId}))
 			           setTitle('')
 			           setCont('')
 		}

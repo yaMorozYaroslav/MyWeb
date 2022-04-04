@@ -7,22 +7,23 @@ const postsSlice = createSlice({
 	name: 'posts',
 	initialState,
 	reducers: {
-		postAdded(state, action){
+		postAdded:{
+			reducer(state, action){
 			state.push(action.payload)
 		},
 		prepare(title, content, userId){
 			return{
 				payload: {
 					id: nanoid(),
+					
 					title,
 					content,
-					date: new Date().toISOString(),
 					user: userId
 			   }
 			}
-		 }
+		  }
 		}
-	  
+	  }
 	})
   export const {postAdded} = postsSlice.actions
 export default postsSlice.reducer
