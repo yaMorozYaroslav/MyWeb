@@ -10,18 +10,27 @@ const postsSlice = createSlice({
 		postAdded(state, action){
 			state.push(action.payload)
 		},
-		prepare(title, content, userId){
+		prepare(title, content, userId, reactions){
 			return{
 				payload: {
 					id: nanoid(),
 					title,
 					content,
-					user: userId
+					user: userId,
+					reactions: {prosent: 0, baks: 0, jail: 0, dog: 0}
 			   }
 			}
+
+		  },
+		  reactionAdded(state, action){
+		  	const {postId, reaction} = action.payload
+		  	const existingPost = state.find(post=>post.id===postId)
+		  	if(existingPost){
+		  		existingPost.reactions[reaction]++
+		  	}
 		  }
 		}
 	  
 	})
-  export const {postAdded} = postsSlice.actions
+  export const {postAdded, reactionAdded} = postsSlice.actions
 export default postsSlice.reducer
