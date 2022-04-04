@@ -33,18 +33,21 @@ export const AddPost =()=>{
   return(
       <section className="addPost">
        <form>
-          <div>
+          
           <label htmlFor="title">Title:</label>
             <input
                    type="text" id="title" name="title"
                    value={title} onChange={handTitle} />
-          </div>
+         
+          
           <label htmlFor="content">Content:</label>
             <textarea
                      id="content"
                      value={content}
                      onChange={handContent} />
+          
           <label htmlFor="author">author:</label>
+         
           <select id="postAuthor" value={userId} onChange={handAuthor}>
             <option value=""></option>
             {usersOptions}

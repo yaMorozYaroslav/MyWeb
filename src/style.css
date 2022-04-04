@@ -1,7 +1,5 @@
-.main{
-	width: 1000px;
-	text-align:  center;
-}
+.main{width: 1000px;text-align:  center;}
+.addAndList{display: flex}
 .header{
 	margin-left: 50px;
 }
@@ -14,7 +12,8 @@
 .panLink:hover{color: green}
 .bodier{}
 .postsList{
-	margin-left: 50px;
+	margin-right: -250px;
+	width: 1600px;
 }
 .postTitle{
 	background-color: dodgerblue;
@@ -30,10 +29,9 @@ font-size: 20px;}
 .addPost{
    width: 1000px;
    margin-left: 30px;
-   display:  flex;
 }
-.addPost label{margin-left: 30px;}
-.addPost textarea{height:100px;width:300px}
-.addPost input{height: 100px;width:300px}
+.addPost label{margin: 0px 0px 0px 0px; font-size: 20px}
+.addPost textarea{margin-left: 100px;height: 100px;display: flex}
+.addPost input{margin-left: 100px; height: 50px; display:  flex}
 .post{background:  black; color: dodgerblue}
 .noPost{background: maroon; color: white}

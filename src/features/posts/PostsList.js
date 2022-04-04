@@ -16,8 +16,8 @@ export const PostsList =()=>{
        View Post</Link>
     </article>
    	))
-   return (<>
+   return (<div className="addAndList">
   <AddPost/>
   <section className="postsList"><h1>Posts</h1>{renderedPosts}</section>
-   	</>)
+   	</div>)
 }
