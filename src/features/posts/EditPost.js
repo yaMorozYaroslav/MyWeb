@@ -14,7 +14,7 @@ export const EditPost = () =>{
 	const [content,setContent] = React.useState(post.content)
     
     const dispatch = useDispatch()
-    const history = useNavigate()
+    const navigate = useNavigate()
 
     const onTitle = o => setTitle(o.target.value)
     const onContent = o => setContent(o.target.value)
@@ -22,7 +22,7 @@ export const EditPost = () =>{
     const onSave =()=>{
     	if(title&&content){
     		dispatch(postUpdated({id: postId, title, content}))
-    		history(`/posts/${postId}`)
+    		navigate(`/posts/${postId}`)
     	}
     }
 
