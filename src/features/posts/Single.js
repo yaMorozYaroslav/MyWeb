@@ -2,7 +2,6 @@ import React from 'react'
 import {useParams} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import {Author} from './Author'
-import {ReactionButtons} from './ReactionButtons'
 export const Single =()=>{
 	const {postId} = useParams()
 
@@ -22,7 +21,6 @@ export const Single =()=>{
        <h2>{post.userId}</h2>
        <p className="post-content">{post.content}</p>
        <Author userId={post.userId} />
-       <ReactionButtons post={post.id}/>
      </article>
    </section>
    	)
