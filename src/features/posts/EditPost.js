@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {useHistory} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom'
 
 import {postUpdated} from './postsSlice'
 
-export const EditPost = ({match}) =>{
-	const {postId} = match.params
+export const EditPost = () =>{
+	const {postId} = useParams()
 
 	const post = useSelector(state=>state.posts.find(
 		                                  post=>post.id===postId))
@@ -14,7 +14,7 @@ export const EditPost = ({match}) =>{
 	const [content,setContent] = React.useState(post.content)
     
     const dispatch = useDispatch()
-    const history = useHistory()
+    const history = useNavigate()
 
     const onTitle = o => setTitle(o.target.value)
     const onContent = o => setContent(o.target.value)
@@ -22,7 +22,7 @@ export const EditPost = ({match}) =>{
     const onSave =()=>{
     	if(title&&content){
     		dispatch(postUpdated({id: postId, title, content}))
-    		history.push(`/posts/${postId}`)
+    		history(`/posts/${postId}`)
     	}
     }
 
@@ -44,7 +44,7 @@ export const EditPost = ({match}) =>{
                       id="postContent"
                       name="postContent"
                       value={content}
-                      onChange={onContentChanged} />
+                      onChange={onContent} />
                </form>
                <button type="button" onClick={onSave}>
                Save</button>

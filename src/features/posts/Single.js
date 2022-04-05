@@ -1,5 +1,5 @@
 import React from 'react'
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import {Author} from './Author'
 import {selectPostById} from './postsSlice'
@@ -22,6 +22,9 @@ export const Single =()=>{
        <h2>{post.userId}</h2>
        <p className="post-content">{post.content}</p>
        <Author userId={post.userId} />
+       <Link to={`/editPost/${post.id}`} className="button">
+          Edit Post
+       </Link>
      </article>
    </section>
    	)
