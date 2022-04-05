@@ -1,11 +1,21 @@
 import React from 'react';
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {AddPost} from './AddPost'
-import {selectAllPosts} from './postsSlice'
+import {selectAllPosts, fetchPosts} from './postsSlice'
 
 export const PostsList =()=>{
+   const dispatch = useDispatch()
    const posts = useSelector(selectAllPosts)
+   
+   const postStatus = useSelector(state=>state.posts.status)
+
+   React.useEffect(()=>{
+    if(postStatus==='idle'){
+      dispatch(fetchPosts())
+    }
+   }, [postStatus, dispatch])
+
    const renderedPosts = posts.map(post=>(
 
  <article key={post.id}>

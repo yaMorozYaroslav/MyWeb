@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@reduxjs/toolkit": "^1.8.0",
+    "msw": "^0.39.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2"
   }
