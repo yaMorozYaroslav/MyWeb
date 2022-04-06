@@ -1,6 +1,6 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
-import {useParam} from 'react-router-dom'
+//import {useParam} from 'react-router-dom'
 
 export const Author = ({userId}) => {
 

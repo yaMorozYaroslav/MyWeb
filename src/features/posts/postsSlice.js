@@ -7,10 +7,11 @@ const initialState={
 	error: null
 }
 
+
 export const fetchPosts = createAsyncThunk(
 	         'posts/fetchPosts', async()=>{
-	         	const response = await axios.get('https://api-football-v1.p.rapidapi.com/v3/timezone')
-	         	console.log(response.data[0])
+	         	const response = await axios.get('http://catalog.data.gov/api/3/')
+	         	console.log(response)
 	         	return response.data
 	         })
 const postsSlice = createSlice({
