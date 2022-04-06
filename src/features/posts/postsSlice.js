@@ -1,4 +1,5 @@
 import {createSlice, nanoid, createAsyncThunk} from '@reduxjs/toolkit'
+import axios from 'axios'
 
 const initialState={
 	posts: [],
@@ -8,7 +9,8 @@ const initialState={
 
 export const fetchPosts = createAsyncThunk(
 	         'posts/fetchPosts', async()=>{
-	         	const response = await client.get('/fakeApi/posts')
+	         	const response = await axios.get('https://api-football-v1.p.rapidapi.com/v3/timezone')
+	         	console.log(response.data[0])
 	         	return response.data
 	         })
 const postsSlice = createSlice({
