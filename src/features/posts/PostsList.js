@@ -1,14 +1,26 @@
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {AddPost} from './AddPost'
+//import {AddPost} from './AddPost'
+import {Spinner} from '../../Spinner'
 import {selectAllPosts, fetchPosts} from './postsSlice'
+
+const FirstWord = ({post})=>{
+  return(
+    <article className="post-excerpt" key={post.id}>
+       <h3 className="postTitle">{post.name}</h3>
+       <p className="postConten">{post.min_size}</p>
+    <Link to={`/posts/${post.id}`}>View</Link>
+    </article>
+    )
+}
 
 export const PostsList =()=>{
    const dispatch = useDispatch()
    const posts = useSelector(selectAllPosts)
    
    const postStatus = useSelector(state=>state.posts.status)
+   const error = useSelector(state=>state.posts.error)
 
    React.useEffect(()=>{
     if(postStatus==='idle'){
@@ -16,18 +28,21 @@ export const PostsList =()=>{
     }
    }, [postStatus, dispatch])
 
-   const renderedPosts = posts.map(post=>(
+   let content
 
- <article key={post.id}>
-          <h3 className="postTitle">{post.name}</h3>
-          <p className="postConten">{post.min_size}</p>
+   if(postStatus === 'loading'){
 
-     <Link to={`posts/${post.id}`} className="linkView">
-       View Post</Link>
-    </article>
-   	))
+    content = <Spinner text="Loading..." />
+
+   }else if (postStatus==='succeeded'){
+
+    content = posts.map(post=>(
+         <FirstWord key={post.id} post={post} />
+        ))
+   }  else if(postStatus === 'failed'){
+    content = <div>{error}</div>
+   }
    return (<div className="addAndList">
-  <AddPost/>
-  <section className="postsList"><h1>Posts</h1>{renderedPosts}</section>
+  <section className="postsList"><h1>Posts</h1>{content}</section>
    	</div>)
 }
