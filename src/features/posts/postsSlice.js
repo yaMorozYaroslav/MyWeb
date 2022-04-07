@@ -11,7 +11,7 @@ const initialState={
 export const fetchPosts = createAsyncThunk(
 	         'posts/fetchPosts', async()=>{
 	         	const response = await axios.get('https://api.coinbase.com/v2/currencies')
-	         	console.log(response.data.data)
+	         	
 	         	return response.data.data
 	         })
 const postsSlice = createSlice({
@@ -47,7 +47,7 @@ const postsSlice = createSlice({
 			    	state.status = 'loading'
 			    })
 			    .addCase(fetchPosts.fulfilled, (state, action)=>{
-                    state.status = 'suceeded'
+                    state.status = 'succeeded'
                     state.posts = state.posts.concat(action.payload)
 			    })
 			    .addCase(fetchPosts.rejected, (state,action)=>{
