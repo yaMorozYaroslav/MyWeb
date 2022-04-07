@@ -19,8 +19,8 @@ export const PostsList =()=>{
    const renderedPosts = posts.map(post=>(
 
  <article key={post.id}>
-          <h3 className="postTitle">{post.title}</h3>
-          <p className="postConten">{post.content}</p>
+          <h3 className="postTitle">{post.name}</h3>
+          <p className="postConten">{post.min_size}</p>
 
      <Link to={`posts/${post.id}`} className="linkView">
        View Post</Link>
