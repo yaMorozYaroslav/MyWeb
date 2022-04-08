@@ -28,10 +28,15 @@ const initialState = []
                 existingPost.title = title
                 existingPost.content = content
             }
-        }
-   
+          }
+      
     }
  })
  export const {postAdded, postUpdated} = postsSlice.actions
 
  export default postsSlice.reducer
+
+ export const selectAllPosts = state =>state.posts
+
+ export const selectPostById = (state, postId) =>
+                    state.posts.find(post=>post.id===postId)
