@@ -1,5 +1,4 @@
 import {createSlice, nanoid} from '@reduxjs/toolkit'
-import {sub} from 'date-fns'
 
 const initialState = []
  const postsSlice = createSlice({
@@ -29,16 +28,10 @@ const initialState = []
                 existingPost.title = title
                 existingPost.content = content
             }
-        },
-     reactionAdded(state, action){
-        const {postId, reaction} = action.payload
-        const existingPost = state.find(post=>post.id===postId)
-        if(existingPost){
-            existingPost.reactions[reaction]++
         }
-      }
+   
     }
  })
- export const {postAdded, postUpdated, reactionAdded} = postsSlice.actions
+ export const {postAdded, postUpdated} = postsSlice.actions
 
  export default postsSlice.reducer
