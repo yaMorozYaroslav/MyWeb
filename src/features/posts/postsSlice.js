@@ -50,7 +50,7 @@ export const fetchPosts = createAsyncThunk('posts/fetchPosts', async()=>{
             .addCase(fetchPosts.fullfilled, (state, action)=>{
                 state.status = 'succeeded'
 
-                state.posts = state.posts.concat(action.payload)
+                state.slices = state.slices.concat(action.payload)
             })
             .addCase(fetchPosts.rejected, (state, action)=>{
                 state.status = 'failed'
@@ -62,7 +62,7 @@ export const fetchPosts = createAsyncThunk('posts/fetchPosts', async()=>{
 
  export default postsSlice.reducer
 
- export const selectAllPosts = state =>state.posts.slices
+ export const selectAllPosts = state =>state.slices.slices
 
  export const selectPostById = (state, postId) =>
-                    state.posts.slices.find(post=>post.id===postId)
+                    state.slices.slices.find(post=>post.id===postId)
