@@ -1,13 +1,13 @@
 import {createSlice, nanoid, createAsyncThunk} from '@reduxjs/toolkit'
-import {client} from '../../api/client'
+//import {client} from '../../api/client'
 
 const initialState = {
-    slices: [],
+    posts: [],
     status: 'idle',
     error: null
 }
 export const fetchPosts = createAsyncThunk('posts/fetchPosts', async()=>{
-    const response = await client.get('/fakeApi/posts')
+    const response = await client.get('https://sv443.net/jokeapi/v2')
     return response.data
 })
 
@@ -19,7 +19,7 @@ export const fetchPosts = createAsyncThunk('posts/fetchPosts', async()=>{
  	reducers:{
         postAdded:{
             reducer(state, action){
-                state.slices.push(action.payload)
+                state.posts.push(action.payload)
             },
             prepare(title, content, userId){
                 return{
@@ -35,7 +35,7 @@ export const fetchPosts = createAsyncThunk('posts/fetchPosts', async()=>{
         },
         postUpdated(state, action){
             const {id, title, content} = action.payload
-            const existingPost = state.slices.find(post=>post.id===id)
+            const existingPost = state.posts.find(post=>post.id===id)
             if(existingPost){
                 existingPost.title = title
                 existingPost.content = content
@@ -50,7 +50,7 @@ export const fetchPosts = createAsyncThunk('posts/fetchPosts', async()=>{
             .addCase(fetchPosts.fullfilled, (state, action)=>{
                 state.status = 'succeeded'
 
-                state.slices = state.slices.concat(action.payload)
+                state.posts = state.posts.concat(action.payload)
             })
             .addCase(fetchPosts.rejected, (state, action)=>{
                 state.status = 'failed'
@@ -62,7 +62,7 @@ export const fetchPosts = createAsyncThunk('posts/fetchPosts', async()=>{
 
  export default postsSlice.reducer
 
- export const selectAllPosts = state =>state.slices.slices
+ export const selectAllPosts = state =>state.posts.posts
 
  export const selectPostById = (state, postId) =>
-                    state.slices.slices.find(post=>post.id===postId)
+                    state.posts.posts.find(post=>post.id===postId)
