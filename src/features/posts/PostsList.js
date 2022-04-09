@@ -7,7 +7,7 @@ import {TimeAgo} from './TimeAgo'
 import {selectAllPosts, fetchPosts} from './postsSlice'
 
 export const PostsList =()=> {
-  const dispatch = useDisaptch()
+  const dispatch = useDispatch()
 	const posts = useSelector(selectAllPosts)
 
 const postStatus = useSelector(state=>state.posts.status)
