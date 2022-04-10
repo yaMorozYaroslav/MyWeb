@@ -10,7 +10,7 @@ import React from 'react'
     	return place;
   }
 
-export const App =()=>{
+export const CallArray =()=>{
 	let numbers = [1,2,3,4,5,6,7,8]
     let strangeNum = separ(numbers,(number) => number %2 != 0)
     let normalNum = separ(numbers, (number)=>number %2 == 0)
