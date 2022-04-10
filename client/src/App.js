@@ -1,20 +1,10 @@
 import React from 'react'
-  
-  const separ=(numbers, fn)=>{
-  	let place = []
-    for(let number of numbers){
-    	if(fn(number)){
-    		place.push(number)
-    	}
-      } 
-    	return place;
-  }
+import {Container, AppBar, Typography, Grow, Grid} from '@material-ui/core'
 
-export const App =()=>{
-	let numbers = [1,2,3,4,5,6,7,8]
-    let strangeNum = separ(numbers,(number) => number %2 != 0)
-    let normalNum = separ(numbers, (number)=>number %2 == 0)
-	return(
-      <p>{strangeNum}, {normalNum}</p>
-	);
+export const App =()=> {
+  return(
+     <div>
+          <h1>App</h1>
+     </div>
+    )
 }
