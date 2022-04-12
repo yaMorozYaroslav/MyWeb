@@ -18,7 +18,7 @@ export const Post =({post})=>{
 		</div>
 		<div className={classes.overlay2}>
 		  <Button style={{color: 'white'}} size="small" onClick={()=>{}}>
-              <MoreHorizIcon fontSize="default" />
+              <MoreHorizIcon fontSize="medium" />
 		   </Button>
 		</div>
 		<div className={classes.details}>
