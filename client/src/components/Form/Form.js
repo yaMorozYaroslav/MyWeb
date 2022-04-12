@@ -5,9 +5,9 @@ import FileBase from 'react-file-base64'
 import {useDispatch} from 'react-redux'
 
 import useStyles from './styles'
-import {createPost} from '../../actions/postact'
+import {createPost, updatePost} from '../../actions/postact'
 
-export const Form =()=>{
+export const Form =({currentId, setCurrentId})=>{
 	const [postData, setPostData] = React.useState({
 	creator: '', title: '', message: '', tags: '', selectedFile: ''
 	})
@@ -16,8 +16,11 @@ export const Form =()=>{
 
 	const handleSubmit =(e)=>{
        e.preventDefault()
-       dispatch(createPost(postData))
-	}
+       if(currentId){
+           dispatch(updatePost(currentId, postData))
+       }else{dispatch(createPost(postData))}
+      }
+
 	const clear =()=>{
 
 	}

@@ -9,6 +9,7 @@ import memories from './images/memories.png'
 import useStyles from './styles'
 
 export const App =()=> {
+    const [currentId, setCurrentId] = React.useState(null)
     const classes = useStyles()
     const dispatch = useDispatch()
 
@@ -40,10 +41,10 @@ export const App =()=> {
               alignItems="stretch" 
               spacing={3}>
                 <Grid item xs={12} sm={7}>
-                    <Posts />
+                    <Posts setCurrentId={setCurrentId} />
                 </Grid>
                 <Grid item xs={12} sm={4}>
-                    <Form />
+                    <Form currentId={currentId} setCurrentId={setCurrentId}/>
                 </Grid>
               </Grid>
          </Container>
