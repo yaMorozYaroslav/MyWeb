@@ -37,7 +37,7 @@ export const App =()=> {
       <Grow in>
          <Container>
            <Grid 
-              container justifyContent="space-between"
+              container direction="column-reverse" justifyContent="space-between"
               alignItems="stretch" 
               spacing={3}>
                 <Grid item xs={12} sm={7}>
