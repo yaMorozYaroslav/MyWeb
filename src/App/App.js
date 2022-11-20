@@ -1,13 +1,12 @@
-import logo from './logo.svg';
+import React from 'react'
 import s from './App.module.css'
 
-function App() {
+export function App() {
   return (
-    <div className="App">
+    <div className={s.body}>
        <div className={s.header}>Header</div>
        
     </div>
-  );
+  )
 }
 
-export default App;
