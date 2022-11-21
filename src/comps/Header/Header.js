@@ -9,7 +9,5 @@ export const Header =()=> {
 	                           </div>
 	                           <div className={s.second} />
 	                           </div>)
-	                            
-	                
-	    )
+	              
 	}

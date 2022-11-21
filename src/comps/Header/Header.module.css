@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
+.header{
+width: 100%;
+display: flex;
+
+}
+.first{
+width: 45%;
+color: white;
+background-image: url('./mesk.jpg')
+}
+.text{
+font-family: 'Sorts Mill Goudy', serif;
+font-size: 54px;
+}
+.gear{
+font-size: 22px;
+margin: 0px
+}
+.second{}
