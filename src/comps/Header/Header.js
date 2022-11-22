@@ -8,10 +8,11 @@ export const Header =()=> {
 	    
 	                          <div className={s.first}>
 	                             <h1 className={s.text}>Development</h1>
-	                             <div className={s.gear}>Text<i className = 'fa-solid fa-gears fa-3x'></i></div>
-	                             <FontAwesomeIcon icon={faGear}/>
+	                             <FontAwesomeIcon className={s.gear} icon={faGear}/>
 	                           </div>
+	                           
 	                           <div className={s.second} />
-	                           </div>)
+	                           
+	                     </div>)
 	              
 	}
