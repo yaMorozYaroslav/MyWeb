@@ -12,14 +12,14 @@ background-image: url('./mesk.jpg')
 .text{
 margin: 34px 0px 0px 19px;
 font-family: 'Sorts Mill Goudy', serif;
-font-size: 54px;
+font-size: 45px;
 }
 .gear{
-margin:29px 0px 0px 7px;
-font-size: 80px;
+margin:20px 0px 0px 10px;
+font-size: 65px;
 }
 .second{
-width: 55%;
+width: 60%;
 background-image: url('./net.jpg');
 }
 @media only screen and (max-width: 850px){
@@ -27,7 +27,7 @@ background-image: url('./net.jpg');
 }
 @media only screen and (max-width: 450px){
 .first{width:100%; }
-.text{font-size: 40px;}
-.gear{font-size: 50px;}
+.text{font-size: 32px;}
+.gear{font-size: 40px;}
 .second{display: none;}
 }
