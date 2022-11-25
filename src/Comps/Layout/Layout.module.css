@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 .nav{
     width: 100%;
-    margin:4px 10px 0px 5%;
     background-color: black;
-    border-radius: 10px;  
-}
-.div{
-	
 }
 .but{
 	height: 50px;
@@ -25,67 +20,29 @@
 	border-radius: 10px;
     margin: 10px 12px 10px 12px;
 }
-.current{
-	font-size: 28px;
-	color:  white;
-	font-family: 'Playfair Display', serif;
-	text-decoration: none;
-}
-.murrent{
-	font-size: 30px;
-	color:  white;
-	font-family: Italy;
-	text-decoration:  none;
-
-}
-.murrent:hover{
-	font-size: 33px;
-}
 .outlet{
 	width: 1000px;
 	height: 500px;
-	margin-left: 5%;
-	position: relative;
-	z-index: 2;
 }
-.layout{
-	width: 920px;
+.sheet{
+	width: 100%;
 	height: 500px;
 	opacity: 0.8;
 	border-radius: 10px;
 	background-color: black;
-	position:  relative;
-	top: -570px;
-	left: 5%;
-    z-index:  1;
 }
 @media only screen and (max-width: 450px){
 .nav{
-   display:flex;
-   margin:0px 10px 10px 0px;
+   display:grid;
+   grid-template-columns: repeat(2, 200px);
    height: 100px;
    justify-content: center;
 }
 
 .layout{
-	width: 100%;
-	left: 0px;
 }
 .but{
-	width: 120px;
-	height: 40px;
-	margin: 7px 0px 0px 20px;
 }
 .bud{
-	width: 120px;
-	height: 40px;
-   margin: 6px 0px 0px 20px;
-}
-.current{
-	font-size: 12px;
-	
-}
-.murrent{
-	font-size: 15px;
 }
 }

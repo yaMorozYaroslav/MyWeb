@@ -18,7 +18,7 @@ export const Layout = () => {
 	React.useEffect(()=>{
 	   if(splitLocation[1]==="contacts") dispatch(openContact()) 
 	   if(splitLocation[1]!=="contacts"&&!contact) dispatch(closeContact())
-		},[location])
+		},[location, contact, dispatch, splitLocation])
 	React.useEffect(()=>{
 	     console.log(contact)
 	    //if(contact === true) console.log(contact)
@@ -27,7 +27,6 @@ export const Layout = () => {
 		<>
 		  <nav className={s.nav}>
 		  
-		    <div className={s.div}>
 		      <button className={splitLocation[1]===""?s.bud:s.but}>
 		        <Link  to="/">Introduction </Link>
 		      </button>
@@ -43,11 +42,12 @@ export const Layout = () => {
 		     <button className={splitLocation[1]==="contacts"?s.bud:s.but}>
 		          <Link  to="/contacts">Contacts</Link>
 		     </button>
-		      </div>
-		     </nav>
+		     
+		    </nav>
 
-		     <div className={s.outlet}><Outlet /></div>
-		     <div className={s.layout}></div>
-		     </>		        
+		     <div className={s.sheet}>
+		        <div className={s.outlet}><Outlet /></div>
+		     </div>
+		   </>		        
            )
          };
