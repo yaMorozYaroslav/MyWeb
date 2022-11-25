@@ -1,0 +1,92 @@
+.can{
+	width:800px;
+	margin:70px 0px 0px 180px;
+	color: white;
+	text-align: center;
+}
+.city{
+	position:  relative;
+	top: 40px;
+	left: 280px;
+	font-size: 25px;
+}
+.label{
+	font-size: 34px;
+	margin: 0px 0px 0px 100px;
+	width: 300px;
+	background: dodgerblue;
+	border-radius: 5px;
+}
+.discr{
+	font-size: 24px;
+	margin: 10px 0px 10px 200px;
+	background: black;
+	border-radius: 10px;
+}
+.dicr{
+	font-size: 24px;
+	margin: 10px 0px 10px 200px;
+	background: black;
+	border-radius: 10px;
+}
+.discr:hover{
+	font-size: 26px;
+	margin: 9px 0px 8px 200px;
+}
+.dicr:hover{
+	font-size: 26px;
+	margin: 9px 0px -2px 200px;
+}
+.element{
+	position:  relative;
+	width: 380px;
+	top: -160px;
+	left: 663px;
+}
+@media only screen and (max-width: 450px){
+	.can{
+	width:400px;
+	margin:70px 0px 0px -90px;
+	
+}
+.city{
+	position:  relative;
+	top: -390px;
+	left: 120px;
+	font-size: 25px;
+}
+.label{
+	font-size: 25px;
+	margin: 0px 0px 0px 90px;
+	width: 200px;
+	background: dodgerblue;
+	border-radius: 5px;
+}
+.discr{
+	font-size: 21px;
+	margin: 10px 0px 10px 120px;
+	background: none;
+	
+}
+.dicr{
+	font-size: 21px;
+	margin: 10px 0px 10px 120px;
+	background: none;
+	
+	
+}
+.discr:hover{
+	font-size: 22px;
+	margin: 8px 0px 10px 160px;
+}
+.dicr:hover{
+	font-size: 22px;
+	margin: 10px 0px 10px 160px;
+}
+.element{
+	position:  relative;
+	width: 100%;
+	top: -200px;
+	left: 30px;
+}
+}
