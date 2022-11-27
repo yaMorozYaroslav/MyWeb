@@ -24,14 +24,12 @@ export const Layout = () => {
 	    //if(contact === true) console.log(contact)
 		},[contact])
 		
-		const Linker = param => <Link className={s.link} to={param} />
 	return(
 		<>
 		  <nav className={s.nav}>
 		  
 		      <button className={splitLocation[1]===""?s.bud:s.but}>
-		        <Linker param="/">Introduction</Linker>
-		        <Link  className={s.link} to="/">Introduction </Link>
+		        <Link  className={s.link} to="/">Intro </Link>
 		      </button>
 		      
 		      <button className={splitLocation[1]==="profile"?s.bud:s.but}>
