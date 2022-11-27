@@ -39,7 +39,7 @@ font-family: 'Playfair Display', serif;
 	width: 400px;
 	margin: -117px 0px 0px 1049px;
 }
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 450px){
 	.container{
 		margin:70px 0px 0px 0px;
 	}

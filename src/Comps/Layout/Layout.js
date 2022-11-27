@@ -17,30 +17,33 @@ export const Layout = () => {
 	
 	React.useEffect(()=>{
 	   if(splitLocation[1]==="contacts") dispatch(openContact()) 
-	   if(splitLocation[1]!=="contacts"&&!contact) dispatch(closeContact())
+	   if(splitLocation[1]!=="contacts" && !contact) dispatch(closeContact())
 		},[location, contact, dispatch, splitLocation])
 	React.useEffect(()=>{
 	     console.log(contact)
 	    //if(contact === true) console.log(contact)
 		},[contact])
+		
+		const Linker = param => <Link className={s.link} to={param} />
 	return(
 		<>
 		  <nav className={s.nav}>
 		  
 		      <button className={splitLocation[1]===""?s.bud:s.but}>
-		        <Link  to="/">Introduction </Link>
+		        <Linker param="/">Introduction</Linker>
+		        <Link  className={s.link} to="/">Introduction </Link>
 		      </button>
 		      
 		      <button className={splitLocation[1]==="profile"?s.bud:s.but}>
-		        <Link to="/profile">Profile</Link>
+		        <Link className={s.link} to="/profile">Profile</Link>
 		      </button>
 		      
 		       <button className={splitLocation[1]==="project"?s.bud:s.but}>
-		          <Link  to="/project">Projects</Link>
+		          <Link className={s.link} to="/project">Projects</Link>
 		     </button >
 		     
 		     <button className={splitLocation[1]==="contacts"?s.bud:s.but}>
-		          <Link  to="/contacts">Contacts</Link>
+		          <Link className={s.link}  to="/contacts">Contacts</Link>
 		     </button>
 		     
 		    </nav>

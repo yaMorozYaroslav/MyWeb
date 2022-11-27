@@ -1,23 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 .container{
 	font-family: 'Sawarabi Mincho', serif;
-	margin:70px 0px 0px 150px;
 	font-size: 45px;
 	color: white;
 	text-align: center;
 }
 .text{
-	position:  relative;
 	width: 700px;
-	top: -30px;
-	left: 100px;
+	
 }
 .img{
 	width: 350px;
 	height: 200px;
 	margin: -115px 0px 0px 1080px;
 }
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 450px){
 .container{
 	font-size: 24px;
 }
