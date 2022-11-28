@@ -7,7 +7,8 @@ width: 100%;
 display: flex;
 width: 45%;
 color: white;
-background-image: url('./mesk.jpg')
+background-image: url('./mesk.jpg');
+background-position: -35px -12px;
 }
 .text{
 margin: 34px 0px 0px 19px;
@@ -15,19 +16,21 @@ font-family: 'Sorts Mill Goudy', serif;
 font-size: 45px;
 }
 .gear{
-margin:20px 0px 0px 10px;
+margin:20px 36px 0px 10px;
 font-size: 65px;
 }
 .second{
-width: 60%;
+width: 70%;
 background-image: url('./net.jpg');
 }
 @media only screen and (max-width: 850px){
-.first{width:80%;}
+.first{width:80%;background-position: -115px -20px;}
+.text{font-size: 40px;}
+.gear{font-size: 48px;}
 }
 @media only screen and (max-width: 450px){
-.first{width:100%; }
-.text{font-size: 32px;}
-.gear{font-size: 40px;}
+.first{width:100%; background-position: -120px -18px;}
+.text{font-size: 38px;}
+.gear{font-size: 44px;}
 .second{display: none;}
 }

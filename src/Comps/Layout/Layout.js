@@ -23,24 +23,24 @@ export const Layout = () => {
 	     console.log(contact)
 	    //if(contact === true) console.log(contact)
 		},[contact])
-		
+	
 	return(
 		<>
 		  <nav className={s.nav}>
 		  
-		      <button className={splitLocation[1]===""?s.bud:s.but}>
+		      <button className={splitLocation[1]===""?s.active:s.idle}>
 		        <Link  className={s.link} to="/">Intro </Link>
 		      </button>
 		      
-		      <button className={splitLocation[1]==="profile"?s.bud:s.but}>
+		      <button className={splitLocation[1]==="profile"?s.active:s.idle}>
 		        <Link className={s.link} to="/profile">Profile</Link>
 		      </button>
 		      
-		       <button className={splitLocation[1]==="project"?s.bud:s.but}>
+		       <button className={splitLocation[1]==="project"?s.active:s.idle}>
 		          <Link className={s.link} to="/project">Projects</Link>
 		     </button >
 		     
-		     <button className={splitLocation[1]==="contacts"?s.bud:s.but}>
+		     <button className={splitLocation[1]==="contacts"?s.active:s.idle}>
 		          <Link className={s.link}  to="/contacts">Contacts</Link>
 		     </button>
 		     

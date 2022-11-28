@@ -6,23 +6,15 @@
 	text-align: center;
 }
 .text{
-	width: 700px;
+	width: 100%;
 	
 }
-.img{
-	width: 350px;
-	height: 200px;
-	margin: -115px 0px 0px 1080px;
-}
+
 @media only screen and (max-width: 450px){
 .container{
 	font-size: 24px;
 }
-.text{
-	width: 330px;
-	top: -40px;
-	left: -140px;
-}
+.text{}
 .img{
 	margin: -50px 0px 0px -10px;
 }
