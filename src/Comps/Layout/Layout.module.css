@@ -33,17 +33,19 @@
 }
 .sheet{
 	width: 90%;
-	margin:-3% 0% 0% 5%;
-	opacity: 0.8;
+	margin:-2.5% 0% 0% 5%;
+	opacity: 0.95;
 	border-radius: 10px;
 	background-color: black;
 }
 @media only screen and (max-width: 850px){
 .link{font-size:24px;}
+.sheet{margin-top:-35px;}
 }
 @media only screen and (max-width: 450px){
 .nav{  display:grid; grid-template-columns: repeat(2, 50%);}
 .active{height: 40px;}
 .idle{height: 40px;}
 .link{font-size:23px;}
+.sheet{margin-top:-15px;}
 }

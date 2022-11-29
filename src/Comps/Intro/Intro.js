@@ -6,9 +6,13 @@ export const Intro = () =>{
 	    <div 
 	       className={styles.container}>
 	       <p className={styles.text}>
-	Great, that you came.<br/> Here is all the information you might
-	need to know about me, if you are my client, employer, 
-	colleague or just a casual visitor.
+	Welcome to my portfolio website.<br/>
+	Here you can find basic information 
+	about my skills, aspirations and areas of interest.<br/>
+	I also prepared an example of my work with a description and links 
+	to its code and a working application.
+  
+	Enjoy the application, I tried to make it convenient for you.
     </p></div>
     </>
 }

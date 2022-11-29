@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
 .container{
-	
 	color: white;
-	margin:70px 0px 0px 180px;
 }
 .photo{
 margin:-30px 10px 0px 30px;
@@ -19,16 +17,13 @@ border: 3px solid dodgerblue;
 }
 .name{
 	font-family: 'Supermercado One', cursive;
-	position: relative;
-	top:  -65px;
-	left:  80px;
 	font-size: 18px;
 	color: white;
 	width: 800px;
 
 }
 .text{
-margin: -80px 0px 0px 45px;
+
 justify-content:  center;
 width: 795px;
 font-size:  28px;
