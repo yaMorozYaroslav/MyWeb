@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 .container{
 	font-family: 'Sawarabi Mincho', serif;
-	font-size: 45px;
+	font-size: 40px;
 	color: white;
 	text-align: center;
 }
@@ -15,7 +15,4 @@
 	font-size: 24px;
 }
 .text{}
-.img{
-	margin: -50px 0px 0px -10px;
-}
 }

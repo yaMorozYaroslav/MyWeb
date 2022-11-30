@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
 .container{
 	color: white;
+	font-family: 'Playfair Display', serif;
 }
 .photo{
-margin:-30px 10px 0px 30px;
 width: 220px;
 height: 330px;
 border-radius:  5px;
@@ -16,47 +16,28 @@ border: 3px solid dodgerblue;
 	margin-right: 15px;
 }
 .name{
-	font-family: 'Supermercado One', cursive;
-	font-size: 18px;
-	color: white;
-	width: 800px;
+
 
 }
 .text{
 
-justify-content:  center;
-width: 795px;
 font-size:  28px;
 
-font-family: 'Playfair Display', serif;
+
 }
-.gear{
-	width: 400px;
-	margin: -117px 0px 0px 1049px;
-}
+
 @media only screen and (max-width: 450px){
-	.container{
-		margin:70px 0px 0px 0px;
-	}
+	.container{	}
 	.photo{
-	 margin: -60px 5px 0px 10px;
-     width: 130px;
      height: 200px;
 	}
 	.name{
 		font-size: 11px;
-		left:  -10px;
-		width: 340px;
 	}
 	.text{
-		margin: -70px 0px 0px 5px;
 		font-size: 16px;
 		width: 330px;
 		text-align:  center;
 	}
-	.gear{
-	width: 420px;
-	margin: -40px 0px 0px -45px;
-}
 }
 

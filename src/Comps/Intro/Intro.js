@@ -13,6 +13,7 @@ export const Intro = () =>{
 	to its code and a working application.
   
 	Enjoy the application, I tried to make it convenient for you.
-    </p></div>
+        </p>
+    </div>
     </>
 }

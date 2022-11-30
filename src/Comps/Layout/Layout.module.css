@@ -29,11 +29,11 @@
 
 .outlet{
 	width: 90%;
-	margin:0% 0% 0% 5%;
+	margin:-10px 0% 0% 5%;
 }
 .sheet{
 	width: 90%;
-	margin:-2.5% 0% 0% 5%;
+	margin:-10px 0% 0% 5%;
 	opacity: 0.95;
 	border-radius: 10px;
 	background-color: black;
