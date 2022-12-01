@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Contacts.module.css';
-//import element from './element.png';
 
 
 export function Contacts(){
@@ -24,12 +23,7 @@ export function Contacts(){
     const City = () =>{
   return <h1 className={styles.city}>NS, Dartmouth 2022</h1>
     }
-  /*  const Element = () => {
-    	return <img src={element} alt="some"
-    	        className={styles.element}/>
-    }
-     */
-
+ 
  return(<div className={styles.can}>
                                <Number/>
                                <Email/>

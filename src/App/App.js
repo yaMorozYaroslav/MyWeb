@@ -2,6 +2,7 @@ import React from 'react'
 import s from './App.module.css'
 import {Header} from '../Comps/Header/Header'
 import {Router} from '../Router/Router'
+import {SideCont} from '../Comps/SideCont/SideCont'
 
 export function App() {
   return (
