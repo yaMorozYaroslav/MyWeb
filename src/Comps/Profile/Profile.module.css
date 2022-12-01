@@ -3,10 +3,19 @@
 .container{
 	color: white;
 	font-family: 'Playfair Display', serif;
+	
+}
+.text{
+
+font-size:  32px;
+text-indent: 50px;
+
 }
 .photo{
+float: left;
 width: 220px;
 height: 330px;
+margin: 20px 20px 0px 0px;
 border-radius:  5px;
 border: 3px solid dodgerblue;
 
@@ -15,16 +24,8 @@ border: 3px solid dodgerblue;
 	float: left;
 	margin-right: 15px;
 }
-.name{
+.name{}
 
-
-}
-.text{
-
-font-size:  28px;
-
-
-}
 
 @media only screen and (max-width: 450px){
 	.container{	}
