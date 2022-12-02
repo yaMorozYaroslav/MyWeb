@@ -4,7 +4,6 @@
     margin: -8px 0px 0px -8px;
     background-image: url('tech.jpg');
 }
-
 @media only screen and (width: 850px){
 .body{}
 }

@@ -45,10 +45,12 @@ export const Layout = () => {
 		     </button>
 		     
 		    </nav>
-
+       <section className={s.double}>
 		     <div className={s.sheet}>
 		        <div className={s.outlet}><Outlet /></div>
 		     </div>
+		     <div className={s.sideCont}></div>
+	   </section>
 		   </>		        
            )
          };

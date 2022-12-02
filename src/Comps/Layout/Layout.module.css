@@ -26,18 +26,24 @@
     text-decoration: none;
     color:  white; 
 }
-
+.double{display:flex;}
 .outlet{
-	width: 90%;
+	width: 80%;
 	margin:0% 0% 0% 5%;
 }
 .sheet{
-	width: 90%;
+	width: 80%;
 	margin:0% 0% 0% 5%;
 	opacity: 0.95;
 	border-radius: 10px;
 	background-color: black;
 }
+.sideCont{
+width:20%;
+height:800px;
+background-image:url('./sideWell.jpg');
+}
+
 @media only screen and (max-width: 850px){
 .link{font-size:24px;}
 .sheet{margin-top:-35px;}
