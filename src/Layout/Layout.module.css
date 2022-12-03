@@ -26,23 +26,28 @@
     text-decoration: none;
     color:  white; 
 }
-.double{display:flex;}
+.double{
+    display:flex;
+    width: 98%;
+    margin: 0% 0% 0% 1%;
+}
 
 .outlet{
 	width: 70%;
-	margin:0% 0% 0% 5%;
+	
 }
 .sheet{
-	width: 70%;
-	margin:0% 0% 0% 5%;
+	width: 72%;
+	
 	opacity: 0.95;
 	border-radius: 10px;
 	background-color: black;
 }
 .sideCont{
-width:30%;
-height:800px;
-background-image:url('./sideWell.jpg');
+width:28%;
+height:600px;
+border-radius: 10px;
+
 }
 
 @media only screen and (max-width: 850px){

@@ -4,7 +4,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
  import {Contacts} from '../Comps/Contacts/Contacts'
 import {Profile} from '../Comps/Profile/Profile'
 import {Project} from '../Comps/Project/Project'
-import {Layout} from '../Comps/Layout/Layout'
+import {Layout} from '../Layout/Layout'
 import {Intro} from '../Comps/Intro/Intro'
 import {GitHub, Netlify} from './links'
 

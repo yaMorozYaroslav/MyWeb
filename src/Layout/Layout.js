@@ -1,12 +1,13 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import s from'./NavBar.module.css';
+import {Outlet, Link} from "react-router-dom";
+import s from'./Layout.module.css';
 import {useLocation} from "react-router-dom";
+import sideCont from './futurer.jpg'
 
 import {useDispatch, useSelector} from 'react-redux'
-import {closeContact, openContact} from '../../Redux/openSlice'
+import {closeContact, openContact} from '../Redux/openSlice'
 
-export const NavBar = () => {
+export const Layout = () => {
 	const location = useLocation();
 	const {pathname} = location;
 	const splitLocation = pathname.split("/")
@@ -45,5 +46,12 @@ export const NavBar = () => {
 		     </button>
 		     
 		    </nav>
-		   </>)
-	   }
+       <section className={s.double}>
+		     <div className={s.sheet}>
+		        <div className={s.outlet}><Outlet /></div>
+		     </div>
+		     <img src={sideCont} alt='circle' className={s.sideCont} />
+	   </section>
+		   </>		        
+           )
+         };
