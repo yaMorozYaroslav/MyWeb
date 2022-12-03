@@ -2,6 +2,7 @@ import React from 'react';
 import {Outlet, Link} from "react-router-dom";
 import s from'./Layout.module.css';
 import {useLocation} from "react-router-dom";
+import sideCont from './sideWell.jpg'
 
 import {useDispatch, useSelector} from 'react-redux'
 import {closeContact, openContact} from '../../Redux/openSlice'
@@ -49,7 +50,7 @@ export const Layout = () => {
 		     <div className={s.sheet}>
 		        <div className={s.outlet}><Outlet /></div>
 		     </div>
-		     <div className={s.sideCont}></div>
+		     <img src={sideCont} alt='circle' className={s.sideCont} />
 	   </section>
 		   </>		        
            )

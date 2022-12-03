@@ -27,19 +27,20 @@
     color:  white; 
 }
 .double{display:flex;}
+
 .outlet{
-	width: 80%;
+	width: 70%;
 	margin:0% 0% 0% 5%;
 }
 .sheet{
-	width: 80%;
+	width: 70%;
 	margin:0% 0% 0% 5%;
 	opacity: 0.95;
 	border-radius: 10px;
 	background-color: black;
 }
 .sideCont{
-width:20%;
+width:30%;
 height:800px;
 background-image:url('./sideWell.jpg');
 }
