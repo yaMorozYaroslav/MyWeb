@@ -2,7 +2,7 @@ import React from 'react';
 import {Outlet, Link} from "react-router-dom";
 import s from'./Layout.module.css';
 import {useLocation} from "react-router-dom";
-import sideCont from './futurer.jpg'
+import sideCont from './sidePic.jpg'
 
 import {useDispatch, useSelector} from 'react-redux'
 import {closeContact, openContact} from '../Redux/openSlice'
