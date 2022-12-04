@@ -2,7 +2,8 @@
     height: 1000px;
     width: 101.23%;
     margin: -8px 0px 0px -8px;
-    background-image: url('tech.jpg');
+    background-image: url('bridger.jpg');
+    background-position: -300px -600px;
 }
 @media only screen and (width: 850px){
 .body{}
