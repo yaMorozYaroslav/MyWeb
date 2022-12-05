@@ -1,9 +1,10 @@
 .body{
-    height: 1000px;
+    height: 100%;
     width: 101.23%;
     margin: -8px 0px 0px -8px;
-    background-image: url('bridger.jpg');
-    background-position: -300px -600px;
+    background-image: url('road.jpg');
+    background-position: 0px 0px;
+    background-size: cover;
 }
 @media only screen and (width: 850px){
 .body{}

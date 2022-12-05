@@ -3,15 +3,13 @@
     display: grid;
     grid-template-columns: repeat(4, 25%);
     width: 100%;
-    background-color: black;
-    
+    background-color: black; 
 }
 .idle{
 	height: 50px;
 	border: none;
 	border-radius: 10px;
 	background-color: black;
-  
 }
 .active{
     height: 50px;
@@ -38,8 +36,7 @@
 }
 .sheet{
 	width: 72%;
-	
-	opacity: 0.95;
+	opacity: 0.8;
 	border-radius: 10px;
 	background-color: black;
 }
@@ -52,12 +49,15 @@ border-radius: 10px;
 
 @media only screen and (max-width: 850px){
 .link{font-size:24px;}
-.sheet{margin-top:-35px;}
+.sheet{}
 }
 @media only screen and (max-width: 450px){
 .nav{  display:grid; grid-template-columns: repeat(2, 50%);}
 .active{height: 40px;}
 .idle{height: 40px;}
 .link{font-size:23px;}
-.sheet{margin-top:-15px;}
+.double{display:inline;}
+.outlet{width:100%;margin-top:-50px;}
+.sheet{width:100%;}
+.sideCont{width:100%;}
 }
