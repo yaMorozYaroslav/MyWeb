@@ -6,10 +6,10 @@ width: 100%;
 .first{
 display: flex;
 width: 55%;
-color: black;
+color: white;
 border: 3px solid black;
-background-image: url('./lights.jpg');
-background-position: 0px 0px;
+background-image: url('./city.jpg');
+background-position: 0px -100px;
 background-size:cover;
 }
 .text{

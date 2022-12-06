@@ -8,21 +8,26 @@
 .idle{
 	height: 50px;
 	border: none;
-	border-radius: 10px;
 	background-color: black;
 }
 .active{
     height: 50px;
-	background-color: steelblue;
-	border: 1px solid black;
+	background-color: white;
+	border: 3px solid white;
 	border-radius: 10px;
    
 }
 .link{
-    font-family: 'Playfair Display', serif;
+    font-family: Times, bold;
     font-size: 32px;
     text-decoration: none;
     color:  white; 
+}
+.alink{
+   font-family: Times, bold;
+   font-size: 32px;
+   text-decoration: none;
+   color: black;
 }
 .double{
     display:flex;
@@ -55,7 +60,7 @@ border-radius: 10px;
 .nav{  display:grid; grid-template-columns: repeat(2, 50%);}
 .active{height: 40px;}
 .idle{height: 40px;}
-.link{font-size:23px;}
+.link{font-size:28px;}
 .double{display:inline;}
 .outlet{width:100%;margin-top:-50px;}
 .sheet{width:100%;}

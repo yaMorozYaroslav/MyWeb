@@ -25,16 +25,19 @@ export const Layout = () => {
 	    //if(contact === true) console.log(contact)
 		},[contact])
 	
+	const Linker =({text, route,location})=>
+	 <Link className={splitLocation[1]===location?s.alink:s.link} to={route} >{text}</Link>
+	
 	return(
 		<>
 		  <nav className={s.nav}>
 		  
 		      <button className={splitLocation[1]===""?s.active:s.idle}>
-		        <Link  className={s.link} to="/">Intro </Link>
+		        <Linker text={"Intro"} route={"/"} location={""}/>
 		      </button>
 		      
 		      <button className={splitLocation[1]==="profile"?s.active:s.idle}>
-		        <Link className={s.link} to="/profile">Profile</Link>
+		        		        <Linker text={"Profile"} route={"/profile"} location={"profile"}/>
 		      </button>
 		      
 		       <button className={splitLocation[1]==="project"?s.active:s.idle}>
