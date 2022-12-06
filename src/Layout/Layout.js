@@ -41,11 +41,11 @@ export const Layout = () => {
 		      </button>
 		      
 		       <button className={splitLocation[1]==="project"?s.active:s.idle}>
-		          <Link className={s.link} to="/project">Projects</Link>
+		          <Linker text={"Project"} route={"/project"} location={"project"}/>
 		     </button >
 		     
 		     <button className={splitLocation[1]==="contacts"?s.active:s.idle}>
-		          <Link className={s.link}  to="/contacts">Contacts</Link>
+		          <Linker text={"Contacts"} route={"/contacts"} location={"contacts"}/>
 		     </button>
 		     
 		    </nav>
