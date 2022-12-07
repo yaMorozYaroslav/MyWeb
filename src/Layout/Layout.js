@@ -14,14 +14,16 @@ export const Layout = () => {
 	
 	const dispatch = useDispatch()
 	const selectContact = state => state.open.contact
+	const selectNow = state => state.open.now
 	const contact = useSelector(selectContact)
+	const now = useSelector(selectNow)
 	
 	React.useEffect(()=>{
 	   if(splitLocation[1]==="contacts") dispatch(openContact()) 
 	   if(splitLocation[1]!=="contacts" && !contact) dispatch(closeContact())
 		},[location, contact, dispatch, splitLocation])
 	React.useEffect(()=>{
-	     console.log(contact)
+	     console.log(now)
 	    //if(contact === true) console.log(contact)
 		},[contact])
 	
