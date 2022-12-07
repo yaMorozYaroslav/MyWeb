@@ -5,7 +5,7 @@ import {useLocation} from "react-router-dom";
 import sideCont from './sidePic.jpg'
 
 import {useDispatch, useSelector} from 'react-redux'
-import {closeContact, openContact} from '../Redux/openSlice'
+import {closeContact, openContact, nowIntro, nowProfile} from '../Redux/openSlice'
 
 export const Layout = () => {
 	const location = useLocation();
@@ -19,13 +19,14 @@ export const Layout = () => {
 	const now = useSelector(selectNow)
 	
 	React.useEffect(()=>{
-	   if(splitLocation[1]==="contacts") dispatch(openContact()) 
-	   if(splitLocation[1]!=="contacts" && !contact) dispatch(closeContact())
-		},[location, contact, dispatch, splitLocation])
+		if(splitLocation[1]==="") dispatch(nowIntro())
+	   if(splitLocation[1]==="profile") dispatch(nowProfile()) 
+	   if(splitLocation[1]==="project") dispatch(nowProject())
+	   if(splitLocation[1]==="contacts")dispatch(nowContacts())
+		},[location, dispatch, splitLocation])
 	React.useEffect(()=>{
-	     console.log(now)
-	    //if(contact === true) console.log(contact)
-		},[contact])
+	    if(now === "profile") console.log(now)
+		},[now, location])
 	
 	const Linker =({text, route,location})=>
 	 <Link className={splitLocation[1]===location?s.alink:s.link} to={route} >{text}</Link>
