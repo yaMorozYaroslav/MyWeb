@@ -2,10 +2,10 @@ import React from 'react';
 import {Outlet, Link} from "react-router-dom";
 import s from'./Layout.module.css';
 import {useLocation} from "react-router-dom";
-import sideCont from './sidePic.jpg'
+import sideCont from './welcomer.jpg'
 
 import {useDispatch, useSelector} from 'react-redux'
-import {closeContact, openContact, nowIntro, nowProfile} from '../Redux/openSlice'
+import {nowIntro, nowProfile, nowProject, nowContacts} from '../Redux/openSlice'
 
 export const Layout = () => {
 	const location = useLocation();
