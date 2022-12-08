@@ -34,17 +34,13 @@
     width: 98%;
     margin: 0% 0% 0% 1%;
 }
-
-.outlet{
-	width: 70%;
-	
-}
 .sheet{
 	width: 72%;
 	opacity: 0.8;
 	border-radius: 10px;
-	background-color: black;
+	background: rgba(0,0,0,0.8);
 }
+.outlet{}
 .sideCont{
 width:28%;
 height:600px;
