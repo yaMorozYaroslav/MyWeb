@@ -53,9 +53,8 @@ export const Layout = () => {
 		     
 		    </nav>
        <section className={s.double}>
-		     <div className={s.sheet}>
+		    
 		        <div className={s.outlet}><Outlet /></div>
-		     </div>
 		     <img src={sideCont} alt='circle' className={s.sideCont} />
 	   </section>
 		   </>		        

@@ -13,13 +13,13 @@ background-position: 10px -30px;
 background-size:cover;
 }
 .text{
-margin: 34px 0px 0px 20px;
+margin: 20px 0px 0px 20px;
 font-family: 'Sorts Mill Goudy', serif;
-font-size: 45px;
+font-size: 42px;
 }
 .gear{
-margin:20px 25px 0px 5px;
-font-size: 65px;
+margin:10px 25px 0px 5px;
+font-size: 55px;
 }
 .second{
 width: 70%;
@@ -29,13 +29,13 @@ background-position: 0px 0px;
 background-size:cover;
 }
 @media only screen and (max-width: 850px){
-.first{width:70%;background-position: 0px -40px;}
+.first{width:70%;background-position: 10px -20px;}
 .text{font-size: 40px;}
 .gear{font-size: 48px;}
 .second{width:30%;}
 }
 @media only screen and (max-width: 450px){
-.first{width:100%; background-position: 30px 0px;}
+.first{width:100%; background-position: 5px -35px;}
 .text{font-size: 30px;}
 .gear{font-size: 40px;}
 .second{display: none;}

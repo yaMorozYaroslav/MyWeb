@@ -12,7 +12,6 @@ export function Project(){
 	      later use in token authentication. An authorized user can 
 	      add items to the database and manage those that he added.
 	      
-	      In the "Contacts" section, I made it possible to send me an email directly from there.
 	   
 	</div></>)
 	}

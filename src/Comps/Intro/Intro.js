@@ -7,12 +7,13 @@ export const Intro = () =>{
 	       className={styles.container}>
 	       <p className={styles.text}>
 	Welcome to my portfolio website.<br/>
-	Here you can find basic information 
-	about my skills, aspirations and areas of interest.<br/>
-	I also prepared an example of my work with a description and links 
-	to its code and a working application.
+	Here you will find important information
+about my skills, aspirations and areas of interest
+ along with an example of my work. the source code 
+ of my project and the website are available in one 
+ click, as well as the deployed project<br/>
   
-	Enjoy the application, I tried to make it convenient for you.
+    In the "Contacts" section, I made it possible to send me an email directly from there.
         </p>
     </div>
     </>
