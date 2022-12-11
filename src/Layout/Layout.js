@@ -13,9 +13,8 @@ export const Layout = () => {
 	const splitLocation = pathname.split("/")
 	
 	const dispatch = useDispatch()
-	const selectContact = state => state.open.contact
+	
 	const selectNow = state => state.open.now
-	const contact = useSelector(selectContact)
 	const now = useSelector(selectNow)
 	
 	React.useEffect(()=>{
@@ -25,8 +24,8 @@ export const Layout = () => {
 	   if(splitLocation[1]==="contacts")dispatch(nowContacts())
 		},[location, dispatch, splitLocation])
 	React.useEffect(()=>{
-	    if(now === "profile") console.log(now)
-		},[now, location])
+	    if(now !=="intro") console.log(now)
+		},[now])
 	
 	const Linker =({text, route,location})=>
 	 <Link className={splitLocation[1]===location?s.alink:s.link} to={route} >{text}</Link>
