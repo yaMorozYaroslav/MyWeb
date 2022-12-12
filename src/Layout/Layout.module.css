@@ -29,22 +29,14 @@
    text-decoration: none;
    color: black;
 }
-.double{
-    display:flex;
-    width: 98%;
-    margin: 0% 0% 0% 1%;
-}
+.double{display:flex;}
 .outlet{
     width: 72%;
+    margin-top: -10px;
 	border-radius: 10px;
 	background: rgba(0,0,0,0.8);
 }	
-.sideCont{
-width:28%;
-height:100%;
-border-radius: 0px;
 
-}
 
 @media only screen and (max-width: 850px){
 .link{font-size:24px;}
@@ -55,8 +47,6 @@ border-radius: 0px;
 .active{height: 40px;}
 .idle{height: 40px;}
 .link{font-size:28px;}
-.double{display:inline;}
 .outlet{width:100%;margin-top:-50px;}
 .sheet{width:100%;}
-.sideCont{width:100%;}
 }
