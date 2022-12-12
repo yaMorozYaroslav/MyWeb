@@ -4,42 +4,39 @@
 	color: white;
 	font-family: 'Playfair Display', serif;
 }
+.pic{
+float: left;
+height:330px;
+width:220px;
+margin: 5px;
+background-image: url('./myPhoto.jpg');
+background-size: cover;
+border: 3px solid dodgerblue;
+border-radius:  5px;
+}
+.name{
+font-size: 40px;
+}
 .text{
 text-indent: 50px;
 }
-.photo{
 
-width: 220px;
-height: 330px;
-margin: 20px 10px 10px 10px;
-border: 3px solid dodgerblue;
-border-radius:  5px;
-opacity: 1.0;
-}
-.pic{
-float: left;
-height:200px;
-width:40%;
-background-image: url('./myPhoto.jpg');
-background-size: cover;
-}
-.name{
-font-size: 50px;
-}
+
 
 
 @media only screen and (max-width: 450px){
 	.container{margin-top:24px;	}
+	
+	.pic{
+     height: 200px;
+     width: 140px;
+	}
+	.name{
+		font-size: 24px;
+	}
 	.text{
 		font-size: 16px;
 		
-	}
-	.photo{
-     height: 200px;
-     width: 120px;
-	}
-	.name{
-		font-size: 14px;
 	}
 	
 }

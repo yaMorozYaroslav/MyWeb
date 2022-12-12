@@ -2,7 +2,6 @@ import React from 'react';
 import {Outlet, Link} from "react-router-dom";
 import s from'./Layout.module.css';
 import {useLocation} from "react-router-dom";
-import sideCont from './welcomer.jpg'
 
 import {useDispatch, useSelector} from 'react-redux'
 import {nowIntro, nowProfile, nowProject, nowContacts} from '../Redux/openSlice'
@@ -54,7 +53,6 @@ export const Layout = () => {
        <section className={s.double}>
 		    
 		        <div className={s.outlet}><Outlet /></div>
-		     <img src={sideCont} alt='circle' className={s.sideCont} />
 	   </section>
 		   </>		        
            )
