@@ -29,10 +29,10 @@
    text-decoration: none;
    color: black;
 }
-.double{display:flex;}
+.double{}
 .outlet{
+    display:flex;
     width: 72%;
-    margin-top: -10px;
 	border-radius: 10px;
 	background: rgba(0,0,0,0.8);
 }	
