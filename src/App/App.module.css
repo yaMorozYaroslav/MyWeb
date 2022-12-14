@@ -2,6 +2,8 @@
     height: 100%;
     width: 101.23%;
     margin: -8px 0px 0px -8px;
+}
+.backIntro{
     background-image: url('forest.jpg');
     background-position: 0px 0px;
     background-size: cover;
