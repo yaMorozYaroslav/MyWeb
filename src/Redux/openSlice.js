@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = {
-	alert: false, now: 'intro'
+	alert: false, section: 'intro'
 	}
 
 export const openSlice = createSlice({
@@ -10,10 +10,10 @@ export const openSlice = createSlice({
 	   reducers: {
 		   openAlert: state => {state.alert = true},
 		   closeAlert: state => {state.alert = false},
-		   nowProfile: state => {state.now = 'profile'},
-		   nowProject: state => {state.now = 'project'},
-		   nowContacts: state => {state.now = 'contacts'},
-		   nowIntro: state => {state.now = initialState.now}
+		   nowProfile: state => {state.section = 'profile'},
+		   nowProject: state => {state.section = 'project'},
+		   nowContacts: state => {state.section = 'contacts'},
+		   nowIntro: state => {state.section = initialState.section}
 		   }
 	})
 	export const {openAlert, closeAlert, nowIntro, 
