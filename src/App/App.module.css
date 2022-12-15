@@ -8,6 +8,11 @@
     background-position: 0px 0px;
     background-size: cover;
 }
+.profile{
+  background-image: url('laptops.jpg');
+    background-position: 0px 0px;
+    background-size: cover;
+}
 @media only screen and (width: 850px){
 
 }

@@ -3,6 +3,7 @@ import s from './App.module.css'
 import {Header} from '../Comps/Header/Header'
 import {Router} from '../Router/Router'
 import {useSelector} from 'react-redux'
+import classnames from 'classnames'
 
 export function App() {
 	
@@ -14,10 +15,10 @@ const section = useSelector(selectSection)
 
   return (
     <div className={s.body}>
-      <div className={section?section:s.intro}>
+      <div className={classnames(section==='intro'&&s.intro, section==='profile'&&s.profile)} > 
        <section className={s.header}><Header /></section>
        <section className={s.router}><Router/></section>
-      </div>
+       </div>
     </div>
   )
 }
