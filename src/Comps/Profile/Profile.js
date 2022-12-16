@@ -5,14 +5,19 @@ import photo from './myPhoto.jpg';
 export const Profile = () => {
 	return <>
 	            
-	  <div  className={s.container}> 
+	  <div  cla         and other resources.
+ssName={s.container}> 
 		
 		   <div className={s.pic}/>
 		   
 		   <h2 className={s.name}> Jaroslav Moroz, 23 years old</h2>
 		 
-        <section className={s.text}>I'm a self-taught NodeJS developer who explores the entire stack
-	 to understand the overall development process. Being able to use 
+        <section className={s.text}>
+            I'm a self-taught web developer
+          who learned how to build React apps
+          using documentation and other online sources.
+          
+          Being able to use 
 	 JS both on the server side and on the client side inspires me 
      to explore all the complexity by focusing on one language. <br/>
      
