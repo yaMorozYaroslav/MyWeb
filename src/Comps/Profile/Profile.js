@@ -12,17 +12,21 @@ export const Profile = () => {
 		   <h2 className={s.name}> Jaroslav Moroz, 23 years old</h2>
 		 
         <section className={s.text}>
-            I'm a self-taught web developer
-          who learned how to build React apps
-          using documentation and other online sources.
+           I am a self-taught web developer who learned 
+           how to use the ReactJS library by reading 
+           documentation and watching online courses.
           
-        Being able to use JS as a back-end inspired me
-         to create a REST API which allows authorization with ExpressJS using MongoDB
+        Being able to create a backend with ExpressJS 
+        and MongoDB inspired me to build
+        a REST API that provides authentication.
           <br/>
      
-        <section>I installed the Arch Linux distribution with the i3 window manager
-     on both of my laptops to take advantage of its performance
-     and partitioned the hard drive of one of them to play games on Win 11.</section><br/>
+        <section>
+            To improve the performance of my laptops,
+            I installed an Arch Linux distribution with 
+            an i3 window manager and partitioned 
+            the hard drive to play games on Win 11.
+        </section><br/>
 		  
        I wanna participate in the creation of AI web 
 	 applications. Waiting for new acquaintances and profitable
