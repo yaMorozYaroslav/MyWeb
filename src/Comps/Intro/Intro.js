@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './Intro.module.css';
-//import intro from './intro.png';
+
 export const Intro = () =>{
 	return <>
 	    <div 

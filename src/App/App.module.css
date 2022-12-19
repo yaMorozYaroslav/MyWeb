@@ -10,8 +10,13 @@
 }
 .profile{
   background-image: url('laptops.jpg');
-    background-position: 0px 0px;
+    background-position: 0px -500px;
     background-size: cover;
+}
+.project{
+  background-image: url('city.jpg');
+  background-position:0px -400px;
+  background-size:cover;
 }
 @media only screen and (width: 850px){
 
