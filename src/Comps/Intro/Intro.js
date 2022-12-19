@@ -6,7 +6,7 @@ export const Intro = () =>{
 	    <div 
 	       className={styles.container}>
 	       <p className={styles.text}>
-	Welcome to the site.<br/>
+	Welcome to the site..<br/>
 	
 Here you will find important information
 about my skills, aspirations and areas of interest
