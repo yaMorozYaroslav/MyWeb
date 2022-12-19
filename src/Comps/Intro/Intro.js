@@ -1,12 +1,12 @@
 import React from "react";
 import styles from './Intro.module.css';
-//import intro from './intro.png';
+
 export const Intro = () =>{
 	return <>
 	    <div 
 	       className={styles.container}>
 	       <p className={styles.text}>
-	Welcome to the site.<br/>
+	Welcome to the site..<br/>
 	
 Here you will find important information
 about my skills, aspirations and areas of interest
