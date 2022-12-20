@@ -4,17 +4,17 @@
     margin: -8px 0px 0px -8px;
 }
 .intro{
-    background-image: url('forest.jpg');
-    background-position: 0px 0px;
+    background-image: url('intro.jpg');
+    background-position: 0px -300px;
     background-size: cover;
 }
 .profile{
-  background-image: url('laptops.jpg');
-    background-position: 0px -500px;
+  background-image: url('profile.jpg');
+    background-position: 0px -150px;
     background-size: cover;
 }
 .project{
-  background-image: url('city.jpg');
+  background-image: url('project.jpg');
   background-position:0px -400px;
   background-size:cover;
 }

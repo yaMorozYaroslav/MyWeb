@@ -11,7 +11,7 @@ width:220px;
 margin: 15px;
 background-image: url('./myPhoto.jpg');
 background-size: cover;
-border: 3px solid dodgerblue;
+border: 3px solid white;
 border-radius:  5px;
 }
 .name{
