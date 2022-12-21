@@ -16,15 +16,13 @@ export const Profile = () => {
         </section>
            
           <section className={s.text}>
-                Being able to develop a full stack in one language
-               inspired me to create a REST API that provides authentication.
+                The desire to develop a full stack in NodeJS 
+                inspired me to create a REST API that provides authentication.
           </section>
           
         <section className={s.text}>
-            To improve the performance of my laptops,
-            I installed an Arch Linux distribution with 
-            an i3 window manager and partitioned 
-            the hard drive to play games on Win 11.
+                A few months ago, I installed an Arch Linux distribution with 
+                an i3 window manager to make my laptops as efficient and adjustable as possible.
         </section>
         
 	    <section className={s.text}>

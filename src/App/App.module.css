@@ -18,6 +18,11 @@
   background-position:0px -400px;
   background-size:cover;
 }
+.contacts{
+background-image: url('contacts.jpg');
+background-position: 0px -400px;
+background-size: cover;
+}
 @media only screen and (width: 850px){
 
 }
