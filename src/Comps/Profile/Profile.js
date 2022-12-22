@@ -10,19 +10,19 @@ export const Profile = () => {
 		   <h2 className={s.name}> Jaroslav Moroz, 23 years old</h2>
 		 
         <section className={s.text}>
-                I'm a self-taught web developer who learned
+                  I'm a self-taught web developer who learned
               how to use the React library by reading 
               the documentation, watching online courses, and practicing.<br/>
         </section>
            
           <section className={s.text}>
-                The desire to develop a full stack in NodeJS 
-                inspired me to create a REST API that provides authentication.
+                   The desire to see the big picture inspired me to look into 
+                the back-end and create a REST API that provides authentication.
           </section>
           
         <section className={s.text}>
-                A few months ago I installed the Arch Linux distribution with the i3
-                 window manager and enjoy its efficiency and customization.
+                   For my day to day tasks, I installed the Arch Linux distribution
+                with the i3 window manager and enjoy its customizability.
         </section>
         
 	    <section className={s.text}>
