@@ -21,8 +21,8 @@ export const Profile = () => {
           </section>
           
         <section className={s.text}>
-                A few months ago, I installed an Arch Linux distribution with 
-                an i3 window manager to make my laptops as efficient and adjustable as possible.
+                A few months ago I installed the Arch Linux distribution with the i3
+                 window manager and enjoy its efficiency and customization.
         </section>
         
 	    <section className={s.text}>
