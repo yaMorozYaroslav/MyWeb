@@ -11,18 +11,20 @@ export const Profile = () => {
 		 
         <section className={s.text}>
                   I'm a self-taught web developer who learned
-              how to use the React library by reading 
-              the documentation, watching online courses, and practicing.<br/>
+              how to use the React library by reading the documentation,
+               watching online courses, and practicing.
         </section>
            
           <section className={s.text}>
-                   The desire to see the big picture inspired me to look into 
-                the back-end and create a REST API that provides authentication.
+                  The desire to see the big picture inspired me 
+                  to explore the backend to create a REST API
+                   that provides authentication.
           </section>
           
         <section className={s.text}>
-                   For my day to day tasks, I installed the Arch Linux distribution
-                with the i3 window manager and enjoy its customizability.
+                   For my daily tasks, I installed the Arch Linux
+                    distribution with the i3 window manager 
+                    to take advantage of its customizability.
         </section>
         
 	    <section className={s.text}>
