@@ -10,14 +10,14 @@ export const Profile = () => {
 		   <h2 className={s.name}> Jaroslav Moroz, 23 years old</h2>
 		 
         <section className={s.text}>
-                  I'm a self-taught web developer who learned
-              how to use the React library by reading the documentation,
-               watching online courses, and practicing.
+                  I'm a self-taught web developer who learned 
+                  how to use the React library by watching online
+                  courses in addition to practicing with the documentation.
         </section>
            
           <section className={s.text}>
                   The desire to see the big picture inspired me 
-                  to explore the backend to create a REST API
+                  to explore the backend and create a REST API
                    that provides authentication.
           </section>
           
@@ -26,7 +26,13 @@ export const Profile = () => {
                     distribution with the i3 window manager 
                     to take advantage of its customizability.
         </section>
-        
+        <section className={s.text}> 
+                  Fascinated by the power of modern applications,
+                   they allow us to browse the Internet, manage files, 
+                   edit images, and improve our programming and communication skills.
+                    The web apps are especially good and accessible from any platform
+                     without having to be downloaded to the device.
+        </section>
 	    <section className={s.text}>
        I can develop and maintain websites and applications.
         Waiting for new acquaintances and profitable
