@@ -1,9 +1,19 @@
 import React from 'react';
 import styles from './Contacts.module.css';
+import {useDispatch, useSelector} from 'react-redux'
 
+import {openEmail, closeEmail} from '../../Redux/openSlice'
 
 export function Contacts(){
 	
+	const dispatch = useDispatch()
+	
+	const selectEmail = state => state.open.email
+	const email = useSelector(selectEmail)
+	React.useEffect(()=>{
+		console.log(email)
+		dispatch(closeEmail())
+		},[email])
 	const Number = () =>{
 		return (<><h1 className={styles.label}>Number</h1>
 			      <p className={styles.discr}>+1 902 877 5222</p></>)};
@@ -30,6 +40,7 @@ export function Contacts(){
                                <LinkedIn/>
                                <GitHub/>
                                <City/>
+                               <button onClick={()=>dispatch(openEmail())}>Send</button>
 
         </div>)
 }
