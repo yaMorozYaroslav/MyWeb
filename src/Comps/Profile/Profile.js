@@ -29,7 +29,7 @@ export const Profile = () => {
         <section className={s.text}> 
                   Fascinated by the power of modern applications,
                    they allow us to browse the Internet, manage files, 
-                   edit images, and improve our programming and communication skills.
+                   edit  images, and improve our programming and communication skills.
                     The web apps are especially good and accessible from any platform
                      without having to be downloaded to the device.
         </section>
