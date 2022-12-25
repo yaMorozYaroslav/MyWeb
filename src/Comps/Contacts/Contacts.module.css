@@ -1,14 +1,11 @@
+.sender{
+position: absolute;
+}
 .can{
 	width:800px;
 	margin:70px 0px 0px 180px;
 	color: white;
 	text-align: center;
-}
-.city{
-	position:  relative;
-	top: 40px;
-	left: 280px;
-	font-size: 25px;
 }
 .label{
 	font-size: 34px;
@@ -37,12 +34,10 @@
 	font-size: 26px;
 	margin: 9px 0px -2px 200px;
 }
-.element{
-	position:  relative;
-	width: 380px;
-	top: -160px;
-	left: 663px;
+.city{
+	font-size: 25px;
 }
+
 @media only screen and (max-width: 450px){
 	.can{
 	width:400px;
@@ -83,10 +78,5 @@
 	font-size: 22px;
 	margin: 10px 0px 10px 160px;
 }
-.element{
-	position:  relative;
-	width: 100%;
-	top: -200px;
-	left: 30px;
-}
+
 }

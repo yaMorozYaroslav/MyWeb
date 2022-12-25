@@ -31,7 +31,8 @@ export const Email = () => {
 	}
 	 //{alert? <Alert /> : null}
 	return(
-	<section>
+	<section className={s.container}>
+	      <button onClick={()=>dispatch(closeEmail())}>X</button>
 	      <div className={s.contForm}>
 	        <h2>Contact me</h2>
 	        <form ref={form} onSubmit={sendEmail}>

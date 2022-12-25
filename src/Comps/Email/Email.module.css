@@ -1,6 +1,8 @@
 .contForm{
+position: relative;
 width: 300px;
 margin-left: 5px;
+z-index: 1;
 }
 .input{
 width: 250px;
