@@ -1,13 +1,13 @@
 import React from 'react'
 
-import s from './Contact.module.css'
+import s from './Email.module.css'
 //import {Alert} from '../Alert/Alert'
 
 import {useRef} from 'react'
 import emailjs from '@emailjs/browser'
 import {useSelector, useDispatch} from 'react-redux'
 
-import {openAlert} from '../../Redux/openSlice'
+import {openAlert, closeEmail} from '../../Redux/openSlice'
 
 export const Email = () => {
 	
@@ -29,6 +29,7 @@ export const Email = () => {
 				})
 				e.target.reset()
 	}
+	 //{alert? <Alert /> : null}
 	return(
 	<section>
 	      <div className={s.contForm}>
@@ -46,7 +47,7 @@ export const Email = () => {
 	              Send Message</button>
 	         </form>
 	       </div>
-	       {alert? <Alert /> : null}
+	      
 	     </section>                                         
 	)	
 }
