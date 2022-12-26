@@ -3,7 +3,7 @@ import styles from './Contacts.module.css';
 import {Email} from '../Email/Email'
 import {useDispatch, useSelector} from 'react-redux'
 
-import {openEmail, closeEmail} from '../../Redux/openSlice'
+import {openEmail} from '../../Redux/openSlice'
 
 export function Contacts(){
 	
@@ -11,10 +11,6 @@ export function Contacts(){
 	
 	const selectEmail = state => state.open.email
 	const email = useSelector(selectEmail)
-	React.useEffect(()=>{
-		console.log(email)
-		},[email])
-		
 		
 	const MyData = () =>{
 		return (<>
@@ -38,10 +34,9 @@ export function Contacts(){
  
  return(            
                             <div className={styles.can}>
+                              {!email?<button onClick={()=>dispatch(openEmail())}>Click to email me</button>:null}
                                   {email?<div className={styles.sender}> <Email /></div>:<MyData />}
                                
-                               <button onClick={()=>dispatch(openEmail())}>Send</button>
-
-                 </div>
+                            </div>
     )
 }

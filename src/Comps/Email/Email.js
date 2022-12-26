@@ -33,15 +33,19 @@ export const Email = () => {
 	return(
 	<section className={s.container}>
 	      <button onClick={()=>dispatch(closeEmail())}>X</button>
-	      <div className={s.contForm}>
-	        <h2>Contact me</h2>
+	       <h2 className={s.tit}>Contact me</h2>
+	      <div className={s.form}>
 	        <form ref={form} onSubmit={sendEmail}>
+	             <label  className={s.label} for='Name'>Name</label>
 	             <input className={s.input}
-	                                         type='text' placeholder='FullName' name='user' required/>
+	                                         type='text' placeholder='Name' name='user' required/>
+	              <label  className={s.label} for='Email'>Email</label>
 	             <input className={s.input}
 	                                         type='email' placeholder='Email' name='userEmail' required/>
+	             <label  className={s.label} for='Subject'>Subject</label>
 	             <input className={s.input} 
 	                                         type='text' placeholder='Subject' name='subject' required />
+	   	             <h1 className={s.subtit}>Message</h1>  
 	             <textarea className={s.textarea}
 	                                         name='message' cols='30' rows='5'></textarea>
 	              <button className={s.button} type='submit' onClick={()=>dispatch(openAlert())}>
