@@ -4,9 +4,7 @@
 	text-align: center;
 	margin-top: 10px;
 }
-.sender{
-
-}
+.sender{}
 .label{
 	font-size: 34px;
 	margin: 0px 0px 0px 20%;
@@ -29,16 +27,10 @@
 }
 @media only screen and (max-width: 450px){
 	.can{
-	width:400px;
-	margin:70px 0px 0px -90px;
+	
 	
 }
-.city{
-	position:  relative;
-	top: -390px;
-	left: 120px;
-	font-size: 25px;
-}
+.city{	font-size: 25px;}
 .label{
 	font-size: 25px;
 	margin: 0px 0px 0px 90px;
@@ -50,22 +42,11 @@
 	font-size: 21px;
 	margin: 10px 0px 10px 120px;
 	background: none;
-	
 }
-.dicr{
-	font-size: 21px;
-	margin: 10px 0px 10px 120px;
-	background: none;
-	
-	
-}
+
 .discr:hover{
 	font-size: 22px;
 	margin: 8px 0px 10px 160px;
-}
-.dicr:hover{
-	font-size: 22px;
-	margin: 10px 0px 10px 160px;
 }
 
 }
