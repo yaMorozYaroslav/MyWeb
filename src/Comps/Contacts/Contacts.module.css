@@ -1,16 +1,15 @@
-.sender{
-position: absolute;
-}
 .can{
-	width:800px;
-	margin:70px 0px 0px 180px;
+	width:80%;
 	color: white;
 	text-align: center;
+}
+.sender{
+position: static;
 }
 .label{
 	font-size: 34px;
 	margin: 0px 0px 0px 100px;
-	width: 300px;
+	width: 40%;
 	background: dodgerblue;
 	border-radius: 5px;
 }
@@ -20,24 +19,13 @@ position: absolute;
 	background: black;
 	border-radius: 10px;
 }
-.dicr{
-	font-size: 24px;
-	margin: 10px 0px 10px 200px;
-	background: black;
-	border-radius: 10px;
-}
 .discr:hover{
 	font-size: 26px;
-	margin: 9px 0px 8px 200px;
-}
-.dicr:hover{
-	font-size: 26px;
-	margin: 9px 0px -2px 200px;
+	margin: 8.5px 0px 8.5px 200px;
 }
 .city{
 	font-size: 25px;
 }
-
 @media only screen and (max-width: 450px){
 	.can{
 	width:400px;

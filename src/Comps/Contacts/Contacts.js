@@ -29,7 +29,7 @@ export function Contacts(){
                                                     linkedin.com/in/yaroslav-moroz-4556a8225/</p>
                      
                    <h1 className={styles.label}>GitHub</h1>
-    	          <p className={styles.dicr}>github.com/yaMorozYaroslav</p>
+    	          <p className={styles.discr}>github.com/yaMorozYaroslav</p>
 			      
 			      <h1 className={styles.city}>NS, Dartmouth 2022</h1>
 			      </>)};
@@ -38,8 +38,8 @@ export function Contacts(){
  
  return(            
                             <div className={styles.can}>
-                                  {email?<div className={styles.sender}> <Email /></div>:null}
-                               <MyData />
+                                  {email?<div className={styles.sender}> <Email /></div>:<MyData />}
+                               
                                <button onClick={()=>dispatch(openEmail())}>Send</button>
 
                  </div>
