@@ -1,8 +1,8 @@
 .can{
-	width:80%;
+	width:84%;
 	color: white;
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 .sender{}
 .label{
@@ -26,10 +26,7 @@
 	font-size: 25px;
 }
 @media only screen and (max-width: 450px){
-	.can{
-	
-	
-}
+	.can{width: 100%;}
 .city{	font-size: 25px;}
 .label{
 	font-size: 25px;

@@ -41,7 +41,7 @@ export const Email = () => {
 	             <input className={s.input}
 	                                         type='email' placeholder='Email' name='userEmail' required/>
 	             <label  className={s.label} htmlFor='Subject'>Subject</label>
-	             <input className={s.input} 
+	             <input className={s.inputSub} 
 	                                         type='text' placeholder='Subject' name='subject' required />
 	   	             <h1 className={s.subtit}>Message</h1>  
 	             <textarea className={s.textarea}
