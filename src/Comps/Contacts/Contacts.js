@@ -34,8 +34,12 @@ export function Contacts(){
  
  return(            
                             <div className={styles.can}>
-                              {!email?<button onClick={()=>dispatch(openEmail())}>Click to email me</button>:null}
-                                  {email?<div className={styles.sender}> <Email /></div>:<MyData />}
+                            
+                              {!email?
+								  <button className={styles.clicker} onClick={()=>dispatch(openEmail())}>
+								                                                                                            Click to email me</button>:null}
+								                                                                                            
+                                  {email?<div ><Email /></div>:<MyData />}
                                
                             </div>
     )

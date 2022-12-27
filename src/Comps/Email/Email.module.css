@@ -24,9 +24,15 @@ width: 80%;
 height: 100px;
 }
 .button{
-width: 60%;
-border: 1px solid dodgerblue;
+width: 50%;
+height: 50px;
+margin: 5px;
+font-size: 40px;
+color:white;
+background-color: black;
+border: 2px solid white;
 }
+.button:hover{cursor: pointer;color:black; background-color: white;}
 .tit{
 font-size: 50px;
 writing-mode: vertical-rl;
@@ -34,8 +40,10 @@ text-orientation: mixed;
 background-color: black;
 margin-left: 100%;
 }
-.closer{background-color: red; width: 60px;margin-left: 100%;}
-.closer:hover{cursor:pointer;}
+.closer{width: 60px;margin-left: 100%;color:white;background-color: red;border:2px solid black;}
+.closer0{width: 60px;margin-left: 100%;color:white;background-color: green;border:2px solid black;}
+.closer:hover{cursor:pointer; border:2px solid white;}
+.closer0:hover{cursor:pointer;border:2px solid white}
 @media only screen and (max-width: 850px){
 .label{font-size: 35px}
 .input{width: 100%;}
@@ -45,4 +53,5 @@ margin-left: 100%;
 .input{}
 .tit{margin-left:30%;}
 .closer{margin-left:10%;}
+.closer0{margin-left:10%;}
 }

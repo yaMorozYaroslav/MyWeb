@@ -11,16 +11,17 @@ import {openAlert, closeEmail} from '../../Redux/openSlice'
 
 export const Email = () => {
 	var [flash, setFlash] = React.useState(0)
-	const onFlash = () => setFlash(flash = 1)
-	const offFlash = () => setFlash(flash = 0)
+	function changer(){if(flash===0){setFlash(1)}else{setFlash(0)}}
+	
 	React.useEffect(()=>{
 		const interval = setInterval(()=>{
-			if(flash===0){onFlash()}else{offFlash()}
-			
-			console.log(flash)
-			},3000)
-		},[])
-	
+			changer()
+			},1000)
+			return () => clearInterval(interval)
+		},[flash]) 
+		
+		function opener (){ window.open('https://play.google.com')}
+		
 	const dispatch = useDispatch()
 	const selectAlert = state => state.open.alert
 	const alert = useSelector(selectAlert)
@@ -61,7 +62,8 @@ export const Email = () => {
 	         </form>
 	       </div>
 	       <div>
-	         <button className={s.closer} onClick={()=>dispatch(closeEmail())}>X</button>
+	          <button onClick={opener}>open</button>
+	         <button className={flash?s.closer:s.closer0} onClick={()=>dispatch(closeEmail())}>X</button>
 	         <h2 className={s.tit}>Contact Form</h2>
 	       </div>
 	     </section>                                         

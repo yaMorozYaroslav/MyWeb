@@ -4,7 +4,6 @@
 	text-align: center;
 	margin-top: 15px;
 }
-.sender{}
 .label{
 	font-size: 34px;
 	margin: 0px 0px 0px 20%;
@@ -25,20 +24,29 @@
 .city{
 	font-size: 25px;
 }
+.clicker{
+font-size:24px;
+float: right;
+color: white;
+background-color: green;
+border-radius: 20px;
+
+}
 @media only screen and (max-width: 450px){
-	.can{width: 100%;}
+.can{width: 100%;}
+.clicker{float: none;}
 .city{	font-size: 25px;}
 .label{
 	font-size: 25px;
-	margin: 0px 0px 0px 90px;
-	width: 200px;
+	width: 40%;
+	margin:0%;
 	background: dodgerblue;
 	border-radius: 5px;
 }
 .discr{
 	font-size: 21px;
-	margin: 10px 0px 10px 120px;
 	background: none;
+	margin: 0%;
 }
 
 .discr:hover{
