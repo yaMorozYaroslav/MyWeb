@@ -10,9 +10,9 @@ export const Profile = () => {
 		   <h2 className={s.name}> Jaroslav Moroz, 23 years old</h2>
 		 
         <section className={s.text}>
-                     I'm a self-taught web developer who learned 
-                  how to use the React library by watching online
-                  courses in addition to practicing with the documentation.
+                        I'm a self-taught web developer who learned
+                      to use the React library by practicing with
+                       the documentation in addition to watching online courses.
         </section>
            
           <section className={s.text}>

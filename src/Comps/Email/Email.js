@@ -10,6 +10,16 @@ import {useSelector, useDispatch} from 'react-redux'
 import {openAlert, closeEmail} from '../../Redux/openSlice'
 
 export const Email = () => {
+	var [flash, setFlash] = React.useState(0)
+	const onFlash = () => setFlash(flash = 1)
+	const offFlash = () => setFlash(flash = 0)
+	React.useEffect(()=>{
+		const interval = setInterval(()=>{
+			if(flash===0){onFlash()}else{offFlash()}
+			
+			console.log(flash)
+			},3000)
+		},[])
 	
 	const dispatch = useDispatch()
 	const selectAlert = state => state.open.alert
