@@ -1,7 +1,7 @@
 import React from 'react'
 
 import s from './Email.module.css'
-//import {Alert} from '../Alert/Alert'
+import {Alert} from '../Alert/Alert'
 
 import {useRef} from 'react'
 import emailjs from '@emailjs/browser'
@@ -18,7 +18,15 @@ export const Email = () => {
 			changer()
 			},1000)
 			return () => clearInterval(interval)
-		},[flash]) 
+		},[flash, changer]) 
+		
+		function validateForm() {
+  let x = document.forms["form"]["name"].value;
+  if (x ==="") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
 		
 		function opener (){ window.open('https://play.google.com')}
 		
@@ -40,14 +48,13 @@ export const Email = () => {
 				})
 				e.target.reset()
 	}
-	 //{alert? <Alert /> : null}
 	return(
 	<section className={s.container}>
 	      <div className={s.form}>
 	        <form ref={form} onSubmit={sendEmail}>
 	             <label  className={s.label} htmlFor='Name'>Name</label>
 	             <input className={s.input}
-	                                         type='text' placeholder='Name' name='user' required/>
+	                                         type='text' placeholder='Name' name='name'  required/>
 	              <label  className={s.label} htmlFor='Email'>Email</label>
 	             <input className={s.input}
 	                                         type='email' placeholder='Email' name='userEmail' required/>
@@ -57,7 +64,7 @@ export const Email = () => {
 	   	             <h1 className={s.subtit}>Message</h1>  
 	             <textarea className={s.textarea}
 	                                         name='message' cols='30' rows='5'></textarea>
-	              <button className={s.button} type='submit' onClick={()=>dispatch(openAlert())}>
+	              <button className={s.button} type='submit' onSubmit={validateForm()} onClick={()=>dispatch(openAlert())}>
 	              Send</button>
 	         </form>
 	       </div>
@@ -66,6 +73,7 @@ export const Email = () => {
 	         <button className={flash?s.closer:s.closer0} onClick={()=>dispatch(closeEmail())}>X</button>
 	         <h2 className={s.tit}>Contact Form</h2>
 	       </div>
+	       {alert? <Alert /> : null}
 	     </section>                                         
 	)	
 }
