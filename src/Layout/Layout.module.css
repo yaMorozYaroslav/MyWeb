@@ -50,7 +50,7 @@
 .sheet{}
 }
 @media only screen and (max-width: 450px){
-.nav{  display:grid; grid-template-columns: repeat(2, 50%);}
+.nav{  display:grid; grid-template-columns: repeat(2, 50%);top:62px;}
 .active{height: 40px;}
 .idle{height: 40px;}
 .link{font-size:28px;}
