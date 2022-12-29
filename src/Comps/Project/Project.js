@@ -4,6 +4,7 @@ import itemImg from './itemImg.jpg'
 import picture from './picture.jpg'
 
 export function Project(){
+	function opener (){ window.open('https://play.google.com')}
 	return (<>
 	
 	<div  className={s.container} >
@@ -20,6 +21,7 @@ export function Project(){
 	      later use in token authentication. An authorized user can 
 	      add items to the database and manage those that he added.
 	   </section>
+	   <button onClick={opener}>open</button>
 	   
 	</div>
 	</>)

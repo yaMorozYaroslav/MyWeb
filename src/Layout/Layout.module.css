@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 .nav{
     display: grid;
+    position: fixed;
     grid-template-columns: repeat(4, 25%);
     width: 100%;
+    top:82px;
     background-color: black; 
 }
 .idle{
@@ -10,6 +12,7 @@
 	border: none;
 	background-color: black;
 }
+.idle:hover{border:3px solid white;border-radius: 10px;}
 .active{
     height: 50px;
 	background-color: white;
@@ -18,12 +21,14 @@
    
 }
 .link{
+    display: block;
     font-family: Times, bold;
     font-size: 32px;
     text-decoration: none;
     color:  white; 
 }
 .alink{
+   display: block;
    font-family: Times, bold;
    font-size: 32px;
    text-decoration: none;
@@ -33,6 +38,7 @@
 .outlet{
     display:flex;
     width: 80%;
+    margin-top:140px;
 	border-radius: 10px;
 	background: rgba(0,0,0,0.9);
 }	
@@ -40,6 +46,7 @@
 
 @media only screen and (max-width: 850px){
 .link{font-size:24px;}
+.alink{font-size:26px;}
 .sheet{}
 }
 @media only screen and (max-width: 450px){

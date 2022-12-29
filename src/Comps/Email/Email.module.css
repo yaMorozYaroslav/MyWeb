@@ -10,6 +10,7 @@ font-size: 42px;
 .input{
 width: 80%;
 height: 40px;
+font-size: 24px;
 }
 .inputSub{
 width: 76.5%;
@@ -22,6 +23,7 @@ margin: 0px 0px 0px 0px;
 .textarea{
 width: 80%;
 height: 100px;
+font-size:22px;
 }
 .button{
 width: 50%;
@@ -41,17 +43,28 @@ background-color: black;
 margin-left: 100%;
 }
 .closer{width: 60px;margin-left: 100%;color:white;background-color: red;border:2px solid black;}
-.closer0{width: 60px;margin-left: 100%;color:white;background-color: green;border:2px solid black;}
+.closer0{width: 60px;margin-left: 100%;color:red;background-color: red;border:2px solid black;}
 .closer:hover{cursor:pointer; border:2px solid white;}
-.closer0:hover{cursor:pointer;border:2px solid white}
+.closer0:hover{cursor:pointer;border:2px solid white;}
+
 @media only screen and (max-width: 850px){
-.label{font-size: 35px}
-.input{width: 100%;}
+.tit{margin-left:70%;}
+.closer{margin-left:70%;}
+.closer0{margin-left:70%;}
+.label{margin-left:5%;font-size: 35px;}
+.input{width: 100%;font-size:20px;}
+.inputSub{width:100%;}
+.textarea{width:110%;margin-left:-4.5%;font-size:18px;}
+.button{width:80%;margin-left:5%;}
 }
+
 @media only screen and (max-width: 450px){
 .form{}
 .input{}
-.tit{margin-left:30%;}
-.closer{margin-left:10%;}
-.closer0{margin-left:10%;}
+.tit{margin-left:75%;}
+.closer{margin-left:72%;}
+.closer0{margin-left:72%;}
+.textarea{}
+.button{width:80%;}
 }
+

@@ -1,14 +1,19 @@
 import React from 'react'
-import {closeAlert} from '../../Redux/openSlice'
+import {closeAlert, closeEmail} from '../../Redux/openSlice'
 import {useDispatch} from 'react-redux'
+import {Link} from 'react-router-dom'
+import s from './Alert.module.css'
 
 export const Alert = () => {
 	const dispatch = useDispatch()
-	
+	const double =()=> {
+		dispatch(closeAlert())
+		dispatch(closeEmail())
+		}
 	return(
-	<section>
-	<h1>You've sent the message</h1>
-	<button onClick={()=>dispatch(closeAlert())}>close</button>
+	<section className={s.container}>
+	<h1 className={s.message}>You've sent<br/> the message.</h1>
+	<button className={s.button} onClick={double}>Close</button>
 	</section>
 	)
 	}

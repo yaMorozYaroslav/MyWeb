@@ -1,5 +1,6 @@
 .can{
 	width:84%;
+	height: 1000px;
 	color: white;
 	text-align: center;
 	margin-top: 15px;
@@ -13,13 +14,13 @@
 }
 .discr{
 	font-size: 24px;
-	margin: 10px 0px 10px 40%;
+	margin: 1% 5% 1% 40%;
 	background: black;
 	border-radius: 10px;
 }
 .discr:hover{
-	font-size: 26px;
-	margin: 8.5px 0px 8.5px 40%;
+    color: black;
+	background: white;
 }
 .city{
 	font-size: 25px;
@@ -29,29 +30,36 @@ font-size:24px;
 float: right;
 color: white;
 background-color: green;
+border: 3px solid black;
 border-radius: 20px;
+}
+.clicker:hover{cursor:pointer;border:3px solid white;}
+
+@media only screen and (max-width:850px){
+.label{margin-left:10%;font-size:30px;}
+.discr{margin-left:10%;font-size:22px;}
+.clicker{
+position: absolute;
+margin-left: 5%;
+font-size: 20px;
 
 }
+}
 @media only screen and (max-width: 450px){
-.can{width: 100%;}
-.clicker{float: none;}
+.can{width: 80%;}
+.clicker{float: none; font-size: 18px;margin-top:-0.5%;}
 .city{	font-size: 25px;}
 .label{
-	font-size: 25px;
+	font-size: 23px;
 	width: 40%;
-	margin:0%;
+	margin-left:5%;
 	background: dodgerblue;
 	border-radius: 5px;
 }
 .discr{
-	font-size: 21px;
+    width: 100%;
+	font-size: 20px;
 	background: none;
-	margin: 0%;
+	margin:2% 10% 2% 5%;
 }
-
-.discr:hover{
-	font-size: 22px;
-	margin: 8px 0px 10px 160px;
-}
-
 }
