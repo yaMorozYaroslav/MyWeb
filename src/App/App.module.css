@@ -1,6 +1,6 @@
 .body{
     height: 100%;
-    width: 102.5%;
+    width: 101.2%;
     margin: -8px 0px 0px -8px;
 }
 .intro{
@@ -23,6 +23,9 @@ background-image: url('contacts.jpg');
 background-position: 0px -400px;
 background-size: cover;
 }
+@media only screen and (max-width:850px){
+.body{width: 102.5%;}
+}
 @media only screen and (max-width: 450px){
-body{width:100%;}
+body{width: 104%;}
 }

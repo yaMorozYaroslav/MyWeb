@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './App.module.css'
 import {Header} from '../Comps/Header/Header'
+import {Footer} from '../Comps/Footer/Footer'
 import {Router} from '../Router/Router'
 import {useSelector} from 'react-redux'
 import classnames from 'classnames'
@@ -22,6 +23,7 @@ const section = useSelector(selectSection)
 		                                                              )} > 
        <section className={s.header}><Header /></section>
        <section className={s.router}><Router/></section>
+       <section className={s.footer}><Footer /></section>
        </div>
     </div>
   )
