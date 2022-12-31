@@ -1,9 +1,9 @@
 .can{
 	width:84%;
-	height: 1000px;
+	height: 500px;
 	color: white;
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 20px;
 }
 .label{
 	font-size: 44px;
@@ -24,7 +24,10 @@
 	background: white;
 }
 .city{
-	font-size: 25px;
+	font-size: 28px;
+	color: black;
+	background: white;
+	border-radius: 10px;
 }
 .clicker{
 font-size:24px;
@@ -36,7 +39,11 @@ border-radius: 20px;
 }
 .clicker:hover{cursor:pointer;border:3px solid white;}
 
+@media only screen and (max-width:1250px){.can{height: 570px;margin-top:10px;}}
+
+
 @media only screen and (max-width:850px){
+.can{margin-top:50px;}
 .label{margin-left:10%;font-size:30px;}
 .discr{width:100%;margin-left:10%;font-size:22px;}
 .clicker{

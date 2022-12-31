@@ -4,7 +4,9 @@ import itemImg from './itemImg.jpg'
 import picture from './picture.jpg'
 
 export function Project(){
-	function opener (){ window.open('https://play.google.com')}
+	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
+	function openApp(){window.open('https://thefunnyfair.netlify.app')}
+	function openBack(){window.open('https://back-item.herokuapp.com/')}
 	return (<>
 	
 	<div  className={s.container} >
@@ -21,8 +23,9 @@ export function Project(){
 	      later use in token authentication. An authorized user can 
 	      add items to the database and manage those that he added.
 	   </section>
-	   <button onClick={opener}>open</button>
-	   
+	   <button className={s.opener} onClick={openCode}>Open Application Code on GitHub</button>
+	   <button className={s.opener} onClick={openApp}>Open Deployed Application on Netlify</button>
+	   <button className={s.opener} onClick={openBack}>Open Deployed Backend on Heroku</button>
 	</div>
 	</>)
 	}

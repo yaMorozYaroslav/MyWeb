@@ -27,7 +27,7 @@ export function Contacts(){
                    <h1 className={styles.label}>GitHub</h1>
     	          <p className={styles.discr}>github.com/yaMorozYaroslav</p>
 			      
-			      <h1 className={styles.city}>NS, Dartmouth 2022</h1>
+			      <h1 className={styles.city}>NS, Dartmouth</h1>
 			      </>)};
 
 

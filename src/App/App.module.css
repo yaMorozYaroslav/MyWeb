@@ -25,6 +25,10 @@ background-size: cover;
 }
 @media only screen and (max-width:850px){
 .body{width: 102.5%;}
+
+.intro{
+background-position: 0px 0px;
+}
 }
 @media only screen and (max-width: 450px){
 body{width: 104%;}

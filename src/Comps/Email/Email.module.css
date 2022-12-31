@@ -1,20 +1,23 @@
 .container{
 display: flex;
-margin-left:10%;
+margin:20px 0% 0% 10%;
+
 }
 .form{}
 .label{
-margin-right: 10px;
+margin: 50px 10px 0px 0px;
 font-size: 42px;
 }
 .input{
 width: 80%;
 height: 40px;
+margin: 10px 10px 0px 0px;
 font-size: 24px;
 }
 .inputSub{
 width: 76.5%;
 height: 40px;
+margin: 10px 10px 0px 0px;
 }
 .subtit{
 font-size: 40px;
