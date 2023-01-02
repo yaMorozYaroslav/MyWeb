@@ -1,5 +1,5 @@
-import React from 'react'
-import s from './App.module.css'
+import React from 'react';
+import s from './App.module.css';
 import {Header} from '../Comps/Header/Header'
 import {Footer} from '../Comps/Footer/Footer'
 import {Router} from '../Router/Router'

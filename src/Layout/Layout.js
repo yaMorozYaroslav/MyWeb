@@ -1,12 +1,12 @@
 import React from 'react';
-import {Outlet, Link} from "react-router-dom";
 import s from'./Layout.module.css';
+import {Outlet, Link} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 
 import {useDispatch, useSelector} from 'react-redux'
 import {nowIntro, nowProfile, nowProject, nowContacts} from '../Redux/openSlice'
 
-export const Layout = () => {
+export function Layout(){
 	const location = useLocation();
 	const {pathname} = location;
 	const splitLocation = pathname.split("/")

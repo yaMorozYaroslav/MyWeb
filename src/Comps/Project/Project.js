@@ -7,11 +7,14 @@ export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
 	function openApp(){window.open('https://thefunnyfair.netlify.app')}
 	function openBack(){window.open('https://back-item.herokuapp.com/')}
+	
+	const tablet = window.innerWidth < 863
+
 	return (<>
 	
 	<div  className={s.container} >
 	
-	<img className={s.img} src={itemImg} alt="itemImg" />
+	<img className={tablet?s.img0:s.img} src={itemImg} alt="itemImg" />
 	<img className={s.img} src={picture} alt="oneItem" />
 	
 	 <section className={s.text}>
