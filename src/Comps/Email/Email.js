@@ -24,7 +24,6 @@ export const Email = () => {
 		},[flash]) 
 		return(
 			<section className={s.container}>
-	      <div className={s.form}>
 	        <form ref={form} name='form' onSubmit={sendEmail}>
 	             <label  className={s.label} htmlFor='Name'>Name</label>
 	             <input className={s.input}
@@ -41,7 +40,6 @@ export const Email = () => {
 	              <button className={s.button} type='submit' onSubmit={()=>dispatch(openAlert())}  >
 	              Send</button>
 	         </form>
-	       </div>
 	       <div>
 	         <button className={flash?s.closer:s.closer0} onClick={()=>dispatch(closeEmail())}>X</button>
 	         <h2 className={s.tit}>Contact Form</h2>

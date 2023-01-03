@@ -1,9 +1,7 @@
 .container{
 display: flex;
-margin:20px 0% 0% 10%;
-
+margin:50px 0% 0% 10%;
 }
-.form{}
 .label{
 margin: 50px 10px 0px 0px;
 font-size: 42px;
@@ -11,17 +9,17 @@ font-size: 42px;
 .input{
 width: 80%;
 height: 40px;
-margin: 10px 10px 0px 0px;
+margin: 20px 10px 10px 0px;
 font-size: 24px;
 }
 .inputSub{
 width: 76.5%;
 height: 40px;
-margin: 10px 10px 0px 0px;
+margin: 20px 10px 0px 0px;
 }
 .subtit{
 font-size: 40px;
-margin: 0px 0px 0px 0px;
+margin: 20px 0px 0px 0px;
 }
 .textarea{
 width: 80%;
@@ -43,17 +41,18 @@ font-size: 50px;
 writing-mode: vertical-rl;
 text-orientation: mixed;
 background-color: black;
-margin-left: 100%;
+margin-left: 50%;
 }
-.closer{width: 60px;margin-left: 100%;color:white;background-color: red;border:2px solid black;}
-.closer0{width: 60px;margin-left: 100%;color:red;background-color: red;border:2px solid black;}
+.closer{width: 60px;margin-left: 50%;color:white;background-color: red;border:2px solid black;}
+.closer0{width: 60px;margin-left: 50%;color:red;background-color: red;border:2px solid black;}
 .closer:hover{cursor:pointer; border:2px solid white;}
 .closer0:hover{cursor:pointer;border:2px solid white;}
 
 @media only screen and (max-width: 850px){
-.tit{margin-left:70%;}
-.closer{margin-left:70%;}
-.closer0{margin-left:70%;}
+.container{margin-top:-30px;}
+.tit{margin-left:50%;}
+.closer{margin-left:50%;}
+.closer0{margin-left:50%;}
 .label{margin-left:5%;font-size: 35px;}
 .input{width: 100%;font-size:20px;}
 .inputSub{width:100%;}
@@ -62,12 +61,14 @@ margin-left: 100%;
 }
 
 @media only screen and (max-width: 450px){
-.form{}
-.input{}
-.tit{margin-left:75%;}
-.closer{margin-left:72%;}
-.closer0{margin-left:72%;}
-.textarea{font-size: 22px;}
-.button{width:80%;}
+.input{width: 110%;}
+.inputSub{width:110%;}
+.tit{margin-left:65%;}
+.closer{margin-left:62%;margin-top:10px;}
+.closer0{margin-left:62%;margin-top:10px;}
+.label{font-size: 32px;}
+.subtit{margin-left:15%;}
+.textarea{font-size: 22px;width:120%;}
+.button{width:80%;margin-left:13%;}
 }
 
