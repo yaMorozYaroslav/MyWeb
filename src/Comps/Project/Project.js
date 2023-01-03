@@ -16,7 +16,7 @@ export function Project(){
 	
 	<img className={tablet?s.img0:s.img} src={itemImg} alt="itemImg" />
 	<img className={s.img} src={picture} alt="oneItem" />
-	
+	<div className={s.descAndButs}>
 	 <section className={s.text}>
 	      This is one of my first full stack projects created half a year ago
 	    using NodeJS, ExpressJS, MongoDB, React and Redux.
@@ -26,9 +26,12 @@ export function Project(){
 	      later use in token authentication. An authorized user can 
 	      add items to the database and manage those that he added.
 	   </section>
+	<section className={s.buttons}>   
 	   <button className={s.opener} onClick={openCode}>Open Application Code on GitHub</button>
 	   <button className={s.opener} onClick={openApp}>Open Deployed Application on Netlify</button>
 	   <button className={s.opener} onClick={openBack}>Open Deployed Backend on Heroku</button>
+   </section>
+   </div>
 	</div>
 	</>)
 	}

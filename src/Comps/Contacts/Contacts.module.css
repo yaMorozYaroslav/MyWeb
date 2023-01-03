@@ -14,7 +14,7 @@
 .discr{
     width: 65%;
     margin: 1.5% 5% 1% 30%;
-	font-size: 32px;
+	font-size: 30px;
 	background: black;
 	border-radius: 10px;
 }
@@ -24,7 +24,7 @@
 }
 .city{
     margin-left:20px;
-	font-size: 28px;
+	font-size: 32px;
 	color: black;
 	background: white;
 	border-radius: 10px;
@@ -41,8 +41,9 @@ border-radius: 20px;
 .clicker:hover{cursor:pointer;border:3px solid white;}
 
 @media only screen and (max-width:1105px){.can{height: 680px;margin-top:10px;}
-                                                                                                 .label{margin-top:30px;margin-bottom:10px;}
-                                                                                                 .city{font-size:40px;}}
+                                          .label{margin-top:30px;margin-bottom:10px;}
+                                          .clicker{margin-top:140px}
+                                          .city{font-size:40px;}}
 
 
 @media only screen and (max-width:850px){

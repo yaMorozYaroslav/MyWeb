@@ -1,23 +1,26 @@
 .container{
 	color: white;
-	margin:15px 0px 0px 0px;
+	margin:25px 0px 0px 0px;
 }
 .img{
-    width:49%;
+    width:46%;
     height:220px;
-    border: 3px solid dodgerblue;
-    border-radius: 10px;
+    margin-left:2.5%;
+    border: 3px solid black;
     opacity: 1.0;
     }
  .img0{display:none;}
+ .descAndButs{display:flex;}
  .text{
    width:90%;
    margin-left: 5%;
    text-indent: 10px;
+   font-size:29px;
  }
+ .buttons{}
  .opener{
- width: 60%;
- margin: 2px;
+ width: 70%;
+ margin: 2px 2px 2px 15%;
  font-size: 30px;
  color:black;
  background: white;
@@ -26,4 +29,5 @@
  .opener:hover{cursor: pointer; color:dodgerblue;}
 @media only screen and (max-width: 850px){
 .img{width:80%;height:150px;margin-left:10%;}
+.descAndButs{display: inline;}
 }
