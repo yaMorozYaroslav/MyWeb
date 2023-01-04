@@ -27,9 +27,12 @@ export function Project(){
 	      add items to the database and manage those that he added.
 	   </section>
 	<section className={s.buttons}>   
-	   <button className={s.opener} onClick={openCode}>Open Application Code on GitHub</button>
-	   <button className={s.opener} onClick={openApp}>Open Deployed Application on Netlify</button>
-	   <button className={s.opener} onClick={openBack}>Open Deployed Backend on Heroku</button>
+	   <button className={s.opener} onClick={openCode}>
+	            <span className={s.butText}> Open Application Code on GitHub</span></button>
+	   <button className={s.opener} onClick={openApp}>
+	            <span className={s.butText}>Open Deployed Application on Netlify</span></button>
+	   <button className={s.opener} onClick={openBack}>
+	            <span className={s.butText}>Open Deployed Backend on Heroku</span></button>
    </section>
    </div>
 	</div>
