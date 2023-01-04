@@ -10,7 +10,7 @@ export const Profile = () => {
 		   <h2 className={s.name}> Jaroslav Moroz, 23 years old</h2>
 		 
         <section className={s.text}>
-                        I'm a self-taught web developer who learned
+                        I'm a web developer who learned
                       to use the React library by practicing with
                        the documentation in addition to watching online courses.
         </section>
@@ -29,12 +29,15 @@ export const Profile = () => {
         </section>
         <section className={s.text}> 
                       The prospects of modern web technologies are impressive,
-                       online education and business, together with virtual 
+                       online education and business, together with digital 
                        documents and forms, have improved life beyond 
                        recognition. Human activity can be almost completely
                    transferred to the Internet, which will make any effort
                    in our haste through eternity more efficient. 
-                      This is the future I want to contribute to.
+                      
+        </section>
+        <section className={s.text}>
+               This is the future I want to contribute to.
         </section>
 	       
 	     </div>
