@@ -2,6 +2,9 @@ import React from 'react'
 import s from './Project.module.css'
 import itemImg from './itemImg.jpg'
 import picture from './picture.jpg'
+//import ImageZoom from 'react-image-zoom'
+
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
@@ -9,13 +12,26 @@ export function Project(){
 	function openBack(){window.open('https://back-item.herokuapp.com/')}
 	
 	const tablet = window.innerWidth < 863
-
-	return (<>
+    
+    //<img className={tablet?s.img0:s.img} src={itemImg} alt="itemImg" />
 	
+	return (<>
+	<TransformWrapper initialScale={1}
+                      initialPositionX={300}
+                      initialPositionY={700}>
+    {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+	<>
+	<div className="tools">
+              <button onClick={() => zoomIn()}>+</button>
+              <button onClick={() => zoomOut()}>-</button>
+              <button onClick={() => resetTransform()}>x</button>
+            </div>
+	<TransformComponent><img className={s.img} src={picture} alt="oneItem" /></TransformComponent>
+	</>
+	)}
+	</TransformWrapper>
 	<div  className={s.container} >
 	
-	<img className={tablet?s.img0:s.img} src={itemImg} alt="itemImg" />
-	<img className={s.img} src={picture} alt="oneItem" />
 	<div className={s.descAndButs}>
 	 <section className={s.text}>
 	      This is one of my first full stack projects created half a year ago
