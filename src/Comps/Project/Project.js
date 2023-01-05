@@ -28,11 +28,11 @@ export function Project(){
 	   </section>
 	<section className={s.buttons}>   
 	   <button className={s.opener} onClick={openCode}>
-	            <span className={s.butText}> Open Application Code on GitHub</span></button>
+	            <p className={s.butText}> Open Application Code on GitHub</p></button>
 	   <button className={s.opener} onClick={openApp}>
-	            <span className={s.butText}>Open Deployed Application on Netlify</span></button>
+	            <p className={s.butText}>Open Deployed Application on Netlify</p></button>
 	   <button className={s.opener} onClick={openBack}>
-	            <span className={s.butText}>Open Deployed Backend on Heroku</span></button>
+	            <p className={s.butText}>Open Deployed Backend on Heroku</p></button>
    </section>
    </div>
 	</div>
