@@ -3,6 +3,7 @@ import s from './Project.module.css'
 import itemImg from './itemImg.jpg'
 import picture from './picture.jpg'
 import ImageMagnify from 'react-image-magnify'
+import {TransformWrapper, TransformComponent} from 'react-zoom-pan-pinch'
 
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
@@ -17,34 +18,23 @@ export function Project(){
 	
 		
 	<div  className={s.container} >
-	<ImageMagnify className={s.img} {...{
-    smallImage: {
-        alt: 'Wristwatch by Ted Baker London',
-        isFluidWidth: false,
-        width:500,
-        height:300,
-        src: picture
-    },
-    largeImage: {
-        src: picture,
-        width: 1200,
-        height: 1800
-    }
-}} />
-<ImageMagnify className={s.img} {...{
-    smallImage: {
-        alt: 'Wristwatch by Ted Baker London',
-        isFluidWidth: false,
-        width:300,
-        height:300,
-        src: picture
-    },
-    largeImage: {
-        src: picture,
-        width: 1200,
-        height: 1800
-    }
-}} />
+      <TransformWrapper
+               defaultScale={1}
+               defaultPositionX={100}
+               defaultPositionY={200}>
+         {({ zoomIn, zoomOut, ...rest }) => (
+         <>
+          <div>
+           <button onClick={()=>zoomIn()}>ZoomIn</button>
+           <button onClick={()=>zoomOut()}>ZoomOut</button>
+          </div>
+         <TransformComponent>
+           <img src={picture} style={{width:'50%'}} />
+         </TransformComponent>
+        </>
+       )}
+       </TransformWrapper>
+    
     <img className={s.img} src={picture} alt="oneItem" />
     
 	<div className={s.descAndButs}>
