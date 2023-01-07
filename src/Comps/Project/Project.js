@@ -1,11 +1,7 @@
 import React from 'react'
 import s from './Project.module.css'
-import itemImg from './itemImg.jpg'
-import picture from './picture.jpg'
 
-import ImageMagnify from 'react-image-magnify'
-import {TransformWrapper, TransformComponent} from 'react-zoom-pan-pinch'
-import Zoom from 'react-img-zoom'
+import {LaptopZoom} from './lenses.js'
 
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
@@ -13,23 +9,15 @@ export function Project(){
 	function openBack(){window.open('https://back-item.herokuapp.com/')}
 	
 	const tablet = window.innerWidth < 863
-	console.log(window.innerWidth)
+	const phone = window.innerWidth < 452
+	console.log(window.innerWidth) 
     
-	 //<img className={tablet?s.img0:s.img} src={itemImg} alt="itemImg" />
-	
 	return (<>
 
 	<div  className={s.container} >
-<div className={s.zoom}>   
-      <Zoom
-  img={picture}
-  zoomScale={2}
-  width={400}
-  height={200}
-/>
-</div>
-
-    <img className={s.img} src={picture} alt="oneItem" />
+        <div className={s.zoomCon}>  
+         <LaptopZoom/>
+        </div>
     
 	<div className={s.descAndButs}>
 	 <section className={s.text}>

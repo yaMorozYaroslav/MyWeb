@@ -2,7 +2,8 @@
 	color: white;
 	margin:25px 0px 20px 0px;
 }
-.zoom{width:200px;}
+.zoomCon{margin:2%; display:flex;}
+.zoomImg{}
 .img{
     transition: transform .3s;
     width:45%;
