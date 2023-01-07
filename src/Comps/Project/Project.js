@@ -2,8 +2,10 @@ import React from 'react'
 import s from './Project.module.css'
 import itemImg from './itemImg.jpg'
 import picture from './picture.jpg'
+
 import ImageMagnify from 'react-image-magnify'
 import {TransformWrapper, TransformComponent} from 'react-zoom-pan-pinch'
+import Zoom from 'react-img-zoom'
 
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
@@ -11,30 +13,22 @@ export function Project(){
 	function openBack(){window.open('https://back-item.herokuapp.com/')}
 	
 	const tablet = window.innerWidth < 863
+	console.log(window.innerWidth)
     
 	 //<img className={tablet?s.img0:s.img} src={itemImg} alt="itemImg" />
 	
 	return (<>
-	
-		
+
 	<div  className={s.container} >
-      <TransformWrapper
-               defaultScale={1}
-               defaultPositionX={100}
-               defaultPositionY={200}>
-         {({ zoomIn, zoomOut, ...rest }) => (
-         <>
-          <div>
-           <button onClick={()=>zoomIn()}>ZoomIn</button>
-           <button onClick={()=>zoomOut()}>ZoomOut</button>
-          </div>
-         <TransformComponent>
-           <img src={picture} style={{width:'50%'}} />
-         </TransformComponent>
-        </>
-       )}
-       </TransformWrapper>
-    
+<div className={s.zoom}>   
+      <Zoom
+  img={picture}
+  zoomScale={2}
+  width={400}
+  height={200}
+/>
+</div>
+
     <img className={s.img} src={picture} alt="oneItem" />
     
 	<div className={s.descAndButs}>
