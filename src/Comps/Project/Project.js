@@ -1,24 +1,27 @@
 import React from 'react'
 import s from './Project.module.css'
 
-import {LaptopZoom,TabletZoom,PhoneZoom} from './lenses.js'
+import {LgLaptopZoom,SmLaptop,TabletZoom,SmPhoneZoom,LgPhoneZoom} from './lenses.js'
 
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
 	function openApp(){window.open('https://thefunnyfair.netlify.app')}
 	function openBack(){window.open('https://back-item.herokuapp.com/')}
 	
-	const laptop = window.innerWidth > 863
-	const tablet = window.innerWidth < 1250
-	const phone = window.innerWidth < 452
+	const laptop = window.innerWidth > 1250
+	const tablet = window.innerWidth < 1250 && window.innerWidth > 650
+	const lgPhone = window.innerWidth < 650 && window.innerWidth > 450
+	const smPhone = window.innerWidth < 450
 	console.log(window.innerWidth) 
     
 	return (<>
 
 	<div  className={s.container} >
         <div className={s.zoomCon}>  
-         {laptop?<LaptopZoom/>:null}
+         {laptop?<LgLaptopZoom/>:null}
          {tablet?<TabletZoom/>:null}
+         {lgPhone?<LgPhoneZoom/>:null}
+         {smPhone?<SmPhoneZoom/>:null}
         </div>
     
 	<div className={s.descAndButs}>

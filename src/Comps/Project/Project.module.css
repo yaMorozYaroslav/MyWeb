@@ -25,6 +25,7 @@
 .butText{margin:5px 5px 5px 5px;}
 @media only screen and (max-width: 1250px){
 .zoomCon{}
-.zoomImg0{display:none;}
 .descAndButs{display: inline;}
+.description{width:90%;}
+.buttons{margin-top:10px;}
 }

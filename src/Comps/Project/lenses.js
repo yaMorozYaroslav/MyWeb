@@ -4,16 +4,15 @@ import s from './Project.module.css'
 import itemImg from './itemImg.jpg'
 import picture from './picture.jpg'
 
-export const LaptopZoom = () => 
- <><section className={s.zoomImg0}>  <Zoom
+export const LgLaptopZoom = () => 
+ <>  <Zoom
   img={itemImg}
   transitionTime={0.5}
   zoomScale={1.5}
   width={500}
   height={220}
-     /> </section>
+     /> 
      <Zoom
-  className={s.zoomImg1}
   img={picture}
   transitionTime={0.5}
   zoomScale={1.5}
@@ -21,7 +20,15 @@ export const LaptopZoom = () =>
   height={220}
      />
  </>
- 
+ export const SmLaptopZoom = () =>
+ <>   <Zoom
+  img={picture}
+  transitionTime={0.5}
+  zoomScale={1.5}
+  width={600}
+  height={300}
+     />
+ </>
  export const TabletZoom = () =>
  <>
  <Zoom
@@ -33,13 +40,23 @@ export const LaptopZoom = () =>
   height={200} />
  </>
  
- export const PhoneZoom = () => 
+ export const LgPhoneZoom = () =>
  <>
  <Zoom
   className={s.zoomImg}
   img={picture}
   transitionTime={0.5}
-  zoomScale={1.5}
-  width={500}
-  height={220} />
+  zoomScale={3}
+  width={400}
+  height={200} />
+ </>
+ export const SmPhoneZoom = () => 
+ <>
+ <Zoom
+  className={s.zoomImg}
+  img={picture}
+  transitionTime={0.5}
+  zoomScale={3}
+  width={300}
+  height={200} />
  </>
