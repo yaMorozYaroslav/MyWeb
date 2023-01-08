@@ -5,16 +5,15 @@ import itemImg from './itemImg.jpg'
 import picture from './picture.jpg'
 
 export const LaptopZoom = () => 
- <>  <Zoom
-  className={s.zoomImg}
+ <><section className={s.zoomImg0}>  <Zoom
   img={itemImg}
   transitionTime={0.5}
   zoomScale={1.5}
   width={500}
   height={220}
-     /> 
-      <Zoom
-  className={s.zoomImg}
+     /> </section>
+     <Zoom
+  className={s.zoomImg1}
   img={picture}
   transitionTime={0.5}
   zoomScale={1.5}
@@ -24,6 +23,17 @@ export const LaptopZoom = () =>
  </>
  
  export const TabletZoom = () =>
+ <>
+ <Zoom
+  className={s.zoomImg}
+  img={picture}
+  transitionTime={0.5}
+  zoomScale={2}
+  width={500}
+  height={200} />
+ </>
+ 
+ export const PhoneZoom = () => 
  <>
  <Zoom
   className={s.zoomImg}

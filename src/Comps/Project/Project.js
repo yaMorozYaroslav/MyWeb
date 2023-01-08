@@ -1,14 +1,15 @@
 import React from 'react'
 import s from './Project.module.css'
 
-import {LaptopZoom} from './lenses.js'
+import {LaptopZoom,TabletZoom,PhoneZoom} from './lenses.js'
 
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
 	function openApp(){window.open('https://thefunnyfair.netlify.app')}
 	function openBack(){window.open('https://back-item.herokuapp.com/')}
 	
-	const tablet = window.innerWidth < 863
+	const laptop = window.innerWidth > 863
+	const tablet = window.innerWidth < 1250
 	const phone = window.innerWidth < 452
 	console.log(window.innerWidth) 
     
@@ -16,11 +17,12 @@ export function Project(){
 
 	<div  className={s.container} >
         <div className={s.zoomCon}>  
-         <LaptopZoom/>
+         {laptop?<LaptopZoom/>:null}
+         {tablet?<TabletZoom/>:null}
         </div>
     
 	<div className={s.descAndButs}>
-	 <section className={s.text}>
+	 <section className={s.description}>
 	      This is one of my first full stack projects created half a year ago
 	    using NodeJS, ExpressJS, MongoDB, React and Redux.
 	      
@@ -30,12 +32,12 @@ export function Project(){
 	      add items to the database and manage those that he added.
 	   </section>
 	<section className={s.buttons}>   
-	   <button className={s.opener} onClick={openCode}>
+	   <button className={s.butt} onClick={openCode}>
 	            <p className={s.butText}> Open Application Code on GitHub</p></button>
-	   <button className={s.opener} onClick={openApp}>
+	   <button className={s.butt} onClick={openApp}>
 	            <p className={s.butText}>Open Deployed Application on Netlify</p></button>
 	   <button className={s.opener} onClick={openBack}>
-	            <p className={s.butText}>Open Deployed Backend on Heroku</p></button>
+	            <p className={s.butt}>Open Deployed Backend on Heroku</p></button>
    </section>
    </div>
 	</div>
