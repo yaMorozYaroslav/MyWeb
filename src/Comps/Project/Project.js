@@ -1,15 +1,16 @@
 import React from 'react'
 import s from './Project.module.css'
 
-import {LgLaptopZoom,SmLaptop,TabletZoom,SmPhoneZoom,LgPhoneZoom} from './lenses.js'
+import {LgLaptopZoom,SmLaptopZoom,TabletZoom,SmPhoneZoom,LgPhoneZoom} from './lenses.js'
 
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
 	function openApp(){window.open('https://thefunnyfair.netlify.app')}
 	function openBack(){window.open('https://back-item.herokuapp.com/')}
 	
-	const laptop = window.innerWidth > 1250
-	const tablet = window.innerWidth < 1250 && window.innerWidth > 650
+	const lgLaptop = window.innerWidth > 1250
+	const smLaptop = window.innerWidth < 1250 && window.innerWidth > 850
+	const tablet = window.innerWidth < 850 && window.innerWidth > 650 
 	const lgPhone = window.innerWidth < 650 && window.innerWidth > 450
 	const smPhone = window.innerWidth < 450
 	console.log(window.innerWidth) 
@@ -18,7 +19,8 @@ export function Project(){
 
 	<div  className={s.container} >
         <div className={s.zoomCon}>  
-         {laptop?<LgLaptopZoom/>:null}
+         {lgLaptop?<LgLaptopZoom/>:null}
+         {smLaptop?<SmLaptopZoom/>:null}
          {tablet?<TabletZoom/>:null}
          {lgPhone?<LgPhoneZoom/>:null}
          {smPhone?<SmPhoneZoom/>:null}
@@ -39,8 +41,8 @@ export function Project(){
 	            <p className={s.butText}> Open Application Code on GitHub</p></button>
 	   <button className={s.butt} onClick={openApp}>
 	            <p className={s.butText}>Open Deployed Application on Netlify</p></button>
-	   <button className={s.opener} onClick={openBack}>
-	            <p className={s.butt}>Open Deployed Backend on Heroku</p></button>
+	   <button className={s.butt} onClick={openBack}>
+	            <p className={s.butText}>Open Deployed Backend on Heroku</p></button>
    </section>
    </div>
 	</div>

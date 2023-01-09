@@ -3,7 +3,7 @@
 	margin:25px 0px 20px 0px;
 }
 .zoomCon{margin:2%; display:flex;justify-content:center;}
-.descAndButs{display:flex;}
+.descAndButs{display:flex;text-align: center;}
 
 .description{
    width:55%;
@@ -24,8 +24,14 @@
 .butt:hover{cursor: pointer; color:dodgerblue;}
 .butText{margin:5px 5px 5px 5px;}
 @media only screen and (max-width: 1250px){
+.container{}
 .zoomCon{}
 .descAndButs{display: inline;}
-.description{width:90%;}
-.buttons{margin-top:10px;}
+.description{width:90%;font-size:35px;}
+.buttons{width: 90%; margin-top:10px;}
+.butt{font-size:40px};
+}
+@media only screen and (max-width: 850px){
+.description{font-size:32px;}
+.butt{font-size:35px;}
 }

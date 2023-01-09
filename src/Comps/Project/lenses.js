@@ -32,28 +32,25 @@ export const LgLaptopZoom = () =>
  export const TabletZoom = () =>
  <>
  <Zoom
-  className={s.zoomImg}
   img={picture}
   transitionTime={0.5}
   zoomScale={2}
   width={500}
-  height={200} />
+  height={300} />
  </>
  
  export const LgPhoneZoom = () =>
  <>
  <Zoom
-  className={s.zoomImg}
   img={picture}
   transitionTime={0.5}
   zoomScale={3}
-  width={400}
-  height={200} />
+  width={450}
+  height={250} />
  </>
  export const SmPhoneZoom = () => 
  <>
  <Zoom
-  className={s.zoomImg}
   img={picture}
   transitionTime={0.5}
   zoomScale={3}
