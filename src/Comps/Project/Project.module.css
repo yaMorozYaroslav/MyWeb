@@ -2,27 +2,27 @@
 	color: white;
 	margin:25px 0px 20px 0px;
 }
-.zoomCon{margin:2%; display:flex;justify-content:center;}
+.zoomCon{margin:1% 2% 3% 1.5%; display:flex;justify-content:center;}
 .descAndButs{display:flex;text-align: center;}
 
 .description{
    width:55%;
    margin-left: 3%;
    text-indent: 20px;
-   font-size:30px;
+   font-size:31px;
  }
- .buttons{width:35%;margin:-25px 0px 0px 2.5%;}
+ .buttons{width:35%;margin:-15px 0px 0px 2.5%;}
  
  .butt{
  margin: 15px 2px 2px 2px;
- font-size: 30px;
+ font-size: 29px;
  color:black;
  background: white;
  border:3px solid black;
  border-radius:5px;
  }
 .butt:hover{cursor: pointer; color:dodgerblue;}
-.butText{margin:5px 5px 5px 5px;}
+.butText{margin:10px 10px 10px 10px;}
 @media only screen and (max-width: 1250px){
 .container{}
 .zoomCon{}
@@ -32,6 +32,7 @@
 .butt{font-size:40px};
 }
 @media only screen and (max-width: 850px){
-.description{font-size:32px;}
-.butt{font-size:35px;}
+.zoomCon{margin-left:2%;}
+.description{width:85%;margin-left:7%;font-size:31px;}
+.butt{font-size:34px;}
 }

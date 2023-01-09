@@ -8,16 +8,16 @@ export const LgLaptopZoom = () =>
  <>  <Zoom
   img={itemImg}
   transitionTime={0.5}
-  zoomScale={1.5}
+  zoomScale={2}
   width={500}
-  height={220}
+  height={230}
      /> 
      <Zoom
   img={picture}
   transitionTime={0.5}
-  zoomScale={1.5}
+  zoomScale={2}
   width={500}
-  height={220}
+  height={230}
      />
  </>
  export const SmLaptopZoom = () =>
@@ -44,7 +44,7 @@ export const LgLaptopZoom = () =>
  <Zoom
   img={picture}
   transitionTime={0.5}
-  zoomScale={3}
+  zoomScale={2.5}
   width={450}
   height={250} />
  </>
@@ -53,7 +53,7 @@ export const LgLaptopZoom = () =>
  <Zoom
   img={picture}
   transitionTime={0.5}
-  zoomScale={3}
+  zoomScale={2.5}
   width={300}
   height={200} />
  </>
