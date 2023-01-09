@@ -55,5 +55,5 @@ export const LgLaptopZoom = () =>
   transitionTime={0.5}
   zoomScale={2.5}
   width={300}
-  height={200} />
+  height={220} />
  </>
