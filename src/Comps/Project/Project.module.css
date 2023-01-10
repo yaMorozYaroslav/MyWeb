@@ -37,5 +37,6 @@
 .butt{font-size:34px;}
 }
 @media only screen and (max-width:450px){
-
+.description{width:80%;font-size:27px;}
+.butt{font-size:30px;}
 }

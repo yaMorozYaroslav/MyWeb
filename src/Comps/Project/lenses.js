@@ -5,28 +5,28 @@ import itemImg from './itemImg.jpg'
 import picture from './picture.jpg'
 
 export const LgLaptopZoom = () => 
- <>  <Zoom
+ <> <section style={{margin:'5px'}}> <Zoom
   img={itemImg}
   transitionTime={0.5}
   zoomScale={2}
   width={500}
-  height={230}
-     /> 
-     <Zoom
+  height={240}
+     /> </section>
+    <section style={{margin: '5px'}}> <Zoom
   img={picture}
   transitionTime={0.5}
   zoomScale={2}
   width={500}
-  height={230}
-     />
+  height={240}
+     /> </section>
  </>
  export const SmLaptopZoom = () =>
  <>   <Zoom
   img={picture}
   transitionTime={0.5}
   zoomScale={1.5}
-  width={600}
-  height={300}
+  width={650}
+  height={350}
      />
  </>
  export const TabletZoom = () =>
@@ -55,5 +55,5 @@ export const LgLaptopZoom = () =>
   transitionTime={0.5}
   zoomScale={2.5}
   width={300}
-  height={220} />
+  height={180} />
  </>
