@@ -1,6 +1,6 @@
 .container{
 	color: white;
-	margin:25px 0px 20px 0px;
+	margin:10px 0px 30px 0px;
 }
 .zoomCon{margin:1% 2% 3% 1.5%; display:flex;justify-content:center;}
 .descAndButs{display:flex;text-align: center;}
@@ -14,7 +14,7 @@
  .buttons{width:35%;margin:-15px 0px 0px 2.5%;}
  
  .butt{
- margin: 15px 2px 2px 2px;
+ margin: 15px 2px 2px 20px;
  font-size: 29px;
  color:black;
  background: white;
@@ -37,6 +37,6 @@
 .butt{font-size:34px;}
 }
 @media only screen and (max-width:450px){
-.description{width:80%;font-size:27px;}
-.butt{font-size:30px;}
+.description{width:90%;margin-left:5%;font-size:27px;}
+.butt{font-size:25px;}
 }

@@ -24,7 +24,7 @@ export const LgLaptopZoom = () =>
  <>   <Zoom
   img={picture}
   transitionTime={0.5}
-  zoomScale={1.5}
+  zoomScale={1.8}
   width={650}
   height={350}
      />
@@ -44,7 +44,7 @@ export const LgLaptopZoom = () =>
  <Zoom
   img={picture}
   transitionTime={0.5}
-  zoomScale={2.5}
+  zoomScale={2.3}
   width={450}
   height={250} />
  </>
