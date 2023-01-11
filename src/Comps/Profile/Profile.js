@@ -7,7 +7,8 @@ export const Profile = () => {
 		
 		   <div className={s.pic}/>
 		   
-		   <h2 className={s.name}> Jaroslav Moroz, 23 years old</h2>
+		   <h2 className={s.name}> Yaroslav Moroz</h2>
+		   <h2 className={s.age}>23 years old</h2>
 		 
         <section className={s.text}>
                         I'm a web developer who learned
@@ -16,9 +17,9 @@ export const Profile = () => {
         </section>
            
           <section className={s.text}>
-                      The desire to understand the big picture
-                   inspired me to study the backend and create 
-                   a REST API that provides authentication.
+                      The desire to cover the entire development process
+                      inspired me to explore the backend and create
+                      a REST API that provides authentication.
           </section>
           
         <section className={s.text}>

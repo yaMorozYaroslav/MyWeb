@@ -3,12 +3,13 @@
 .container{
 	color: white;
 	font-family: 'Playfair Display', serif;
+	margin: 0px 0px 20px 0px;
 }
 .pic{
-float: left;
+float: right;
 height:330px;
 width:220px;
-margin: 15px;
+margin: 50px 5% 15px 5%;
 background-image: url('./myPhoto.jpg');
 background-size: cover;
 border: 3px solid white;
@@ -16,12 +17,22 @@ border-radius:  5px;
 }
 .name{
 font-size: 40px;
+text-align:center;
+}
+.age{
+margin-top:-40px;
+font-size:40px;
+text-align:right
 }
 .text{
+margin:10px 40px 0px 40px;
 font-size:30px;
 text-indent: 50px;
 }
-
+@media only screen and (max-width: 850px){
+.pic{height:300px;width:200px;}
+.name{font-size:40px;text-align:center}
+}
 @media only screen and (max-width: 450px){
 	.container{margin-top:24px;	}
 	
@@ -30,11 +41,10 @@ text-indent: 50px;
      width: 140px;
 	}
 	.name{
-		font-size: 24px;
+	font-size: 24px;
 	}
 	.text{
-		font-size: 16px;
-		
+	font-size: 16px;	
 	}
 	
 }
