@@ -9,14 +9,14 @@ export const LgLaptopZoom = () =>
   img={itemImg}
   transitionTime={0.5}
   zoomScale={1.8}
-  width={500}
+  width={490}
   height={240}
      /> </section>
     <section style={{margin: '5px'}}> <Zoom
   img={picture}
   transitionTime={0.5}
   zoomScale={1.8}
-  width={500}
+  width={490}
   height={240}
      /> </section>
  </>

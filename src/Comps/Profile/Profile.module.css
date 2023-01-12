@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
 .container{
+    width:90%;
 	color: white;
 	font-family: 'Playfair Display', serif;
-	margin: 0px 0px 20px 0px;
+	margin: 0px 0px 20px 5%;
 }
 .pic{
 float: right;
 height:330px;
 width:220px;
-margin: 50px 5% 15px 5%;
+margin: 50px 6% 15px 5%;
 background-image: url('./myPhoto.jpg');
 background-size: cover;
 border: 3px solid white;
@@ -20,18 +21,23 @@ font-size: 40px;
 text-align:center;
 }
 .age{
-margin-top:-40px;
+margin:-40px 0px 25px 40%;
 font-size:40px;
-text-align:right
 }
 .text{
-margin:10px 40px 0px 40px;
+margin:15px 40px 0px 40px;
 font-size:30px;
 text-indent: 50px;
 }
+@media only screen and (max-width: 1250px){
+.name{margin-left:5%;text-align:left;}
+.age{margin-left:20%;}
+}
 @media only screen and (max-width: 850px){
 .pic{height:300px;width:200px;}
-.name{font-size:40px;text-align:center}
+.name{font-size:36px;text-align:center;}
+.age{font-size:36px;}
+.text{font-size:28px;}
 }
 @media only screen and (max-width: 450px){
 	.container{margin-top:24px;	}

@@ -4,11 +4,11 @@ export const Profile = () => {
 	return <>
 	            
 	  <div  className={s.container}> 
-		
-		   <div className={s.pic}/>
 		   
-		   <h2 className={s.name}> Yaroslav Moroz</h2>
+		   <h2 className={s.name}> Yaroslav Moroz,</h2>
 		   <h2 className={s.age}>23 years old</h2>
+		   
+		   <div className={s.pic}/>
 		 
         <section className={s.text}>
                         I'm a web developer who learned

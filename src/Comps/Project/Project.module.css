@@ -12,14 +12,14 @@
    font-size:31px;
  }
  .text{
-   text-indent:10%;
-   margin:5px 0px 15px -2%;
+   text-indent:5%;
+   margin:5px 5% 15px 2%;
    
  }
- .buttons{width:38.5%;margin:5px 0px 0px 1%;}
+ .buttons{width:38.5%;margin:5px 0px 0px 0%;}
  
  .butt{
- margin: 15px 2px 2px 20px;
+ margin: 20px 2px 2px 20px;
  font-size: 29px;
  color:black;
  background: white;
@@ -32,8 +32,8 @@
 .container{}
 .zoomCon{}
 .descAndButs{display: inline;}
-.description{width:90%;font-size:35px;}
-.buttons{width: 90%; margin-top:10px;}
+.description{width:90%;margin-left:5%;font-size:35px;}
+.buttons{width: 90%; margin-top:10px;margin-left:2.5%;}
 .butt{font-size:40px};
 }
 @media only screen and (max-width: 850px){
