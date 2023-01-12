@@ -26,16 +26,22 @@ export function Project(){
          {smPhone?<SmPhoneZoom/>:null}
         </div>
     
-	<div className={s.descAndButs}>
-	 <section className={s.description}>
+  <div className={s.descAndButs}>
+	<div className={s.description}>
+	  
+	 <section className={s.text}>
 	      This is one of my first full stack projects created half a year ago
-	    using NodeJS, ExpressJS, MongoDB, React and Redux.
-	      
+	    using NodeJS, ExpressJS, MongoDB, React and Redux.</section>
+	    
+	 <section className={s.text}>   
 	      There is a registration that allows you to store the name, 
 	      email address and encrypted password in MongoDB for 
-	      later use in token authentication. An authorized user can 
-	      add items to the database and manage those that he added.
-	   </section>
+	      later use in token authentication.              </section>
+	       
+	 <section className={s.text}> 
+	      An authorized user can add items to the database and 
+	      manage those that he added.                     </section>
+	 </div>
 	<section className={s.buttons}>   
 	   <button className={s.butt} onClick={openCode}>
 	            <p className={s.butText}> Open Application Code on GitHub</p></button>
