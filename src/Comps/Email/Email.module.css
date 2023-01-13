@@ -61,14 +61,14 @@ margin-left: 50%;
 }
 
 @media only screen and (max-width: 450px){
-.input{width: 110%;}
-.inputSub{width:110%;}
-.tit{margin-left:65%;}
-.closer{margin-left:62%;margin-top:10px;}
-.closer0{margin-left:62%;margin-top:10px;}
-.label{font-size: 32px;}
-.subtit{margin-left:15%;}
-.textarea{font-size: 22px;width:120%;}
-.button{width:80%;margin-left:13%;}
+.input{width: 125%;margin-left:3%;}
+.inputSub{width:125%;margin-left:3%;}
+.tit{margin-left:77%;}
+.closer{margin-left:75%;margin-top:10px;}
+.closer0{margin-left:75%;margin-top:10px;}
+.label{margin-bottom:-5%;font-size: 32px;}
+.subtit{margin-left:20%;}
+.textarea{font-size: 22px;width:140%;}
+.button{width:80%;margin-left:25%;}
 }
 
