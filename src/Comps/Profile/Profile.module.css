@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
 .container{
-    width:90%;
-	color: white;
-	font-family: 'Playfair Display', serif;
-	margin: 0px 0px 20px 5%;
+width:90%;
+color: white;
+font-family: 'Playfair Display', serif;
+margin: 0px 0px 20px 5%;
 }
 .pic{
 float: right;
 height:330px;
 width:220px;
-margin: 50px 6% 15px 5%;
+margin: -100px 6% 15px 5%;
 background-image: url('./myPhoto.jpg');
 background-size: cover;
 border: 3px solid white;
@@ -34,24 +34,18 @@ text-indent: 50px;
 .age{margin-left:20%;}
 }
 @media only screen and (max-width: 850px){
-.pic{height:300px;width:200px;}
-.name{font-size:36px;text-align:center;}
+.pic{margin-top:10px;height:300px;width:200px;}
+.name{font-size:36px;text-align:left;}
 .age{font-size:36px;}
 .text{font-size:28px;}
 }
 @media only screen and (max-width: 450px){
-	.container{margin-top:24px;	}
-	
-	.pic{
-     height: 200px;
-     width: 140px;
-	}
-	.name{
-	font-size: 24px;
-	}
-	.text{
-	font-size: 16px;	
-	}
+	.container{width:100%;margin-top:24px;margin-left:-6%;	}
+	.pic{margin-top:5px;margin-right:1.5%;height: 160px;width: 100px;}
+	.pic:hover{position:absolute;top:250px;height:500px;width:100%;;}
+	.name{margin-left:0%;font-size: 28px;}
+	.age{margin-top:-30px;margin-left:50%;font-size: 28px;}
+	.text{width:89%;font-size: 18px;text-indent:30px;}
 	
 }
 
