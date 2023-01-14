@@ -18,9 +18,10 @@
 }
 @media only screen and (max-width: 450px){
 .container{   
-    width:90%;
-    margin-left: 3%;
-    font-size: 21px;
+    width:94%;
+    margin-top:40px;
+    margin-left: 2.5%;
+    font-size: 22px;
 }
-.text{text-indent:20px;}
+.text{text-indent: 10px;}
 }
