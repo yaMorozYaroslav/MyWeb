@@ -19,7 +19,7 @@ margin: 20px 10px 0px 0px;
 }
 .subtit{
 font-size: 40px;
-margin: 20px 0px 0px 0px;
+margin: 20px 0px 5px 0px;
 }
 .textarea{
 width: 80%;
@@ -47,7 +47,10 @@ margin-left: 50%;
 .closer0{width: 60px;margin-left: 50%;color:red;background-color: red;border:2px solid black;}
 .closer:hover{cursor:pointer; border:2px solid white;}
 .closer0:hover{cursor:pointer;border:2px solid white;}
-
+@media only screen and (max-width: 1090px){
+.input{margin-top:5px;}
+.inputSub{margin-top:5px;}
+}
 @media only screen and (max-width: 850px){
 .container{margin-top:-30px;}
 .tit{margin-left:50%;}
