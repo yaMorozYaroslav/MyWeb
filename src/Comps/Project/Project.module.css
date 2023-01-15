@@ -3,7 +3,7 @@
 	margin:10px 0px 30px 0px;
 }
 .zoomCon{margin:20px 2% 20px 1.5%; display:flex;justify-content:center;}
-.descAndButs{display:flex;text-align: center;}
+.descAndButs{display:flex;flex-direction:row-reverse;text-align: center;}
 
 .description{
    width:55%;

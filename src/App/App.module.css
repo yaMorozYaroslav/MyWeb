@@ -35,10 +35,14 @@ background-size: cover;
 .body{width: 103.5%;}
 .intro{background-position: 0px -200px;}
 }
+@media only screen and (max-width:750px){
+.profile{background-position:-400px -200px;}}
 @media only screen and (max-width:600px){
 .intro{background-position: -300px -100px;}
+.profile{background-position: -500px -300px;}
 }
 @media only screen and (max-width: 450px){
 .body{width: 106%;}
 .intro{background-position: -200px -100px;}
+.profile{background-position: -550px -300px;}
 }
