@@ -9,14 +9,14 @@
     background-size: cover;
 }
 .profile{
-  background-image: url('profile.jpg');
-    background-position: 0px -150px;
+    background-image: url('profile.jpg');
+    background-position: 0px -270px;
     background-size: cover;
 }
 .project{
-  background-image: url('project.jpg');
-  background-position:0px -400px;
-  background-size:cover;
+    background-image: url('project.jpg');
+    background-position:0px -400px;
+    background-size:cover;
 }
 .contacts{
 background-image: url('contacts.jpg');
@@ -25,17 +25,20 @@ background-size: cover;
 }
 @media only screen and (max-width:1250px){
 .intro{background-position:0px -400px;}
+.profile{background-position:0px -220px;}
 }
 @media only screen and (max-width:1000px){
 .intro{background-position:0px -300px;}
+.profile{background-position:-70px -200px;}
 }
 @media only screen and (max-width:850px){
 .body{width: 103.5%;}
-
-.intro{
-background-position: 0px 0px;
+.intro{background-position: 0px -200px;}
 }
+@media only screen and (max-width:600px){
+.intro{background-position: -300px -100px;}
 }
 @media only screen and (max-width: 450px){
-body{width: 97%;}
+.body{width: 106%;}
+.intro{background-position: -200px -100px;}
 }
