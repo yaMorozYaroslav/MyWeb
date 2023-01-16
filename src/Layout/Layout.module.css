@@ -46,15 +46,20 @@
 
 
 @media only screen and (max-width: 850px){
-.link{font-size:24px;}
-.alink{font-size:26px;}
+.link{font-size:28px;}
+.alink{font-size:29px;}
 .sheet{}
 }
 @media only screen and (max-width: 600px){
-.nav{  display:grid; grid-template-columns: repeat(2, 48.5%);top:62px;}
+.nav{  display:grid; grid-template-columns: repeat(2, 48.5%);top:72px;}
 .active{height: 40px;}
 .idle{height: 40px;}
 .link{font-size:28px;}
 .outlet{width:100%;}
 .sheet{width:100%;}
+}
+@media only screen and (max-width:450px){
+.nav{top:65px;}
+.link{font-size:26px;}
+.alink{font-size:27px;}
 }

@@ -20,29 +20,37 @@
 }
 .contacts{
 background-image: url('contacts.jpg');
-background-position: 0px -400px;
+background-position: 60px -455px;
 background-size: cover;
 }
 @media only screen and (max-width:1250px){
 .intro{background-position:0px -400px;}
 .profile{background-position:0px -220px;}
+.contacts{background-position:0px -300px;}
 }
 @media only screen and (max-width:1000px){
 .intro{background-position:0px -300px;}
 .profile{background-position:-70px -200px;}
+.project{background-position:-300px -200px;}
 }
 @media only screen and (max-width:850px){
 .body{width: 103.5%;}
 .intro{background-position: 0px -200px;}
+.contacts{background-position:0px -100px;}
 }
 @media only screen and (max-width:750px){
-.profile{background-position:-400px -200px;}}
+.profile{background-position:-400px -200px;}
+}
 @media only screen and (max-width:600px){
 .intro{background-position: -300px -100px;}
 .profile{background-position: -500px -300px;}
+.project{background-position:-500px -200px;}
+.contacts{background-position: -0px -100px;}
 }
 @media only screen and (max-width: 450px){
 .body{width: 106%;}
 .intro{background-position: -200px -100px;}
 .profile{background-position: -550px -300px;}
+.project{background-position: -420px -200px;}
+.contacts{background-position: -80px -135px;}
 }

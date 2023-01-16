@@ -13,7 +13,7 @@ export function Project(){
 	const tablet = window.innerWidth < 850 && window.innerWidth > 650 
 	const lgPhone = window.innerWidth < 650 && window.innerWidth > 450
 	const smPhone = window.innerWidth < 450
-	console.log(window.innerWidth) 
+	//console.log(window.innerWidth) 
     
 	return (<>
 

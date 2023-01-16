@@ -22,9 +22,9 @@ export function Layout(){
 	   if(splitLocation[1]==="project") dispatch(nowProject())
 	   if(splitLocation[1]==="contacts")dispatch(nowContacts())
 		},[location, dispatch, splitLocation])
-	React.useEffect(()=>{
+	/*React.useEffect(()=>{
 	    if( section!==null) console.log(section)
-		},[section])
+		},[section])*/
 	
 	const Linker =({text, route,location})=>
 	 <Link className={splitLocation[1]===location?s.alink:s.link} to={route} >{text}</Link>
