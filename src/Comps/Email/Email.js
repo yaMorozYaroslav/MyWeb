@@ -27,10 +27,10 @@ export const Email = () => {
 	        <form ref={form} name='form' onSubmit={sendEmail}>
 	             <label  className={s.label} htmlFor='Name'>Name</label>
 	             <input className={s.input}
-	                                         type='text' placeholder='Name' name='name'  required/>
+	                                         type='text' placeholder='Name' name='user_name'  required/>
 	              <label  className={s.label} htmlFor='Email'>Email</label>
 	             <input className={s.input}
-	                                         type='email' placeholder='Email' name='userEmail' required/>
+	                                         type='email' placeholder='Email' name='user_email' required/>
 	             <label  className={s.label} htmlFor='Subject'>Subject</label>
 	             <input className={s.inputSub} 
 	                                         type='text' placeholder='Subject' name='subject' required />
