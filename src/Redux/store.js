@@ -1,10 +1,10 @@
 import {configureStore} from '@reduxjs/toolkit';
 
-import openReducer from './openSlice';
+import openReducer from './openSlice'
 
-export const setupStore = () => {
+export const store = preloadedState => {
 	return configureStore({
-	reducer: { open: openReducer}
-	
-	 })	
+	reducer: { open: openReducer, preloadedState})
+		
+	 })
    }
