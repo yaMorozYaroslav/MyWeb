@@ -12,7 +12,7 @@ test('should return the expected initial state', () => {
 test('should change the action value on dispatch',() => {
 	const expected = {alert: true}
 	store.dispatch(openAlert())
-	const newActual = actual
+	const newActual = store.getState().open
 	expect(newActual).toBeInTheDocument(expected)
 	
 	})
