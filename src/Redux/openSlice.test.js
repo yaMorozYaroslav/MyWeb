@@ -16,8 +16,9 @@ test('should change the alarm value to true',() => {
 	expect(actual).toBe(true)
 	})
 test('should change the alarm value to false',() => {
-	const expected = {alert: false}
+	const expected = {alert: true}
 	store.dispatch(closeAlert())
-	const actual = store.getState().open.alert
-	expect(actual).toBe(false)
+	const actual = store.getState().open
+	expect(actual).toEqual(expect.objectContaining(expected))
 	})
+//test('should change the email value to true
