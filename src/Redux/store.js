@@ -2,9 +2,10 @@ import {configureStore} from '@reduxjs/toolkit';
 
 import openReducer from './openSlice'
 
-export const store = preloadedState => {
+export const store = () => {
 	return configureStore({
-	reducer: { open: openReducer, preloadedState})
-		
+	reducer: { open: openReducer}
 	 })
    }
+		
+	 
