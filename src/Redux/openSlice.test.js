@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom'
 import {setupStore} from './store'
-import openReducer, {openAlert, closeAlert} from './openSlice'
+import openReducer, {openAlert, closeAlert, openEmail, closeEmail,
+	                 nowIntro,  nowProfile, nowProject, nowContacts} from './openSlice'
 
 const store = setupStore()
 
@@ -10,15 +11,38 @@ test('should return the expected initial state', () => {
 	expect(actual).toEqual(expected)
 	})
 test('should change the alarm value to true',() => {
-	const expected = {alert: true}
 	store.dispatch(openAlert())
-	const actual = store.getState().open.alert
-	expect(actual).toBe(true)
-	})
-test('should change the alarm value to false',() => {
 	const expected = {alert: true}
-	store.dispatch(closeAlert())
 	const actual = store.getState().open
 	expect(actual).toEqual(expect.objectContaining(expected))
 	})
-//test('should change the email value to true
+test('should change the alarm value to false',() => {
+	store.dispatch(closeAlert())
+	const expected = {alert: false}
+	const actual = store.getState().open
+	expect(actual).toEqual(expect.objectContaining(expected))
+	})
+test('should change the email value to true',() => {
+	store.dispatch(openEmail())
+	const expected = {email: true}
+	const actual = store.getState().open
+	expect(actual).toEqual(expect.objectContaining(expected))
+    })
+test('should change the email value to false',() => {
+	store.dispatch(closeEmail())
+	const expected = {email: false}
+	const actual = store.getState().open
+	expect(actual).toEqual(expect.objectContaining(expected))
+    })
+test('should change the section value to intro',() => {
+	const actual0 = store.getState().open
+	store.dispatch(nowProfile())
+	const actual1 = store.getState().open
+	expect(actual0).not.toEqual(actual1)
+	
+	store.dispatch(nowIntro())
+	const expected = {section: 'intro'}
+	const actual2 = store.getState().open
+	expect(actual2).toEqual(expect.objectContaining(expected))
+	})  
+test('should change the section value to profile', () => {})
