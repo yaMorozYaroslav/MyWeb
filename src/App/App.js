@@ -17,9 +17,9 @@ const section = useSelector(selectSection)
   return (
     <div className={s.body}>
       <div className={classnames(section==='intro'&&s.intro,
-		                                                              section==='profile'&&s.profile,
-		                                                              section==='project'&&s.project,
-		                                                              section==='contacts'&&s.contacts
+		                         section==='profile'&&s.profile,
+		                         section==='project'&&s.project,
+		                         section==='contacts'&&s.contacts
 		                                                              )} > 
        <section className={s.header}><Header /></section>
        <section className={s.router}><Router/></section>
