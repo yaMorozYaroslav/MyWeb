@@ -1,6 +1,5 @@
 import React from 'react'
 import Zoom from 'react-img-zoom'
-import s from './Project.module.css'
 import itemImg from './itemImg.jpg'
 import picture from './picture.jpg'
 

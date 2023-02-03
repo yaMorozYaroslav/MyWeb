@@ -1,7 +1,6 @@
 import React from 'react'
 import {closeAlert, closeEmail} from '../../Redux/openSlice'
 import {useDispatch} from 'react-redux'
-import {Link} from 'react-router-dom'
 import s from './Alert.module.css'
 
 export const Alert = () => {
