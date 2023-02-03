@@ -12,7 +12,7 @@ export const Header =()=> {
 	                           </div>
 	                           
 	                           <div className={s.second} />
-	                           
+	                           <h1>{window.innerWidth > 300?'+300':'-300'}</h1>
 	                     </div>)
 	              
 	}
