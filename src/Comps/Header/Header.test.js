@@ -2,6 +2,7 @@ import mediaQuery from 'css-mediaquery';
 import {fireEvent, screen} from '@testing-library/react'
 import {renderWithProviders} from '../../Redux/test-util'
 import {Header} from './Header'
+import styled from 'styled-components'
 
 const resizeWindow = (x, y) => {
   window.innerWidth = x;
