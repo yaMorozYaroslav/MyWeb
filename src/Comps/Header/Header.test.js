@@ -13,5 +13,10 @@ const resizeWindow = (x, y) => {
 test('should change content if change screen size', () => {
 	resizeWindow(300,300)
 	const {container} = renderWithProviders(<Header/>)
-	expect(container).toBe()
+	const headerClass = Header().type.styledComponentId
+	const MyHeaderRoots = document.getElementsByClassName(headerClass)
+	const style = window.getComputedStyle(MyHeaderRoots[0])
+	
+	expect(style.display).toBe('flex')
+	//expect(container).toBe()
 	})
