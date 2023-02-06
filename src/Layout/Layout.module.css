@@ -4,7 +4,7 @@
     z-index:1;
     grid-template-columns: repeat(4, 24.5%);
     width: 100%;
-    top:82px;
+    top:77px;
     background-color: black; 
 }
 .idle{

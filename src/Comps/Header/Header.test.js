@@ -3,6 +3,7 @@ import {fireEvent, screen} from '@testing-library/react'
 import {renderWithProviders} from '../../Redux/test-util'
 import {Header} from './Header'
 import styled from 'styled-components'
+import '@testing-library/jest-dom'
 
 const resizeWindow = (x, y) => {
   window.innerWidth = x;
@@ -20,4 +21,9 @@ test('should change content if change screen size', () => {
 	
 	expect(style.display).toBe('flex')
 	//expect(container).toBe()
+	})
+	
+test('should change CSS properies', () => {
+	const {getByTestId} = renderWithProviders(<Header/>)
+	expect(getByTestId('container')).toHaveStyle('display: none')
 	})

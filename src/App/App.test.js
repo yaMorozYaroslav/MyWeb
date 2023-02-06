@@ -41,7 +41,7 @@ test('should change content when switching sections', () => {
 	fireEvent.click(screen.getByText(/intro/i))
 	let textElements
 	textElements = container.getElementsByClassName('text')
-	expect(textElements.length).toBe(6)
+	expect(textElements).toBe()
 	
 	fireEvent.click(screen.getByText(/project/i))
 	textElements = container.getElementsByClassName('text')

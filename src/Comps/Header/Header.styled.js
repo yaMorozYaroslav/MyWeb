@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGear } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
 import city from './city.jpg'
+import clouds from './clouds.jpg'
 
 export const Container = styled.div`
     display: flex;
     width: 100%;
+    height: 80px;
     position: fixed;
     z-index:1;
     top:0;
@@ -38,7 +39,7 @@ export const Text = styled.h1`
     font-size: 30px;
  } 
    `
-export const FontIcon = styled(<FontAwesomeIcon icon={faGear}/>)`
+export const FontIcon = styled(FontAwesomeIcon)`
     margin:10px 25px 0px 5px;
     font-size: 55px;
    @media(max-width:850px){
@@ -51,7 +52,7 @@ export const FontIcon = styled(<FontAwesomeIcon icon={faGear}/>)`
 export const Second = styled.div`
     width: 70%;
     border: 3px solid black;
-    background-image: url('./clouds.jpg');
+    background-image: url(${clouds});
     background-position: 0px 0px;
     background-size:cover;
    @media(max-width: 850px){
