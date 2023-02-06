@@ -2,7 +2,7 @@ import React from 'react';
 import s from'./Layout.module.css';
 import {Outlet, Link} from "react-router-dom";
 import {useLocation} from "react-router-dom";
-
+import Linker0 from './Layout.styled.js'
 import {useDispatch} from 'react-redux'
 import {nowIntro, nowProfile, nowProject, nowContacts} from '../Redux/openSlice'
 
