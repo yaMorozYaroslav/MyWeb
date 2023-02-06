@@ -18,6 +18,8 @@ export const openSlice = createSlice({
 		   nowIntro: state => {state.section = initialState.section}
 		   }
 	})
+	export const stateSection = state => state.open.section
+	
 	export const {openAlert, closeAlert, openEmail, closeEmail,
 		                         nowIntro,  nowProfile, nowProject, nowContacts} = openSlice.actions
 	export default openSlice.reducer

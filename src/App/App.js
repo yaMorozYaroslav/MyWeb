@@ -5,6 +5,7 @@ import {Footer} from '../Comps/Footer/Footer'
 import {Router} from '../Router/Router'
 import {useSelector} from 'react-redux'
 import classnames from 'classnames'
+import {Upper} from '../Comps/Upper/Upper'
 
 export function App() {
 	
@@ -22,6 +23,7 @@ const section = useSelector(selectSection)
 		                         section==='contacts'&&s.contacts
 		                                                              )} > 
        <section className={s.header}><Header /></section>
+       <Upper />
        <section className={s.router}><Router/></section>
        <section className={s.footer}><Footer /></section>
        </div>

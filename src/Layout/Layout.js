@@ -5,8 +5,9 @@ import {useLocation} from "react-router-dom";
 import Linker0 from './Layout.styled.js'
 import {useDispatch} from 'react-redux'
 import {nowIntro, nowProfile, nowProject, nowContacts} from '../Redux/openSlice'
+import {stateSection} from '../Redux/openSlice'
 
-export function Layout(){
+export function Layout(current = stateSection){
 	const location = useLocation();
 	const {pathname} = location;
 	const splitLocation = pathname.split("/")
