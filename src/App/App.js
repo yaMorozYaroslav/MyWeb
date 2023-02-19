@@ -12,22 +12,32 @@ const Body = styled.div`
     width: 101.2%;
     margin: -8px 0px 0px -8px;
 `
-
+const Intro = styled.div`
+    background-image: url('pics/intro.jpg');
+    background-position: 0px -550px;
+    background-size: cover;
+`
+const Profile = styled.div`
+    background-image: url('pics/profile.jpg');
+    background-position: 0px -270px;
+    background-size: cover;
+`
 export function App() {
-	
 const section = useSelector(state => state.open.section)
-
+function BackImg(current = section){
+	switch(current){
+		case 'profile':
+		return console.log('kick')
+		default:
+		return (<Intro><section className={s.header}><Header /></section>
+                        <section className={s.router}><Router/></section>
+                        <section className={s.footer}><Footer /></section></Intro>)
+		}
+	}
+	BackImg()
   return (
     <Body>
-      <div className={classnames(section==='intro'&&s.intro,
-		                         section==='profile'&&s.profile,
-		                         section==='project'&&s.project,
-		                         section==='contacts'&&s.contacts
-		                                                              )} > 
-       <section className={s.header}><Header /></section>
-       <section className={s.router}><Router/></section>
-       <section className={s.footer}><Footer /></section>
-       </div>
+       <BackImg/>
     </Body>
   )
 }
