@@ -12,6 +12,13 @@ const Body = styled.div`
     width: 101.2%;
     margin: -8px 0px 0px -8px;
 `
+const BackImg = styled.div`
+ ${({current}) => current === 'profile' && `
+   background-image: url(${pics.profile});
+   background-position: 0px -270px;
+   background-size: cover;
+ `}
+`
 const Intro = styled.div`
     background-image: url(${pics.intro});
     background-position: 0px -550px;
@@ -34,19 +41,16 @@ const Contacts = styled.div`
 `
 export function App() {
 const section = useSelector(state => state.open.section)
-	
-	 const BackImg = section === 'intro' ?Intro:null,
-	                  section === 'profile'?Profile:null
 	                 
 	return(
 	<Body>
-      <BackImg>
+      <BackImg current={section}>
        <section className={s.header}><Header /></section>
        <section className={s.router}><Router/></section>
        <section className={s.footer}><Footer /></section>
 
-    </BackImg>
-   </Body>)
+      </BackImg>
+    </Body>)
 		
 	}
 
