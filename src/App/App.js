@@ -5,51 +5,54 @@ import {Footer} from '../Comps/Footer/Footer'
 import {Router} from '../Router/Router'
 import {useSelector} from 'react-redux'
 import styled from 'styled-components'
-import classnames from 'classnames'
 import {pics} from './pics/pics'
+
 const Body = styled.div`
     height: 100%;
-    width: 101.2%;
+    width: 105%;
     margin: -8px 0px 0px -8px;
 `
 const BackImg = styled.div`
+ ${({current}) => current === 'intro' && `
+   background-image: url(${pics.intro});
+   background-position: 0px -550px;
+   background-size: cover;
+  @media (max-width: 1250px){background-position: 0px -400px;}
+  @media (max-width: 1000px){background-position: 0px -300px;}
+  @media (max-width: 850px){background-position: 0px -200px;}
+  @media (max-width: 600px){background-position: -50px -100px;;}
+  @media (max-width: 450px){background-position: -50px -100px;}
+ `}
  ${({current}) => current === 'profile' && `
    background-image: url(${pics.profile});
    background-position: 0px -270px;
    background-size: cover;
  `}
+ ${({current}) => current === 'project' && `
+   background-image: url(${pics.project});
+   background-position: 0px -400px;
+   background-size: cover;
+ `}
+ ${({current}) => current === 'contacts' && `
+   background-image: url(${pics.contacts});
+   background-position: 60px -455px;
+   background-size: cover;
+ `}
 `
-const Intro = styled.div`
-    background-image: url(${pics.intro});
-    background-position: 0px -550px;
-    background-size: cover;
-`
-const Profile = styled.div`
-    background-image: url(${pics.profile});
-    background-position: 0px -270px;
-    background-size: cover;
-`
-const Project = styled.div`
-    background-image: url(${pics.project});
-    background-position:0px -400px;
-    background-size:cover;
-`
-const Contacts = styled.div`
-    background-image: url(${pics.contacts});
-    background-position: 60px -455px;
-    background-size: cover;
-`
+
 export function App() {
 const section = useSelector(state => state.open.section)
 	                 
 	return(
 	<Body>
+	   <section className={s.header}><Header /></section>
       <BackImg current={section}>
-       <section className={s.header}><Header /></section>
+      
        <section className={s.router}><Router/></section>
-       <section className={s.footer}><Footer /></section>
+      
 
       </BackImg>
+       <section className={s.footer}><Footer /></section>
     </Body>)
 		
 	}
