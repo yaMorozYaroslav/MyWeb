@@ -9,11 +9,11 @@ const size = {
 
 export const device = {
 	
-  mobS: `(min-width: ${size.mobS})`,
-  mobM: `(min-width: ${size.mobM})`,
-  mobL: `(min-width: ${size.mobL})`,
-  tabl: `(min-width: ${size.tabl})`,
-  lapt: `(min-width: ${size.lapt})`,
-  lapL: `(min-width: ${size.lapL})`,
+  mobS: `(max-width: ${size.mobS})`,
+  mobM: `(max-width: ${size.mobM})`,
+  mobL: `(max-width: ${size.mobL})`,
+  tabl: `(max-width: ${size.tabl})`,
+  lapt: `(max-width: ${size.lapt})`,
+  lapL: `(max-width: ${size.lapL})`,
 }
 
