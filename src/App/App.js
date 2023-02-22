@@ -59,14 +59,9 @@ const section = useSelector(state => state.open.section)
 	                 
 	return(
 	<Body>
-	   <section><Header /></section>
-      <BackImg current={section}>
-      
-       <section ><Router/></section>
-      
-
-      </BackImg>
-       <section><Footer /></section>
+	   <Header/>
+         <BackImg current={section}><Router/></BackImg>
+       <Footer />
     </Body>)
 		
 	}
