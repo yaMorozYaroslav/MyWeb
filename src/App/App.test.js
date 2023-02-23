@@ -1,12 +1,14 @@
 import {render, screen, fireEvent} from '@testing-library/react'
 import {renderWithProviders} from '../Redux/test-util'
 import {App} from './App'
+import 'jest-styled-components'
+import '@testing-library/jest-dom'
 
 describe('Yes, I tested CSS', () => {
-	it('has expected default styles', () => {
+	it('changes background image to "profile"', () => {
 	  const {getByTitle,getByText} = renderWithProviders(<App/>)
-	  fireEvent.click(getByText(/intro/i))
-	  
+	  fireEvent.click(getByText(/profile/i))
+	  expect(getByTitle('BackImg')).toHaveStyle('background-image:url(profile.jpg)')
       })
 	})
 

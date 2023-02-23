@@ -7,11 +7,11 @@ import {Container, First, Text,
 export const Header =()=> {
 	
 	    return (       <Container data-testid='container'>
-	                           <First>
+	                           <First data-testid='first'>
 	                             <Text>Development</Text>
 	                             <FontIcon  icon={faGear}/>
 	                           </First>
 	                           
-	                           <Second />
+	                           <Second data-testid='second'/>
 	                   </Container>
 	          )}
