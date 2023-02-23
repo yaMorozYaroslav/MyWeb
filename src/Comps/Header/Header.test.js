@@ -24,6 +24,7 @@ test('should change content if change screen size', () => {
 	})
 	
 test('should change CSS properies', () => {
+	resizeWindow(400,400)
 	const {getByTestId} = renderWithProviders(<Header/>)
 	expect(getByTestId('container')).toHaveStyle('display: none')
 	})
