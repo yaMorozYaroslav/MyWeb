@@ -7,6 +7,6 @@ export const sizeSlice = createSlice({
 		mobileL: state => {state = 'mobileL'} 
 		}
 	})
-	const {mobileL} = sizeSlice.actions
+	export const {mobileL} = sizeSlice.actions
 	
 	export default sizeSlice.reducer

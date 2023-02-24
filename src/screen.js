@@ -5,6 +5,8 @@ import {mobileL} from './Redux/sizeSlice'
 
 function ScreenSize(){
 	const dispatch = useDispatch()
+	const onMobiL = () => dispatch(mobileL())
+	
 	}
 
 const size = {
