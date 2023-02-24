@@ -1,3 +1,12 @@
+import React from 'react'
+import {useSelector, useDispatch} from 'react-redux'
+
+import {mobileL} from './Redux/sizeSlice'
+
+function ScreenSize(){
+	const dispatch = useDispatch()
+	}
+
 const size = {
   mobS: '350px',
   mobM: '450px',

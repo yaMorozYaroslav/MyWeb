@@ -4,7 +4,7 @@ const initialState = {
 	alert: false, email: false, section: 'intro'
 	}
 
-export const openSlice = createSlice({
+const openSlice = createSlice({
 	   name: 'open',
 	   initialState,
 	   reducers: {

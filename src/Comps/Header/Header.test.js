@@ -30,5 +30,5 @@ test('should change CSS properies', () => {
 	resizeWindow(300,300)
 	console.log(window.innerWidth, window.innerHeight)
 	const {getByTestId} = renderWithProviders(<Header/>)
-	//expect(getByTestId('second')).toHaveStyle('display: none')
+	expect(getByTestId('second')).toHaveStyleRule('display', 'none')
 	})
