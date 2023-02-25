@@ -2,7 +2,7 @@ import {createSlice} from '@reduxjs/toolkit'
 
 export const sizeSlice = createSlice({
 	name: 'size',
-	state: null,
+	initialState: null,
 	reducers: {
 		mobileL: state => {state = 'mobileL'} 
 		}
