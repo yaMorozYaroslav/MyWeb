@@ -11,6 +11,7 @@ import {ScreenSize} from '../screen'
 
 export function App() {
 const section = useSelector(state => state.open.section)
+//const section = useSelector(state => state.open.section)
 	                 
 	return(
 	

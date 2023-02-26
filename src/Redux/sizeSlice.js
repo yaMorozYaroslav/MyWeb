@@ -4,9 +4,16 @@ export const sizeSlice = createSlice({
 	name: 'size',
 	initialState: null,
 	reducers: {
-		mobileL: state => {state = 'mobileL'} 
+		mobiS: state => 'mobiS',
+		mobiM: state => 'mobiM',
+		mobiL: state => 'mobiL',
+		tablet: state => 'tablet',
+		laptS: state => 'laptS',
+		laptM: state => 'laptM',
+		laptL: state => 'laptL'
 		}
 	})
-	export const {mobileL} = sizeSlice.actions
+	export const {mobiS, mobiM, mobiL, tablet,
+		                  laptS, laptM, laptL} = sizeSlice.actions
 	
 	export default sizeSlice.reducer
