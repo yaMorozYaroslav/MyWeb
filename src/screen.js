@@ -8,10 +8,8 @@ import {mobiS, mobiM, mobiL, tablet,
 
 export function ScreenSize(){
 	const dispatch = useDispatch()
-	//const actual = useSelector(state => state.size)
 	const actual = useSelector(state => state.size)
 	
-	console.log(actual)
 	React.useEffect(()=>{
 		if(width.mobiS)dispatch(mobiS())
 		if(width.mobiM)dispatch(mobiM())
@@ -21,12 +19,11 @@ export function ScreenSize(){
 		if(width.laptM)dispatch(laptM())
 		if(width.laptL)dispatch(laptL())
 		},[dispatch])
-	//console.log(sizeSlice.actions.mobileL()) 
-	return (
-	console.log(sizeSlice.actions.mobiL(), actual, window.innerWidth )
+	if(actual)return (
+	console.log(sizeSlice.actions.mobiL(), actual, window.innerWidth ))
+	if(!actual)return null
 	
-	
-	     )
+	     
 	}
 const width = {
 	mobiS: window.innerWidth < 350,
