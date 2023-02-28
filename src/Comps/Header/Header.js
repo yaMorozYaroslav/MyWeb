@@ -7,7 +7,7 @@ import { faGear } from '@fortawesome/free-solid-svg-icons'
 import {useMediaQuery} from 'react-responsive'
                  
 export const Header =()=> {
-  const isTablet = useMediaQuery({ query: '(min-width: 800px)' })
+  const isTablet = useMediaQuery({ query: '(min-width: 800px)'  })
 
 
 	    return (       <Container data-testid='container'>
