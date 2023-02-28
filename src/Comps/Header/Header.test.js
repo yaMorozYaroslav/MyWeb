@@ -4,11 +4,11 @@ import {Header} from './Header'
 import styled from 'styled-components'
 import '@testing-library/jest-dom'
 import 'jest-styled-components'
-
+import { Context as ResponsiveContext } from 'react-responsive'
 import '@testing-library/jest-dom/extend-expect'
-import mediaQuery from 'css-mediaquery'
+//import mediaQuery from 'css-mediaquery'
 
-
+/*
 function createMatchMedia(width) {
   return (query) => {
     return {
@@ -27,7 +27,7 @@ function createMatchMedia(width) {
 function resizeScreenSize(width) {
   window.matchMedia = createMatchMedia(width);
 }
-/*
+
 const resizeWindow = (x, y) => {
   window.innerWidth = x;
   window.innerHeight = y;
@@ -47,11 +47,14 @@ const resizeWindow = (x, y) => {
 	}) */
 	
 test('should change CSS properies', () => {
-	
-	resizeScreenSize(300)
-	renderWithProviders(<Header/>)
+renderWithProviders(
+<ResponsiveContext.Provider value={{ width: 300 }}>
+<Header />
+</ResponsiveContext.Provider>)
+
 	
 	console.log(window.innerWidth, window.innerHeight)
 	//expect(getByTestId('second')).toHaveStyleRule('display', 'none')
-	expect(screen.getByText(/small/i)).toBe()
+	//expect(screen.getByText(/tablet/i)).toBeInTheDocument()
+	expect(screen.getByTestId('second')).toHaveStyleRule('display', 'block')
 	})

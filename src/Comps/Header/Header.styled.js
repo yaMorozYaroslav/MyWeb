@@ -50,7 +50,7 @@ export const FontIcon = styled(FontAwesomeIcon)`
   }
   `
 export const Second = styled.div`
-    display: ${state => state.screen === 'mobiS'? 'none': 'block'};
+    display: ${state => !state.tablet ? 'none' : 'block'};
     width: 70%;
     border: 3px solid black;
     background-image: url(${clouds});
