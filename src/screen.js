@@ -9,22 +9,23 @@ import {useMediaQuery} from 'react-responsive'
                  
 
 export function ScreenSize(){
-	const screen = {
-  isTablet: useMediaQuery({ query: '(min-width: 800px)'  }),
-  isLaptop: useMediaQuery({ query: '(min-width: 1000px)'})
-  }
+	
+  const isTablet = useMediaQuery({ query: '(max-width: 800px)'  })
+  const isLaptop = useMediaQuery({ query: '(max-width: 1000px)'})
+  
 	const dispatch = useDispatch()
 	const actual = useSelector(state => state.size)
 	
-	React.useEffect(()=>{
-		if(screen.isTablet)dispatch(mobiS())
-		if(screen.isLaptop)dispatch(mobiM())
+	React.useCallback(()=>{
+		if(isTablet)dispatch(mobiS())
+		if(isLaptop)dispatch(mobiM())
 		/*if(width.mobiL)dispatch(mobiL())
 		if(width.tablet)dispatch(tablet())
 		if(width.laptS)dispatch(laptS())
 		if(width.laptM)dispatch(laptM())
 		if(width.laptL)dispatch(laptL())*/
-		},[dispatch])
+		},[dispatch, isTablet, isLaptop,window.innerWidth])
+	
 	if(actual)return (
 	console.log(sizeSlice.actions.mobiL(), actual, window.innerWidth ))
 	if(!actual)return null
