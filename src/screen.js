@@ -1,23 +1,29 @@
 import React from 'react'
-import {useSelector, useDispatch} from 'react-redux'
-import {sizeSlice} from './Redux/sizeSlice'
+
 import {mobiS, mobiM, mobiL, tablet,
 	            laptS, laptM, laptL} from './Redux/sizeSlice'
-	            
+import {useSelector, useDispatch} from 'react-redux'
+import {sizeSlice} from './Redux/sizeSlice'      
 //import setupStore from './Redux/store'
+import {useMediaQuery} from 'react-responsive'
+                 
 
 export function ScreenSize(){
+	const screen = {
+  isTablet: useMediaQuery({ query: '(min-width: 800px)'  }),
+  isLaptop: useMediaQuery({ query: '(min-width: 1000px)'})
+  }
 	const dispatch = useDispatch()
 	const actual = useSelector(state => state.size)
 	
 	React.useEffect(()=>{
-		if(width.mobiS)dispatch(mobiS())
-		if(width.mobiM)dispatch(mobiM())
-		if(width.mobiL)dispatch(mobiL())
+		if(screen.isTablet)dispatch(mobiS())
+		if(screen.isLaptop)dispatch(mobiM())
+		/*if(width.mobiL)dispatch(mobiL())
 		if(width.tablet)dispatch(tablet())
 		if(width.laptS)dispatch(laptS())
 		if(width.laptM)dispatch(laptM())
-		if(width.laptL)dispatch(laptL())
+		if(width.laptL)dispatch(laptL())*/
 		},[dispatch])
 	if(actual)return (
 	console.log(sizeSlice.actions.mobiL(), actual, window.innerWidth ))

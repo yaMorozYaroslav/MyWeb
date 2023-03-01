@@ -5,6 +5,7 @@ import {Container, First, Text,
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 //import {useSelector} from 'react-redux'
 import {useMediaQuery} from 'react-responsive'
+import {screen} from '../../screen'
                  
 export const Header =()=> {
   const isTablet = useMediaQuery({ query: '(min-width: 800px)'  })

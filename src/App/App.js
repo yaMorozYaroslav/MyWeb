@@ -14,9 +14,8 @@ const section = useSelector(state => state.open.section)
 //const section = useSelector(state => state.open.section)
 	                 
 	return(
-	
 	<Body title='Body'>
-	 <ScreenSize />
+	<ScreenSize/>
 	    <Header/>
             <BackImg 
                 title='BackImg'
