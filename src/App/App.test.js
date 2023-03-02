@@ -5,6 +5,10 @@ import {App} from './App'
 import 'jest-styled-components'
 import '@testing-library/jest-dom'
 
+const RespWrap = ({children, screen}) => <ResponsiveContext.Provider
+                                                value={{width: screen}}>
+                          {children}</ResponsiveContext.Provider>
+
 describe('Yes, I tested CSS', () => {
 	it('changes background image to "profile"', () => {
 	  const {getByTitle,getByText} = renderWithProviders(<App/>)
@@ -12,10 +16,7 @@ describe('Yes, I tested CSS', () => {
 	  expect(getByTitle('BackImg')).toHaveStyle('background-image:url(profile.jpg)')
       })
     it('knows what screen you have', () => {
-	  renderWithProviders(<ResponsiveContext.Provider 
-	                             value={{ width: 1200 }}>
-                          <App />
-                          </ResponsiveContext.Provider>)	
+	  renderWithProviders(<RespWrap screen='1200'><App/></RespWrap>)	
       expect(screen.getByText(/not a tablet/i)).toBeInTheDocument()
 		})
 	})
