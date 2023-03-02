@@ -1,5 +1,6 @@
 import {render, screen, fireEvent} from '@testing-library/react'
 import {renderWithProviders} from '../Redux/test-util'
+import { Context as ResponsiveContext } from 'react-responsive'
 import {App} from './App'
 import 'jest-styled-components'
 import '@testing-library/jest-dom'
@@ -10,6 +11,13 @@ describe('Yes, I tested CSS', () => {
 	  fireEvent.click(getByText(/profile/i))
 	  expect(getByTitle('BackImg')).toHaveStyle('background-image:url(profile.jpg)')
       })
+    it('knows what screen you have', () => {
+	  renderWithProviders(<ResponsiveContext.Provider 
+	                             value={{ width: 1200 }}>
+                          <App />
+                          </ResponsiveContext.Provider>)	
+      expect(screen.getByText(/not a tablet/i)).toBeInTheDocument()
+		})
 	})
 
 /*test('renders with default class name', () => {

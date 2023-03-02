@@ -12,11 +12,12 @@ import {ScreenSize} from '../screen'
 export function App() {
 const section = useSelector(state => state.open.section)
 //const section = useSelector(state => state.open.section)
-	                 
+	     const size = ScreenSize() 
+	     console.log(size.lapS)           
 	return(
 	<Body title='Body'>
-	<ScreenSize/>
 	    <Header/>
+	    <p style={{fontSize: '100px',}}> {size.lapS ?'tablet':'not a tablet'} </p>
             <BackImg 
                 title='BackImg'
                 current={section}>
