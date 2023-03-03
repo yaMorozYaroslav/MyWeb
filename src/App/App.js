@@ -15,10 +15,10 @@ const section = useSelector(state => state.open.section)
 	     const size = ScreenSize() 
 	     console.log(size.lapS)           
 	return(
-	<Body data-testid='body' size={size}>
+	<Body size={size}>
 	    <Header/>
             <BackImg 
-                title='BackImg'
+                data-testid='backimg'
                 current={section}
                 size={size}>
               <Router/>

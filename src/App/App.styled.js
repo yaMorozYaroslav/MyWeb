@@ -7,7 +7,7 @@ export const Body = styled.div`
     width: 101.2%;
     margin: -8px 0px 0px -8px;
    ${({size}) => size.lapL &&`width:103%;`}
-   @media ${device.mobL}{width:105%;}
+   ${({size}) => size.mobL &&`width:105%;`}
 `
 export const BackImg = styled.div`
  ${({current}) => current === 'intro' && `
