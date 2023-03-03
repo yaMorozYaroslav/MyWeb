@@ -6,7 +6,7 @@ export const Body = styled.div`
     height: 100%;
     width: 101.2%;
     margin: -8px 0px 0px -8px;
-   @media ${device.lapL}{width:103%;}
+   ${({size}) => size.lapL &&`width:103%;`}
    @media ${device.mobL}{width:105%;}
 `
 export const BackImg = styled.div`
