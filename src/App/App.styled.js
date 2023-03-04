@@ -14,12 +14,13 @@ export const BackImg = styled.div`
    background-image: url(${pics.intro});
    background-position: 0px -550px;
    background-size: cover;
-  @media ${device.lapL}{background-position: 0px -400px;}
-  @media ${device.lapM}{background-position: 0px -300px;}
-  @media ${device.tabl}{background-position: 0px -200px;}
-  @media ${device.mobL}{background-position: -50px -100px;;}
+  ${size.lapL}  && 'background-position: 0px -400px;'
+  ${size.lapM} && background-position: 0px -300px;
+  ${({size}) => size.lapS === true && 'background-position: 0px -200px;'}
+  @media ${device.mobL}{background-position: -50px -100px;}
   @media ${device.mobM}{background-position: -50px -100px;}
- `}
+ `
+ }
  ${({current}) => current === 'profile' && `
    background-image: url(${pics.profile});
    background-position: 0px -270px;
