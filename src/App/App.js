@@ -13,7 +13,7 @@ export function App() {
 const section = useSelector(state => state.open.section)
 //const section = useSelector(state => state.open.section)
 	     const size = ScreenSize() 
-	     console.log(size.lapS)           
+	     console.log(size.lapL)           
 	return(
 	<Body size={size}>
 	    <Header/>
