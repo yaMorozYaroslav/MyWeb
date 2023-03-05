@@ -1,26 +1,33 @@
-import {render, screen, fireEvent} from '@testing-library/react'
+import {screen, fireEvent} from '@testing-library/react'
 import {renderWithProviders} from '../Redux/test-util'
 import { Context as ResponsiveContext } from 'react-responsive'
 import {App} from './App'
 import 'jest-styled-components'
 import '@testing-library/jest-dom'
 
-const RespWrap = ({children, screen}) => <ResponsiveContext.Provider
-                                                value={{width: screen}}>
-                                 {children}</ResponsiveContext.Provider>
-
-const renderWithRespWrap = (size,component) => renderWithProviders(
-                                               <RespWrap screen={size}>
-                                                 {component}</RespWrap>)
-
-describe('Yes, I tested CSS', () => {
+const renderWithAll = (size, component) => 
+                        renderWithProviders(<ResponsiveContext.Provider
+                                                value={{width: size}}>
+                              {component}</ResponsiveContext.Provider>)
+                              
+describe('background image dependent on redux state', () => {
+	
+	it('displays the "intro" image by default', () => {
+	  const {getByTestId} = renderWithAll(1251, <App/>)
+	  expect(getByTestId('backimg')).toHaveStyle('background-image:url(intro.jpg)')
+      })
 	it('changes background image to "profile"', () => {
-	  const {getByTitle,getByText} = renderWithProviders(<App/>)
+	  const {getByTestId,getByText} = renderWithAll(1251, <App/>)
 	  fireEvent.click(getByText(/profile/i))
-	  expect(getByTitle('BackImg')).toHaveStyle('background-image:url(profile.jpg)')
+	  expect(getByTestId('backimg')).toHaveStyle('background-image:url(profile.jpg)')
+      })
+    it('changes background image to "project"', () => {
+	  const {getByTestId,getByText} = renderWithAll(1251, <App/>)
+	  fireEvent.click(getByText(/project/i))
+	  expect(getByTestId('backimg')).toHaveStyle('background-image:url(project.jpg)')
       })
     it('knows what screen you have', () => {
-	  renderWithRespWrap(1251,<App/>)	
+	  renderWithAll(1249,<App/>)	
       expect(screen.getByTestId('body')).toHaveStyle('width: 103%')
 		})
 	})
