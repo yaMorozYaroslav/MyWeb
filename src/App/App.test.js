@@ -5,7 +5,7 @@ import {App} from './App'
 import 'jest-styled-components'
 import '@testing-library/jest-dom'
 
-const renderWithAll = (size, component) => 
+export const renderWithAll = (size, component) => 
                         renderWithProviders(<ResponsiveContext.Provider
                                                 value={{width: size}}>
                               {component}</ResponsiveContext.Provider>)
@@ -26,62 +26,54 @@ describe('background image dependent on redux state', () => {
 	  fireEvent.click(getByText(/project/i))
 	  expect(getByTestId('backimg')).toHaveStyle('background-image:url(project.jpg)')
       })
-    it('knows what screen you have', () => {
-	  renderWithAll(1249,<App/>)	
-      expect(screen.getByTestId('body')).toHaveStyle('width: 103%')
+    it('changes background image to "contacts"', () => {
+	  const {getByTestId,getByText} = renderWithAll(1251, <App/>)
+	  fireEvent.click(getByText(/contacts/i))
+	  expect(getByTestId('backimg')).toHaveStyle('background-image:url(contacts.jpg)')
+      })
+   })
+   
+describe('the width of the "body" depends on screen size', () => {
+	it('has the expected default width', () => {
+	  const {getByTestId} = renderWithAll(1251,<App/>)	
+      expect(getByTestId('body')).toHaveStyle('width: 101.2%')
+      })
+    it('it has the expected width on a large laptop', () => {
+	  const {getByTestId} = renderWithAll(1250,<App/>)	
+      expect(getByTestId('body')).toHaveStyle('width: 103%')
 		})
+	it('it has the expected width on a large mobile', () => {
+	  const {getByTestId} = renderWithAll(600,<App/>)	
+      expect(getByTestId('body')).toHaveStyle('width: 105%')
+		})
+		})
+describe('background position depends on the screen in 7 options', () => {
+it('has the expected default position', () => {
+	const {getByTestId} = renderWithAll(1251,<App/>)
+	expect(getByTestId('backimg')).toHaveStyle('background-position: 0px -400px;')
+      })
+it('has the expected position on a large laptop', () => {
+	const {getByTestId} = renderWithAll(1250,<App/>)
+	expect(getByTestId('backimg')).toHaveStyle('background-position: 0px -300px;')
 	})
-
-/*test('renders with default class name', () => {
-	const {container} = renderWithProviders(<App />)
-	const intro = container.getElementsByClassName('intro')
-	expect(intro.length).toBe(1)
+it('has the expected position on a medium laptop', () => {
+	const {getByTestId} = renderWithAll(1000,<App/>)
+	expect(getByTestId('backimg')).toHaveStyle('background-position: 0px -200px;')
 	})
-test('should change class name if intro is clicked', () => {
-	const {container} = renderWithProviders(<App />)
-	fireEvent.click(screen.getByText(/profile/i))
-	let intro
-	intro = container.getElementsByClassName('intro')
-	expect(intro.length).toBe(0)
-	
-	fireEvent.click(screen.getByText(/intro/i))
-	intro = container.getElementsByClassName('intro')
-	expect(intro.length).toBe(1)
+it('has the expected position on a small laptop', () => {
+	const {getByTestId} = renderWithAll(800,<App/>)
+	expect(getByTestId('backimg')).toHaveStyle('background-position: 0px -100px;')
 	})
-test('should change class name if profile is clicked', () => {
-	const {container} = renderWithProviders(<App />)
-	fireEvent.click(screen.getByText(/profile/i))
-	const profile = container.getElementsByClassName('profile')
-	expect(profile.length).toBe(1)
+it('has the expected position on a large mobile phone', () => {
+	const {getByTestId} = renderWithAll(600,<App/>)
+	expect(getByTestId('backimg')).toHaveStyle('background-position: 0px -50px;')
 	})
-test('should change class name if project is clicked', () => {
-	const {container} = renderWithProviders(<App />)
-	fireEvent.click(screen.getByText(/project/i))
-	const profile = container.getElementsByClassName('project')
-	expect(profile.length).toBe(1)
+it('has the expected position on a medium mobile phone', () => {
+	const {getByTestId} = renderWithAll(450,<App/>)
+	expect(getByTestId('backimg')).toHaveStyle('background-position: 0px 0px;')
 	})
-test('should change class name if contacts is clicked', () => {
-	const {container} = renderWithProviders(<App />)
-	fireEvent.click(screen.getByText(/contacts/i))
-	const contacts = container.getElementsByClassName('contacts')
-	expect(contacts.length).toBe(1)
+it('has the expected position on a small mobile phone', () => {
+	const {getByTestId} = renderWithAll(350,<App/>)
+	expect(getByTestId('backimg')).toHaveStyle('background-position: -80px 0px;')
 	})
-test('should change content when switching sections', () => {
-	const {container} = renderWithProviders(<App />)
-	fireEvent.click(screen.getByText(/intro/i))
-	let textElements
-	textElements = container.getElementsByClassName('text')
-	expect(textElements).toBe()
-	
-	fireEvent.click(screen.getByText(/project/i))
-	textElements = container.getElementsByClassName('text')
-	expect(textElements.length).toBe(4)
-	
-	fireEvent.click(screen.getByText(/profile/i))
-	textElements = container.getElementsByClassName('text')
-	expect(textElements.length).toBe(6)
-	
-	fireEvent.click(screen.getByText(/contacts/i))
-	textElements = container.getElementsByClassName('text')
-	expect(textElements.length).toBe(1)
-	}) */
+	})

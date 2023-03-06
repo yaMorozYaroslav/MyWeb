@@ -10,10 +10,10 @@ import {useSelector} from 'react-redux'
 import {ScreenSize} from '../screen'
 
 export function App() {
+	
 const section = useSelector(state => state.open.section)
-//const section = useSelector(state => state.open.section)
-	     const size = ScreenSize() 
-	     console.log(size.lapL)           
+const size = ScreenSize()   
+       
 	return(
 	<Body 
 	    data-testid='body' 

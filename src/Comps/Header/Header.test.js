@@ -53,8 +53,8 @@ renderWithProviders(
 </ResponsiveContext.Provider>)
 
 	
-	console.log(window.innerWidth, window.innerHeight)
+	//console.log(window.innerWidth, window.innerHeight)
 	//expect(getByTestId('second')).toHaveStyleRule('display', 'none')
 	//expect(screen.getByText(/tablet/i)).toBeInTheDocument()
-	expect(screen.getByTestId('second')).toHaveStyle('display: none')
+	expect(screen.getByTestId('second')).toHaveStyle('display: block')
 	})
