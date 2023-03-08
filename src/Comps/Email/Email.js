@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import s from './Email.module.css'
 import {Alert} from '../Alert/Alert'
