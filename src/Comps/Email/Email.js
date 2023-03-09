@@ -1,6 +1,6 @@
 import React from 'react';
 
-import s from './Email.module.css'
+import s from './Email.module.css';
 import {Alert} from '../Alert/Alert'
 
 import {useRef} from 'react'
