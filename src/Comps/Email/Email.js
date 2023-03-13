@@ -1,9 +1,9 @@
 import React from 'react';
 
-import s from './Email.module.css'
-import {Alert} from '../Alert/Alert'
+import s from './Email.module.css';
+import {Alert} from '../Alert/Alert';
 
-import {useRef} from 'react'
+import {useRef} from 'react';
 import emailjs from '@emailjs/browser'
 import {useSelector, useDispatch} from 'react-redux'
 
