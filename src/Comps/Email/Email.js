@@ -5,7 +5,7 @@ import {Alert} from '../Alert/Alert'
 
 import {useRef} from 'react';
 import emailjs from '@emailjs/browser'
-import {useSelector, useDispatch} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux';
 
 import {openAlert, closeEmail} from '../../Redux/openSlice'
 
