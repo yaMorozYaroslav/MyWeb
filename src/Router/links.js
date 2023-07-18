@@ -10,7 +10,7 @@ export function GitHub(){
 export function Netlify(){
 	React.useEffect(()=>{
 		 window.location
-		                  .href='https://thefunnyfair.netlify.app'
+		                  .href='https://the-funny-fair.netlify.app'
 		},[])
 		return<></>
 	}
