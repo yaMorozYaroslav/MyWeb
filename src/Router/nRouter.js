@@ -16,14 +16,27 @@ const router = createBrowserRouter([
             {
               path: "contacts",
               element: <Contacts />,
-      },
-    ],
-	             }
+            },
+            {
+              index: "true",
+              element: <Intro />,
+            },
+            {
+              path: "profile",
+              element: <Profile />,
+            },
+            {
+              path: "project",
+              element: <Project />,
+            }
+           
+    ]},
+	             
        ])
 
 export const Router =()=> {
-	return(
-	   <BrowserRouter>
+	return(<RouterProvider router={router} />
+	  /* <BrowserRouter>
 	      <Routes>
 	          <Route path="/" element={<Layout />}>
 	                 <Route index element={<Intro />} />
@@ -34,6 +47,6 @@ export const Router =()=> {
 			         <Route path="github" element={<GitHub />} />
 			         <Route path="netlify" element={<Netlify />} />
 			 </Routes>
-		 </BrowserRouter>
+		 </BrowserRouter> */
 	   )
 	}

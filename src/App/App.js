@@ -2,7 +2,7 @@ import React from 'react'
 
 import {Header} from '../Comps/Header/Header'
 import {Footer} from '../Comps/Footer/Footer'
-import {Router} from '../Router/Router'
+import {Router} from '../Router/nRouter'
 
 import {Body, BackImg} from './App.styled'
 import {useSelector} from 'react-redux'

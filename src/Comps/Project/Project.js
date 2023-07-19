@@ -5,7 +5,7 @@ import {LgLaptopZoom,SmLaptopZoom,TabletZoom,SmPhoneZoom,LgPhoneZoom} from './le
 
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
-	function openApp(){window.open('https://thefunnyfair.netlify.app')}
+	function openApp(){window.open('https://the-funny-fair.netlify.app')}
 	function openBack(){window.open('https://back-item.herokuapp.com/')}
 	
 	const lgLaptop = window.innerWidth > 1250
