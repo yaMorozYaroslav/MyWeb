@@ -6,7 +6,7 @@ import {LgLaptopZoom,SmLaptopZoom,TabletZoom,SmPhoneZoom,LgPhoneZoom} from './le
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
 	function openApp(){window.open('https://the-funny-fair.netlify.app')}
-	function openBack(){window.open('https://back-item.herokuapp.com/')}
+	function openBack(){window.open('https://item-auth-back-0555af6b9518.herokuapp.com')}
 	
 	const lgLaptop = window.innerWidth > 1250
 	const smLaptop = window.innerWidth < 1250 && window.innerWidth > 850
