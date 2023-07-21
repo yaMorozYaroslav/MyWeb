@@ -9,7 +9,7 @@ export function Contacts(){
 	const {alert, mailForm,openAlert, closeAlert,
 		    openMailForm, closeMailForm} = React.useContext(OpenContext)
     //if(!mailForm)openMailForm()	
-	console.log(mailForm)
+	//console.log(mailForm)
 	//const dispatch = useDispatch()
 	
 	//const selectEmail = state => state.open.email
