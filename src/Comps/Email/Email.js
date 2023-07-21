@@ -5,17 +5,15 @@ import {Alert} from '../Alert/Alert'
 
 import {useRef} from 'react'
 import emailjs from '@emailjs/browser'
-import {OpenContext} from '../../Context/OpenState'
 import {useSelector, useDispatch} from 'react-redux'
 
-import {openAlert, closeEmail} from '../../Redux/openSlice'
+import {openAlert} from '../../Redux/openSlice'
 
-export const Email = () => {
+export const Email = ({closeMailForm}) => {
 	
 	const Form =() => {
-	const {mailForm, closeMailForm} = React.useContext(OpenContext)
 	var [flash, setFlash] = React.useState(0)
-	console.log(mailForm)
+	//console.log(mailForm)
 	React.useEffect(()=>{
 		const interval = setInterval(()=>{
 			function changer(){if(flash===0){setFlash(1)}else{setFlash(0)}}
@@ -42,7 +40,7 @@ export const Email = () => {
 	              Send</button>
 	         </form>
 	       <div>
-	         <button className={flash?s.closer:s.closer0} onClick={()=>dispatch(closeEmail())}>X</button>
+	         <button className={flash?s.closer:s.closer0} onClick={closeMailForm}>X</button>
 	         <h2 className={s.tit}>Contact Form</h2>
 	       </div>
 	     </section> 

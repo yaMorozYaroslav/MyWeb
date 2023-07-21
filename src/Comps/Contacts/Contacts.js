@@ -6,8 +6,8 @@ import {OpenContext} from '../../Context/OpenState'
 import {openEmail} from '../../Redux/openSlice'
 
 export function Contacts(){
-	const {mailForm, openMailForm} = React.useContext(OpenContext)
-    if(!mailForm)openMailForm()	
+	const {mailForm, openMailForm, closeMailForm} = React.useContext(OpenContext)
+    //if(!mailForm)openMailForm()	
 	console.log(mailForm)
 	const dispatch = useDispatch()
 	
@@ -37,11 +37,11 @@ export function Contacts(){
  return(            
                             <div className={styles.can}>
                             
-                              {!email?
-								  <button className={styles.clicker} onClick={()=>dispatch(openEmail())}>
+                              {!mailForm?
+								  <button className={styles.clicker} onClick={openMailForm}>
 								                                                                                            Click to email me</button>:null}
 								                                                                                            
-                                  {email?<div ><Email /></div>:<MyData />}
+                                  {mailForm?<div ><Email closeMailForm={closeMailForm}/></div>:<MyData />}
                                
                             </div>
     )
