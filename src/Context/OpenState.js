@@ -1,19 +1,19 @@
 import React from 'react'
 
-export const openContext = React.useContext()
+export const OpenContext = React.createContext()
 
-export const openState =({children})=> {
+export const OpenState =({children})=> {
 	
 	const [open, setOpen] = React.useState({
 		                         item: false, auth: false, mail: false})
 		                         
-    const openItemForm =()=> setOpen({...open, item: true})
-    const closeItemForm =()=> setOpen({...open, item: false})
+    const openMailForm =()=> setOpen({...open, mail: true})
+    const closeMailForm =()=> setOpen({...open, mail: false})
     
     return(
-    <OpenContext.Provider value={{itemForm: open.item,
-		                          openItemForm,
-		                          closeItemForm}}> 
+    <OpenContext.Provider value={{mailForm: open.mail,
+		                          openMailForm,
+		                          closeMailForm}}> 
 	  {children}
     </OpenContext.Provider>
     )

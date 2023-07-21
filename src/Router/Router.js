@@ -6,6 +6,7 @@ import {Profile} from '../Comps/Profile/Profile'
 import {Project} from '../Comps/Project/Project'
 import {Layout} from '../Layout/Layout'
 import {Intro} from '../Comps/Intro/Intro'
+import {OpenState} from '../Context/OpenState'
 
 const router = createBrowserRouter([
             { path: '/',
@@ -32,4 +33,4 @@ const router = createBrowserRouter([
 	             
        ])
 
-export const Router =()=> <RouterProvider router={router} />
+export const Router =()=> <OpenState><RouterProvider router={router} /></OpenState>

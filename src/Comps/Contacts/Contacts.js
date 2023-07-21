@@ -2,11 +2,13 @@ import React from 'react';
 import styles from './Contacts.module.css';
 import {Email} from '../Email/Email'
 import {useDispatch, useSelector} from 'react-redux'
-
+import {OpenContext} from '../../Context/OpenState'
 import {openEmail} from '../../Redux/openSlice'
 
 export function Contacts(){
-	
+	const {mailForm, openMailForm} = React.useContext(OpenContext)
+    if(!mailForm)openMailForm()	
+	console.log(mailForm)
 	const dispatch = useDispatch()
 	
 	const selectEmail = state => state.open.email
