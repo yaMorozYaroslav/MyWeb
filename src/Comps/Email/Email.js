@@ -5,11 +5,11 @@ import {Alert} from '../Alert/Alert'
 
 import {useRef} from 'react'
 import emailjs from '@emailjs/browser'
-import {useSelector, useDispatch} from 'react-redux'
+//import {useSelector, useDispatch} from 'react-redux'
 
-import {openAlert} from '../../Redux/openSlice'
+//import {openAlert} from '../../Redux/openSlice'
 
-export const Email = ({closeMailForm}) => {
+export const Email = ({alert, openAlert, closeMailForm}) => {
 	
 	const Form =() => {
 	var [flash, setFlash] = React.useState(0)
@@ -36,7 +36,7 @@ export const Email = ({closeMailForm}) => {
 	   	             <h1 className={s.subtit}>Message</h1>  
 	             <textarea className={s.textarea}
 	                                         name='message' cols='30' rows='5'></textarea>
-	              <button className={s.button} type='submit' onSubmit={()=>dispatch(openAlert())}  >
+	              <button className={s.button} type='submit' onSubmit={openAlert}  >
 	              Send</button>
 	         </form>
 	       <div>
@@ -47,9 +47,9 @@ export const Email = ({closeMailForm}) => {
 			)
 		}
 		
-	const dispatch = useDispatch()
-	const selectAlert = state => state.open.alert
-	const alert = useSelector(selectAlert)
+	//const dispatch = useDispatch()
+	//const selectAlert = state => state.open.alert
+	//const alert = useSelector(selectAlert)
 	
 	const form = useRef()
 	
@@ -60,7 +60,7 @@ export const Email = ({closeMailForm}) => {
 		'service_wzlecr5', 'template_hu92t85', form.current, 'LTwbosNcCwgaQan9I')
 		.then((result) => {
 			//console.log(result.text)
-			dispatch(openAlert())
+			openAlert()
 			}, (error) => {
 				console.log(error.text)
 				})
