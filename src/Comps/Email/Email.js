@@ -5,15 +5,12 @@ import {Alert} from '../Alert/Alert'
 
 import {useRef} from 'react'
 import emailjs from '@emailjs/browser'
-//import {useSelector, useDispatch} from 'react-redux'
-
-//import {openAlert} from '../../Redux/openSlice'
 
 export const Email = ({alert, openAlert, closeMailForm}) => {
 	
 	const Form =() => {
 	var [flash, setFlash] = React.useState(0)
-	//console.log(mailForm)
+	
 	React.useEffect(()=>{
 		const interval = setInterval(()=>{
 			function changer(){if(flash===0){setFlash(1)}else{setFlash(0)}}
@@ -46,10 +43,6 @@ export const Email = ({alert, openAlert, closeMailForm}) => {
 	     </section> 
 			)
 		}
-		
-	//const dispatch = useDispatch()
-	//const selectAlert = state => state.open.alert
-	//const alert = useSelector(selectAlert)
 	
 	const form = useRef()
 	
@@ -59,7 +52,6 @@ export const Email = ({alert, openAlert, closeMailForm}) => {
 		emailjs.sendForm(
 		'service_wzlecr5', 'template_hu92t85', form.current, 'LTwbosNcCwgaQan9I')
 		.then((result) => {
-			//console.log(result.text)
 			openAlert()
 			}, (error) => {
 				console.log(error.text)

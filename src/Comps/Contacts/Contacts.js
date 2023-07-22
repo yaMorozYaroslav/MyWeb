@@ -6,15 +6,10 @@ import {OpenContext} from '../../Context/OpenState'
 import {openEmail} from '../../Redux/openSlice'
 
 export function Contacts(){
+	
 	const {alert, mailForm,openAlert, closeAlert,
 		    openMailForm, closeMailForm} = React.useContext(OpenContext)
-    //if(!mailForm)openMailForm()	
-	//console.log(mailForm)
-	//const dispatch = useDispatch()
-	
-	//const selectEmail = state => state.open.email
-	//const email = useSelector(selectEmail)
-		
+
 	const MyData = () =>{
 		return (<>
 		         <h1 className={styles.label}>Number</h1>
