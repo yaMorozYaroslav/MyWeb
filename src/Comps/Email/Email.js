@@ -6,7 +6,7 @@ import {Alert} from '../Alert/Alert'
 import {useRef} from 'react'
 import emailjs from '@emailjs/browser'
 
-export const Email = ({alert, openAlert, closeMailForm}) => {
+export const Email = ({alert, openAlert, closeAlert, closeMailForm}) => {
 	
 	const Form =() => {
 	var [flash, setFlash] = React.useState(0)
@@ -45,6 +45,7 @@ export const Email = ({alert, openAlert, closeMailForm}) => {
 		}
 	
 	const form = useRef()
+	console.log(alert)
 	
 	const sendEmail = e => {
 		e.preventDefault()
@@ -57,8 +58,11 @@ export const Email = ({alert, openAlert, closeMailForm}) => {
 				console.log(error.text)
 				})
 				e.target.reset()
+			closeMailForm()
 	}
-	return(<>{alert? <Alert /> : <Form/>}</>
+ return(<>{alert
+		    ? <Alert closeAlert={closeAlert}/>  
+		    : <Form/>}</>
 	                                        
 	)	
 }

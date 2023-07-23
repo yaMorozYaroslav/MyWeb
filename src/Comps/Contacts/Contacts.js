@@ -7,7 +7,7 @@ import {openEmail} from '../../Redux/openSlice'
 
 export function Contacts(){
 	
-	const {alert, mailForm,openAlert, closeAlert,
+	const {alert, mailForm, openAlert, closeAlert,
 		    openMailForm, closeMailForm} = React.useContext(OpenContext)
 
 	const MyData = () =>{
@@ -37,7 +37,10 @@ export function Contacts(){
 								  <button className={styles.clicker} onClick={openMailForm}>
 								                                         Click to email me</button>:null}
 								                                                                                            
-                                  {mailForm?<div ><Email  alert={alert} openAlert={openAlert} closeMailForm={closeMailForm} /></div>:<MyData />}
+                                  {mailForm?<div ><Email  alert={alert} 
+									                      openAlert={openAlert} 
+									                      closeAlert={closeAlert} 
+									                      closeMailForm={closeMailForm} /></div>:<MyData />}
                                
                             </div>
     )

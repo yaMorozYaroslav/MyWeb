@@ -1,11 +1,10 @@
-import React from 'react';
-import s from'./Layout.module.css';
-import {Outlet, Link} from "react-router-dom";
-import {useLocation} from "react-router-dom";
-import Linker0 from './Layout.styled.js'
-import {useDispatch} from 'react-redux'
+import React from 'react'
+import s from'./Layout.module.css'
+import {Outlet, Link} from "react-router-dom"
+import {useLocation} from "react-router-dom"
+
 import {OpenContext} from '../Context/OpenState'
-import {stateSection} from '../Redux/openSlice'
+
 
 export function Layout(){
 	
