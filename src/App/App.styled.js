@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {pics} from './pics/pics'
-import {device} from '../screen'
+//import {device} from '../screen'
 
 export const Body = styled.div`
     height: 100%;

@@ -19,9 +19,11 @@ export const OpenState =({children})=> {
     return(
     <OpenContext.Provider value={{alert: open.alert,
 		                          mailForm: open.mail,
+		                          section: open.section,
 		                          openAlert, closeAlert,
-		                          openMailForm,
-		                          closeMailForm}}> 
+		                          openMailForm, closeMailForm,
+		                          nowIntro, nowProfile, 
+		                          nowProject, nowContacts}}> 
 	  {children}
     </OpenContext.Provider>
     )

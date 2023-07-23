@@ -6,14 +6,16 @@ import {Router} from '../Router/Router'
 
 import {Body, BackImg} from './App.styled'
 import {useSelector} from 'react-redux'
-import {OpenState} from '../Context/OpenState'
+
+import {OpenContext} from '../Context/OpenState'
 
 import {ScreenSize} from '../screen'
 
 
 export function App() {
-	
-const section = useSelector(state => state.open.section)
+//const section = useSelector(state => state.open.section)
+
+const {section} = React.useContext(OpenContext)
 const size = ScreenSize()   
        
 	return(
@@ -25,7 +27,7 @@ const size = ScreenSize()
              data-testid='backimg'
              current={section}
              size={size}>
-              <OpenState><Router/></OpenState>
+              <Router/>
           </BackImg>
        <Footer />
     </Body>)

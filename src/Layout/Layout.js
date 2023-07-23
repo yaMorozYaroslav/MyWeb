@@ -4,26 +4,29 @@ import {Outlet, Link} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 import Linker0 from './Layout.styled.js'
 import {useDispatch} from 'react-redux'
-import {nowIntro, nowProfile, nowProject, nowContacts} from '../Redux/openSlice'
+import {OpenContext} from '../Context/OpenState'
 import {stateSection} from '../Redux/openSlice'
 
-export function Layout(current = stateSection){
+export function Layout(){
+	
+	const {section} = React.useContext(OpenContext)
+	console.log(section)
 	const location = useLocation();
 	const {pathname} = location;
 	const splitLocation = pathname.split("/")
-	
-	const dispatch = useDispatch()
+	const {nowIntro, nowProfile, nowProject, nowContacts} = React.useContext(OpenContext)
 	
 	React.useEffect(()=>{
-		if(splitLocation[1]==="") dispatch(nowIntro())
-	   if(splitLocation[1]==="profile") dispatch(nowProfile()) 
-	   if(splitLocation[1]==="project") dispatch(nowProject())
-	   if(splitLocation[1]==="contacts")dispatch(nowContacts())
-		},[location, dispatch, splitLocation])
+		if(splitLocation[1]===""&&section !== 'intro') nowIntro()
+	   if(splitLocation[1]==="profile"&&section !== 'profile') nowProfile()
+	   if(splitLocation[1]==="project"&&section !== 'project') nowProject()
+	   if(splitLocation[1]==="contacts"&&section !== 'contacts') nowContacts()
+		},[splitLocation, section, nowProject, nowIntro, nowContacts, nowProfile])
 	
 	const Linker =({text, route,location})=>
-	 <Link className={splitLocation[1]===location?s.alink:s.link} to={route} >{text}</Link>
 	
+	 <Link className={splitLocation[1]===location?s.alink:s.link}
+	                                     to={route} >{text}</Link>	
 	return(
 		<>
 		  <nav className={s.nav}>
