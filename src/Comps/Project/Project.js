@@ -1,13 +1,15 @@
 import React from 'react'
 import s from './Project.module.css'
 
-import {LgLaptopZoom,SmLaptopZoom,TabletZoom,SmPhoneZoom,LgPhoneZoom} from './lenses.js'
+import {LgLaptopZoom,SmLaptopZoom,TabletZoom,
+	                 SmPhoneZoom,LgPhoneZoom} from './lenses/lenses.js'
+import {ScreenSize} from '../../screen'
 
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
 	function openApp(){window.open('https://the-funny-fair.netlify.app')}
 	function openBack(){window.open('https://item-auth-back-0555af6b9518.herokuapp.com')}
-	
+	console.log(ScreenSize())
 	const lgLaptop = window.innerWidth > 1250
 	const smLaptop = window.innerWidth < 1250 && window.innerWidth > 850
 	const tablet = window.innerWidth < 850 && window.innerWidth > 650 
