@@ -8,6 +8,8 @@ export const Body = styled.div`
     margin: -8px 0px 0px -8px;
    ${({size}) => size.lapL &&`width:103%;`}
    ${({size}) => size.mobL &&`width:105%;`}
+   ${({size}) => size.mobM &&`width:108%;`}
+   ${({size}) => size.mobS &&`width:108%;`}
 `
 export const BackImg = styled.div`
  ${({current}) => current === 'intro' && `
