@@ -1,9 +1,13 @@
 import React from "react";
 import styles from './Intro.module.css';
+import {Container} from './Intro.styled'
+import {ScreenSize} from '../../screen'
 
 export const Intro = () =>{
+	const screen = ScreenSize()
+	console.log(screen)
 	return <>
-	    <div className={styles.container}>
+	    <Container size={screen}>
 	    
   <section className={styles.text}>
 	Welcome to the site. </section>
@@ -20,6 +24,6 @@ export const Intro = () =>{
      
   <section className={styles.text}>All photos are copyrighted.</section>
   
-    </div>
+    </Container>
     </>
 }
