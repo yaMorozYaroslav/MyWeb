@@ -5,17 +5,17 @@ export const Container = styled.div`
     width: 70%;
     margin:30px 0px 30px 14%;
 	font-family: 'Sawarabi Mincho', serif;
-	font-size: 35px;
+	font-size: 40px;
 	color: white;
 	text-align: center;
-	${({size}) => size.lapS && `width:80%;
-                                margin-left:8%;
-                                font-size:30px;`}
-	
+	${({size})    =>    size.lapS       &&               `width:80%;
+                                                          margin-left:8%;
+                                                          font-size:38px;`}
+    ${({size}) => size.mobL && `font-size: 32px;`}
     ${props => (props.size.mobM || props.size.mobS)  &&  `width:92%;
                                                           margin-top:40px;
                                                           margin-left: 2.5%;
-                                                          font-size: 22px;`}
+                                                          font-size: 31px;`}
     `
 export const Text = styled.section`
     margin-top:5px;

@@ -1,28 +1,29 @@
 import React from "react";
-import styles from './Intro.module.css';
+//import styles from './Intro.module.css';
 import {Container, Text} from './Intro.styled'
 import {ScreenSize} from '../../screen'
 
 export const Intro = () =>{
+	
 	const screen = ScreenSize()
-	console.log(screen)
+	
 	return <>
 	    <Container size={screen}>
 	    
   <Text size={screen}>
 	Welcome to the site. </Text>
 	
-  <section className={styles.text}>Here you will find important
+  <Text size={screen}>Here you will find important
    information about my skills, aspirations and areas of interest
-  along with an example of work.</section>
+  along with an example of work.</Text>
   
-  <section className={styles.text}>Deployed application and its
-   source code are available via links.</section>
+  <Text size={screen}>Deployed application and its
+   source code are available via links.</Text>
   
-  <section className={styles.text}>I also made it possible to write
-     me an email directly from the "Contacts" section.</section>
+  <Text size={screen}>I also made it possible to write
+     me an email directly from the "Contacts" section.</Text>
      
-  <section className={styles.text}>All photos are copyrighted.</section>
+  <Text size={screen}>All photos are copyrighted.</Text>
   
     </Container>
     </>
