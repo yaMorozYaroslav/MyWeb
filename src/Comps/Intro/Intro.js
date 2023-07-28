@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './Intro.module.css';
-import {Container} from './Intro.styled'
+import {Container, Text} from './Intro.styled'
 import {ScreenSize} from '../../screen'
 
 export const Intro = () =>{
@@ -9,8 +9,8 @@ export const Intro = () =>{
 	return <>
 	    <Container size={screen}>
 	    
-  <section className={styles.text}>
-	Welcome to the site. </section>
+  <Text size={screen}>
+	Welcome to the site. </Text>
 	
   <section className={styles.text}>Here you will find important
    information about my skills, aspirations and areas of interest

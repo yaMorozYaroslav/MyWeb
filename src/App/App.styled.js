@@ -9,7 +9,7 @@ export const Body = styled.div`
    ${({size}) => size.lapL &&`width:103%;`}
    ${({size}) => size.mobL &&`width:105%;`}
    ${({size}) => size.mobM &&`width:108%;`}
-   ${({size}) => size.mobS &&`width:108%;`}
+   ${({size}) => size.mobS &&`width:107%;`}
 `
 export const BackImg = styled.div`
  ${({current}) => current === 'intro' && `

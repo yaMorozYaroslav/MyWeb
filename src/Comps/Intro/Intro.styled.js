@@ -12,8 +12,14 @@ export const Container = styled.div`
                                 margin-left:8%;
                                 font-size:30px;`}
 	
-    ${({size}) => size.mobM &&              `width:94%;
-                                             margin-top:40px;
-                                             margin-left: 2.5%;
-                                             font-size: 22px;`}
+    ${props => (props.size.mobM || props.size.mobS)  &&  `width:92%;
+                                                          margin-top:40px;
+                                                          margin-left: 2.5%;
+                                                          font-size: 22px;`}
     `
+export const Text = styled.section`
+    margin-top:5px;
+    text-indent:40px;
+    
+   ${({size}) => (size.mobM || size.mobS) && `text-indent: 10px;`}
+`
