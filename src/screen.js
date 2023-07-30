@@ -8,7 +8,8 @@ const size = {
   mobL: useMediaQuery({ query: '(min-width: 450px) and (max-width: 599px)'}),
   lapS: useMediaQuery({ query: '(min-width: 600px) and (max-width: 799px)'}),
   lapM: useMediaQuery({ query: '(min-width: 800px) and (max-width: 999px)'}),
-  lapL: useMediaQuery({ query: '(min-width: 1000px)'})
+  lapL: useMediaQuery({ query: '(min-width: 1000px) and (max-width: 1199px)'}),
+  lapXL: useMediaQuery({ query: '(min-width: 1200px)'})
 }
 	return size
 	     

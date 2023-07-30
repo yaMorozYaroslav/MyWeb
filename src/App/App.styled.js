@@ -5,7 +5,9 @@ export const Body = styled.div`
     height: 100%;
     width: 101.2%;
     margin: -8px 0px 0px -8px;
-   ${({size}) => size.lapS &&`width:104%;`}
+   ${({size}) => size.lapL &&`width:102%;`}
+   ${({size}) => size.lapM &&`width:102%;`}
+   ${({size}) => size.lapS &&`width:103%;`}
    ${({size}) => size.mobL &&`width:105%;`}
    ${({size}) => size.mobM &&`width:108%;`}
    ${({size}) => size.mobS &&`width:107%;`}

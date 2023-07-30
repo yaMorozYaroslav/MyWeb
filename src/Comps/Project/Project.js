@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './Project.module.css'
 
-import {LgLaptopZoom,SmLaptopZoom,TabletZoom,
+import {LgLaptopZoom,MdLaptopZoom,TabletZoom,
 	                 SmPhoneZoom,LgPhoneZoom} from './lenses/lenses.js'
 import {ScreenSize} from '../../screen'
 
@@ -16,8 +16,8 @@ export function Project(){
 
 	<div  className={s.container} >
         <div className={s.zoomCon}>  
-         {screen.lapL?<LgLaptopZoom/>:null}
-         {screen.lapM?<SmLaptopZoom/>:null}
+         {screen.lapXL?<LgLaptopZoom/>:null}
+         {screen.lapM||screen.lapL?<MdLaptopZoom/>:null}
          {screen.lapS?<TabletZoom/>:null}
          {screen.mobL?<LgPhoneZoom/>:null}
          {screen.mobS||screen.mobM?<SmPhoneZoom/>:null}
@@ -25,7 +25,7 @@ export function Project(){
     
   <div className={s.descAndButs}>
 	<div className={s.description}>
-	 <h2>Description</h2>
+	 <h2 style={{marginBottom:'18px'}}>Description</h2>
 	 <section className={s.text}>
 	      This is one of my first full stack projects created half a year ago
 	    using NodeJS, ExpressJS, MongoDB, React and Redux.</section>
@@ -41,8 +41,8 @@ export function Project(){
 	 </div>
 	 
 	<section className={s.buttons}> 
-	    <h2>Available features</h2>
 	 <ul className={s.features}>
+	  <h3>Available features</h3>
 	   <li>Token Authentication</li>
 	   <li>Role-Based Authorization</li>
 	   <li>Instant Contact Form</li>
@@ -50,11 +50,11 @@ export function Project(){
 	 </ul>
 	  
 	   <button className={s.butt} onClick={openCode}>
-	            <p className={s.butText}> Open Application Code on GitHub</p></button>
+	            <p className={s.butText}> Open Code on GitHub</p></button>
 	   <button className={s.butt} onClick={openApp}>
-	            <p className={s.butText}>Open Deployed Application on Netlify</p></button>
+	            <p className={s.butText}>Open Application on Netlify</p></button>
 	   <button className={s.butt} onClick={openBack}>
-	            <p className={s.butText}>Open Deployed Backend on Heroku</p></button>
+	            <p className={s.butText}>Open Backend on Heroku</p></button>
    </section>
    </div>
 	</div>

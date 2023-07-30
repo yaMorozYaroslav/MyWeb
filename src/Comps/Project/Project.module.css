@@ -13,15 +13,16 @@
  }
  .text{
    text-indent:5%;
-   margin:5px 5% 15px 2%;
+   margin:0px 5% 15px 2%;
    
  }
  .buttons{width:38.5%;margin:5px 0px 0px 0%;}
- .features{font-size: 30px}
+ .features{font-size: 34px}
  .butt{
  margin: 20px 2px 2px 20px;
  font-size: 29px;
  color:black;
+ width: 100%;
  background: white;
  border:3px solid black;
  border-radius:5px;
@@ -33,17 +34,20 @@
 .zoomCon{}
 .descAndButs{display: inline;}
 .description{width:90%;margin-left:5%;font-size:35px;}
-.buttons{width: 90%; margin-top:10px;margin-left:2.5%;}
-.butt{font-size:40px};
+.buttons{width: 80%; margin-top:10px;margin-left:8%;}
+.butt{font-size:35px};
 }
 @media only screen and (max-width: 850px){
 .container{margin-top:30px;}
 .zoomCon{margin-left:2%;}
 .description{width:85%;margin-left:7%;font-size:31px;}
+.features{font-size: 30px}
 .butt{font-size:32px;}
 }
 @media only screen and (max-width:450px){
-.description{width:98%;margin-left:1%;font-size:25px;}
+.zoomCon{margin-bottom:-10px}
+.description{width:98%;margin-left:1%;font-size:28px;}
 .text{margin-bottom:10px;}
-.butt{margin-top:15px;margin-left:5%;font-size:24px;}
+.features{font-size: 26px}
+.butt{margin-top:15px;margin-left:5%;font-size:25px;}
 }

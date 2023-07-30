@@ -19,15 +19,23 @@ export const LgLaptopZoom = () =>
   height={240}
      /> </section>
  </>
- export const SmLaptopZoom = () =>
- <>   <Zoom
+ export const MdLaptopZoom = () => 
+ <> <section style={{margin:'5px'}}> <Zoom
+  img={itemImg}
+  transitionTime={0.5}
+  zoomScale={2}
+  width={310}
+  height={240}
+     /> </section>
+    <section style={{margin: '5px'}}> <Zoom
   img={picture}
   transitionTime={0.5}
-  zoomScale={1.8}
-  width={650}
-  height={350}
-     />
+  zoomScale={2}
+  width={310}
+  height={240}
+     /> </section>
  </>
+
  export const TabletZoom = () =>
  <>
  <Zoom
