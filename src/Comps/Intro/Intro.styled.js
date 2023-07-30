@@ -9,9 +9,11 @@ export const Container = styled.div`
 	color: white;
 	text-align: center;
 	${({size})    =>    size.lapS       &&               `width:80%;
-                                                          margin-left:8%;
-                                                          font-size:38px;`}
-    ${({size}) => size.mobL && `font-size: 32px;`}
+                                                          margin-left:8%;`}
+    ${({size})    =>    size.mobL       &&               `width:90%;
+                                                          margin-left: 5%;
+                                                          font-size: 34px;
+                                                          margin-top:40px;`}
     ${props => (props.size.mobM || props.size.mobS)  &&  `width:92%;
                                                           margin-top:40px;
                                                           margin-left: 2.5%;

@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 import {pics} from './pics/pics'
-//import {device} from '../screen'
 
 export const Body = styled.div`
     height: 100%;
     width: 101.2%;
     margin: -8px 0px 0px -8px;
-   ${({size}) => size.lapL &&`width:103%;`}
+   ${({size}) => size.lapS &&`width:104%;`}
    ${({size}) => size.mobL &&`width:105%;`}
    ${({size}) => size.mobM &&`width:108%;`}
    ${({size}) => size.mobS &&`width:107%;`}
@@ -30,8 +29,7 @@ export const BackImg = styled.div`
    background-image: url(${pics.contacts});
    background-size: cover;
  `}
- ${({size}) => !size.lapL && `background-position: 0px -400px;`}
- ${({size}) => size.lapL && `background-position: 0px -300px;`}
+ ${({size}) => size.lapL && `background-position: 0px -400px;`}
  ${({size}) => size.lapM && `background-position: 0px -200px;`}
  ${({size}) => size.lapS && `background-position: 0px -100px;`}
  ${({size}) => size.mobL && `background-position: 0px -50px;`}

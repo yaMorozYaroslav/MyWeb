@@ -1,5 +1,4 @@
 import React from "react";
-//import styles from './Intro.module.css';
 import {Container, Text} from './Intro.styled'
 import {ScreenSize} from '../../screen'
 

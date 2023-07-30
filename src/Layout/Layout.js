@@ -9,7 +9,7 @@ import {OpenContext} from '../Context/OpenState'
 export function Layout(){
 	
 	const {section} = React.useContext(OpenContext)
-	console.log(section)
+	//console.log(section)
 	const location = useLocation();
 	const {pathname} = location;
 	const splitLocation = pathname.split("/")

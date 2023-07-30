@@ -5,7 +5,7 @@ import {Footer} from '../Comps/Footer/Footer'
 import {Router} from '../Router/Router'
 
 import {Body, BackImg} from './App.styled'
-import {useSelector} from 'react-redux'
+//import {useSelector} from 'react-redux'
 
 import {OpenContext} from '../Context/OpenState'
 

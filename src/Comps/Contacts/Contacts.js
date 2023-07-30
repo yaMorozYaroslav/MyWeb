@@ -1,9 +1,7 @@
 import React from 'react';
 import styles from './Contacts.module.css';
 import {Email} from '../Email/Email'
-import {useDispatch, useSelector} from 'react-redux'
 import {OpenContext} from '../../Context/OpenState'
-import {openEmail} from '../../Redux/openSlice'
 
 export function Contacts(){
 	

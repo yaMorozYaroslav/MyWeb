@@ -25,7 +25,7 @@ export function Project(){
     
   <div className={s.descAndButs}>
 	<div className={s.description}>
-	  
+	 <h2>Description</h2>
 	 <section className={s.text}>
 	      This is one of my first full stack projects created half a year ago
 	    using NodeJS, ExpressJS, MongoDB, React and Redux.</section>
@@ -39,7 +39,16 @@ export function Project(){
 	      An authorized user can add items to the database and 
 	      manage those that he added.                     </section>
 	 </div>
-	<section className={s.buttons}>   
+	 
+	<section className={s.buttons}> 
+	    <h2>Available features</h2>
+	 <ul className={s.features}>
+	   <li>Token Authentication</li>
+	   <li>Role-Based Authorization</li>
+	   <li>Instant Contact Form</li>
+	   <li>Copyrighted Web Design</li>
+	 </ul>
+	  
 	   <button className={s.butt} onClick={openCode}>
 	            <p className={s.butText}> Open Application Code on GitHub</p></button>
 	   <button className={s.butt} onClick={openApp}>
