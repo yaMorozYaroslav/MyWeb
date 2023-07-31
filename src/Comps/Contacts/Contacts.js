@@ -7,7 +7,7 @@ export function Contacts(){
 	
 	const {alert, mailForm, openAlert, closeAlert,
 		    openMailForm, closeMailForm} = React.useContext(OpenContext)
-
+    function openCode(){ window.open('https://github.com/yaMorozYaroslav/MyWeb')}
 	const MyData = () =>{
 		return (<>
 		         <h1 className={styles.label}>Number</h1>
@@ -24,6 +24,8 @@ export function Contacts(){
     	          <p className={styles.discr}>github.com/yaMorozYaroslav</p>
 			      
 			      <h1 className={styles.city}>NS, Dartmouth</h1>
+			      <button className={styles.link} onClick={openCode}>
+			      Source Code for This Site</button>
 			      </>)};
 
 

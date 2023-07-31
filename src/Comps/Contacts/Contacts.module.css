@@ -1,6 +1,6 @@
 .can{
 	width:95%;
-	height: 550px;
+	height: 600px;
 	color: white;
 	text-align: center;
 }
@@ -39,7 +39,8 @@ border: 3px solid black;
 border-radius: 20px;
 }
 .clicker:hover{cursor:pointer;border:3px solid white;}
-
+.link{margin:0px 1px 0px 300px;font-size:20px;}
+.link:hover{cursor:pointer;border:none;margin:2px 1px 0px 300px;background:lime;}
 @media only screen and (max-width:1105px){.can{height: 680px;margin-top:10px;}
                                           .label{margin-top:30px;margin-bottom:10px;}
                                           .clicker{margin-top:140px}
