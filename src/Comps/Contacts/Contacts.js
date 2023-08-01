@@ -25,7 +25,7 @@ export function Contacts(){
 			      
 			      <h1 className={styles.city}>NS, Dartmouth</h1>
 			      <button className={styles.link} onClick={openCode}>
-			      Source Code for This Site</button>
+			      Link To Source Code</button>
 			      </>)};
 
 
