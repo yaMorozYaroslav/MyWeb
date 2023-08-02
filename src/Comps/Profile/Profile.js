@@ -6,7 +6,7 @@ export const Profile = () => {
 	  <div  className={s.container}> 
 		   
 		   <h2 className={s.name}> Yaroslav Moroz,</h2>
-		   <h2 className={s.age}>23 years old</h2>
+		   <h2 className={s.age}>24 years old</h2>
 		   
 		   <div className={s.pic}/>
 		 
