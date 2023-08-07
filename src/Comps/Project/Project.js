@@ -27,17 +27,26 @@ export function Project(){
 	<div className={s.description}>
 	 <h2 style={{marginBottom:'18px'}}>Description</h2>
 	 <section className={s.text}>
-	       This is the latest version of my full stack project
-	      built using NodeJS, ExpressJS, MongoDB and React.</section>
+	   This is the latest version of my full stack project
+	built using NodeJS, ExpressJS, MongoDB and React 
+	which was designed to showcase my current
+	                        coding skills and style.</section>
 	    
-	 <section className={s.text}>   
-	      There is a registration that allows you to store the name, 
-	      email address and encrypted password in MongoDB for 
-	      later use in token authentication.              </section>
+	 <section className={s.text}> 
+	   The app already has most of the features I was looking for,
+    including a shopping cart that a user can email me, logging in,
+    managing items within user permissions, and filters for the list 
+    of products.  
+	              </section>
 	       
 	 <section className={s.text}> 
-	      An authorized user can add items to the database and 
-	      manage those that he added.                     </section>
+	  I wanna add that it is still
+	  in development to eventually become a full fledged ecommerce site.
+	              </section>
+	      
+	 <section className={s.text}> 
+	      In the future, I plan to implement the concept in NextJS,
+        because "create-react-app" is deprecated.                    </section>
 	 </div>
 	 
 	<section className={s.buttons}> 

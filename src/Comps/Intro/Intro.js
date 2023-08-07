@@ -12,11 +12,11 @@ export const Intro = () =>{
   <Text size={screen}>
 	Welcome to the site. </Text>
 	
-  <Text size={screen}>Here you will find important
-   information about my skills, aspirations and areas of interest
-  along with an example of work.</Text>
+  <Text size={screen}>Here you will find information about 
+   my skills, aspirations, areas of interest, as well 
+                                         as examples of work.</Text>
   
-  <Text size={screen}>Deployed application and its
+  <Text size={screen}>Full-stack project and its
    source code are available via links.</Text>
   
   <Text size={screen}>I also made it possible to write
