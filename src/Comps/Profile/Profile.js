@@ -11,15 +11,17 @@ export const Profile = () => {
 		   <div className={s.pic}/>
 		 
         <section className={s.text}>
-                        I'm a web developer who learned
-                      to use the React library by practicing with
-                       the documentation in addition to watching online courses.
+                I am a person who loves to create websites
+                and is looking for opportunities to earn money from it.
         </section>
            
           <section className={s.text}>
-                      The desire to cover the entire development process
-                      inspired me to explore the backend and create
-                      a REST API that provides authentication.
+             What attracts me to web development is the limitless
+             educational potential along with the ability to help people
+             turn their ideas into applications. 
+           It is also enticing that the availability of information 
+           now allows anyone with Internet access to study online,
+           as I did, acquiring all the skills from open sources.
           </section>
           
         <section className={s.text}>

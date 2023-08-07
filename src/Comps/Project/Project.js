@@ -27,8 +27,8 @@ export function Project(){
 	<div className={s.description}>
 	 <h2 style={{marginBottom:'18px'}}>Description</h2>
 	 <section className={s.text}>
-	      This is one of my first full stack projects created half a year ago
-	    using NodeJS, ExpressJS, MongoDB, React and Redux.</section>
+	       This is the latest version of my full stack project
+	      built using NodeJS, ExpressJS, MongoDB and React.</section>
 	    
 	 <section className={s.text}>   
 	      There is a registration that allows you to store the name, 

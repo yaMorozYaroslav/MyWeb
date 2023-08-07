@@ -19,7 +19,7 @@
  .buttons{width:38.5%;margin:5px 0px 0px 0%;}
  .features{font-size: 34px}
  .butt{
- margin: 20px 2px 2px 20px;
+ margin: 20px 2px 2px 0px;
  font-size: 29px;
  color:black;
  width: 100%;
@@ -49,5 +49,5 @@
 .description{width:98%;margin-left:1%;font-size:28px;}
 .text{margin-bottom:10px;}
 .features{font-size: 26px}
-.butt{margin-top:15px;margin-left:5%;font-size:27px;}
+.butt{margin-top:15px;margin-left:2%;font-size:27px;}
 }
