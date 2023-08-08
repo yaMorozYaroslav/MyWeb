@@ -34,10 +34,9 @@ export function Project(){
 	    
 	 <section className={s.text}> 
 	   The app already has most of the features I was looking for,
-    including a shopping cart that a user can email me, logging in,
-    managing items within user permissions, and filters for the list 
-    of products.  
-	              </section>
+	    including a shopping cart that the user can email me, 
+	    basic login, managing items within user permissions,
+	                         and filtering the product list.   </section>
 	       
 	 <section className={s.text}> 
 	  I wanna add that it is still
