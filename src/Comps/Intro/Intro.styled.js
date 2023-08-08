@@ -21,7 +21,8 @@ export const Container = styled.div`
     `
 export const Text = styled.section`
     margin-top:5px;
+    margin-left: 5%;
     text-indent:40px;
-    
+   ${({size}) => !size.lapXL && `margin-left:0%`}
    ${({size}) => (size.mobM || size.mobS) && `text-indent: 10px;`}
 `

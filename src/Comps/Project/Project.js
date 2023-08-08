@@ -27,25 +27,24 @@ export function Project(){
 	<div className={s.description}>
 	 <h2 style={{marginBottom:'18px'}}>Description</h2>
 	 <section className={s.text}>
-	   This is the latest version of my full stack project
-	built using NodeJS, ExpressJS, MongoDB and React 
-	which was designed to showcase my current
-	                        coding skills and style.</section>
+	   This is the latest version of my full-stack project created 
+	with MERN to showcase my current skills and coding style.</section>
 	    
 	 <section className={s.text}> 
 	   The app already has most of the features I was looking for,
-	    including a shopping cart that the user can email me, 
-	    basic login, managing items within user permissions,
-	                         and filtering the product list.   </section>
+	including a shopping cart that the user can email me, 
+	basic login, managing items within user permissions,
+	                      and filtering the list of items. </section>
 	       
 	 <section className={s.text}> 
-	  I wanna add that it is still
-	  in development to eventually become a full fledged ecommerce site.
+	   I want to add that the instance is still in development 
+	to eventually become a full fledged ecommerce site.
+       In the future, it is planned to implement the concept
+    in NextJS, because "build-react-app" is deprecated.
 	              </section>
 	      
 	 <section className={s.text}> 
-	      In the future, I plan to implement the concept in NextJS,
-        because "create-react-app" is deprecated.                    </section>
+	                     </section>
 	 </div>
 	 
 	<section className={s.buttons}> 

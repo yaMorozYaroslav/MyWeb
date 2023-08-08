@@ -3,9 +3,7 @@ import React from 'react'
 import {Container, First, Text,
 	                 FontIcon, Second} from './Header.styled.js'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
-//import {useSelector} from 'react-redux'
 import {useMediaQuery} from 'react-responsive'
-import {screen} from '../../screen'
                  
 export const Header =()=> {
   const isTablet = useMediaQuery({ query: '(min-width: 800px)'  })
