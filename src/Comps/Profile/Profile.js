@@ -11,18 +11,17 @@ export const Profile = () => {
 		   <div className={s.pic}/>
 		 
         <section className={s.text}>
-             I am a person who loves to create websites
-           and is looking for opportunities to work
-           in a team of specialists.
+             I am a web application developer looking for
+            opportunities to develop great applications.
         </section>
            
           <section className={s.text}>
-             What attracts me to web development is the limitless
-           educational potential along with the ability to help people
-           turn their ideas into applications. 
+             The limitless educational potential of programming
+            and the ability to help people turn their ideas 
+            into websites motivate me to keep learning. 
              It is also enticing that the availability of information 
-           now allows anyone with Internet access to study online,
-           as I did, acquiring all knowledge from open sources.
+            now allows anyone with Internet access to study online,
+            as I did, acquiring all knowledge from open sources.
           </section>
           
         <section className={s.text}>
@@ -35,7 +34,7 @@ export const Profile = () => {
              The prospects of modern web technologies are impressive,
            remote education and business have improved life beyond 
            recognition. Human activity can be moved almost entirely 
-           online, making any effort in our haste through eternity more efficient. 
+           online, making our efforts in haste through eternity more efficient. 
         </section>
         
         <section className={s.text}>
