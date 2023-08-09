@@ -18,12 +18,12 @@ export const Profile = () => {
           <section className={s.text}>
              The limitless educational potential of programming
             and the ability to help people turn their ideas 
-            into websites motivate me to keep learning. 
+            into websites motivate me to keep learning.     </section>
+           <section className={s.text}>
              It is also enticing that the availability of information 
             now allows anyone with Internet access to study online,
-            as I did, acquiring all knowledge from open sources.
-          </section>
-          
+            as I did, acquiring all knowledge from open sources.       </section>
+           
         <section className={s.text}>
              Looking for a reliable operating system,
            I settled on the Arch Linux distribution with 

@@ -16,8 +16,8 @@ export const Intro = () =>{
    my skills, aspirations, areas of interest, as well 
                                          as examples of work.</Text>
   
-  <Text size={screen}>Full-stack project and its
-   source code are available via links.</Text>
+  <Text size={screen}>Full-stack project with its 
+                             source code is available via links.</Text>
   
   <Text size={screen}>I also made it possible to write
      me an email directly from the "Contacts" section.</Text>
