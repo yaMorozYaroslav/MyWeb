@@ -33,6 +33,7 @@
 .container{}
 .zoomCon{}
 .descAndButs{display: inline;}
+.descTitle{font-size: 44px;}
 .description{width:90%;margin-left:5%;font-size:35px;}
 .buttons{width: 80%; margin-top:10px;margin-left:8%;}
 .butt{font-size:35px};
@@ -46,6 +47,7 @@
 }
 @media only screen and (max-width:450px){
 .zoomCon{margin-bottom:-10px}
+.descTitle{font-size: 40px;margin-bottom: 20px;}
 .description{width:98%;margin-left:2%;font-size:28px;}
 .text{margin-bottom:10px;}
 .features{font-size: 26px}

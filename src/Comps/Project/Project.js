@@ -25,7 +25,7 @@ export function Project(){
     
   <div className={s.descAndButs}>
 	<div className={s.description}>
-	 <h2 style={{marginBottom:'18px'}}>Description</h2>
+	 <h2 className={s.descTitle}>Description</h2>
 	 <section className={s.text}>
 	   This is the latest version of my full-stack project created 
 	with MERN to showcase my current skills and coding style.</section>

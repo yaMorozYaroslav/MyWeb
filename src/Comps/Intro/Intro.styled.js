@@ -18,7 +18,7 @@ export const Container = styled.div`
     ${props => (props.size.mobM || props.size.mobS)  &&  `width:90%;
                                                           margin-top:40px;
                                                           margin-left: 0%;
-                                                          font-size: 32px;`}
+                                                          font-size: 28px;`}
     `
 export const Text = styled.section`
     margin-top:5px;

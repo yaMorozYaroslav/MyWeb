@@ -52,8 +52,8 @@ text-orientation: mixed;
 background-color: black;
 margin-left: 50%;
 }
-.closer{width: 60px;margin-left: 50%;color:white;background-color: red;border:2px solid black;}
-.closer0{width: 60px;margin-left: 50%;color:red;background-color: red;border:2px solid black;}
+.closer{width: 60px; height: 35px; margin-left: 48%;color:white;background-color: red;border:2px solid black;}
+.closer0{width: 60px; height: 35px; margin-left: 48%;color:red;background-color: red;border:2px solid black;}
 .closer:hover{cursor:pointer; border:2px solid white;}
 .closer0:hover{cursor:pointer;border:2px solid white;}
 @media only screen and (max-width: 1090px){
