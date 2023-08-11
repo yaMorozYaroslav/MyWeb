@@ -1,6 +1,13 @@
 import React from 'react';
 import s from './Profile.module.css'
+import {ScreenSize} from '../../screen'
+
 export const Profile = () => {
+	const [zoom, setZoom] = React.useState(false)
+	const screen = ScreenSize()
+	const onZoom =()=> {
+		if(screen.mobS)setZoom(true)
+		}
 	return <>
 	            
 	  <div  className={s.container}> 
@@ -8,7 +15,7 @@ export const Profile = () => {
 		   <h2 className={s.name}> Yaroslav Moroz,</h2>
 		   <h2 className={s.age}>24 years old</h2>
 		   
-		   <div className={s.pic}/>
+		   <div onClick={onZoom} className={!zoom?s.pic:s.picZoom}/>
 		 
         <section className={s.text}>
              I am a web application developer looking for
