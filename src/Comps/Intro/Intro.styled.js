@@ -8,12 +8,14 @@ export const Container = styled.div`
 	font-size: 40px;
 	color: white;
 	text-align: center;
-	${({size})    =>    size.lapL      &&                `font-size: 34px;
-	                                                      width:60%;`}
-	${({size})    =>    size.lapS      &&                `width:75%;
+	${({size})    =>    size.lapL      &&                `font-size: 36px;
+	                                                      width:65%;`}
+	${({size})    =>    size.lapM      &&                `font-size: 36px;
+	                                                      width:65%;`}
+	${({size})    =>    size.lapS      &&                `width:80%;
                                                           margin-left:6%;
                                                           font-size: 36px;`}
-    ${({size})    =>    size.mobL       &&               `width:85%;
+    ${({size})    =>    size.mobL      &&                `width:85%;
                                                           margin-left: 2.5%;
                                                           font-size: 34px;
                                                           margin-top:40px;`}

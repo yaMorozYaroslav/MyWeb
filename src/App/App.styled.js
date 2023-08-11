@@ -8,8 +8,8 @@ export const Body = styled.div`
    ${({size}) => size.lapL &&`width: 102%;`}
    ${({size}) => size.lapM &&`width:102%;`}
    ${({size}) => size.lapS &&`width:103%;`}
-   ${({size}) => size.mobL &&`width:105%;`}
-   ${({size}) => size.mobM &&`width:108%;`}
+   ${({size}) => size.mobL &&`width:104%;`}
+   ${({size}) => size.mobM &&`width:104%;`}
    ${({size}) => size.mobS &&`width:107%;`}
 `
 export const BackImg = styled.div`
