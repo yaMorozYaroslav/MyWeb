@@ -10,6 +10,7 @@ font-size: 42px;
 width: 80%;
 height: 40px;
 margin: 20px 10px 10px 0px;
+padding-left: 10px;
 font-size: 24px;
 background-color:black;
 color:white;
@@ -19,6 +20,8 @@ border: 1px solid white;
 width: 76.5%;
 height: 40px;
 margin: 20px 10px 0px 0px;
+padding-left: 10px;
+font-size: 24px;
 background-color:black;
 color:white;
 border: 1px solid white;
@@ -31,6 +34,7 @@ margin: 10px 0px 5px 0px;
 width: 80%;
 height: 100px;
 font-size:22px;
+padding: 5px;
 background-color:black;
 color:white;
 border: 1px solid white;
@@ -67,18 +71,18 @@ margin-left: 50%;
 .closer0{margin-top:30px;margin-left:50%;}
 .label{margin-left:5%;font-size: 35px;}
 .input{width: 100%;font-size:20px;}
-.inputSub{width:100%;}
+.inputSub{width:100%;font-size:20px;}
 .textarea{width:110%;margin-left:-4.5%;font-size:18px;}
 .button{width:80%;margin-left:5%;}
 }
 
 @media only screen and (max-width: 450px){
-.container{margin-top:-10px;}
-.input{width: 120%;margin-left:3%;}
-.inputSub{width:120%;margin-left:3%;}
-.tit{margin-left:77%;}
-.closer{margin-left:75%;margin-top:10px;}
-.closer0{margin-left:75%;margin-top:10px;}
+.container{margin:-10px 30px 0px 25px;}
+.input{width: 120%;}
+.inputSub{width:120%;}
+.tit{margin-left:64%;}
+.closer{margin-left:60%;margin-top:-30px;}
+.closer0{margin-left:60%;margin-top:-30px;}
 .label{margin-bottom:-5%;margin-left:30%;font-size: 32px;}
 .subtit{margin-left:15%;}
 .textarea{font-size: 22px;width:138%;}

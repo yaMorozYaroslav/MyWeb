@@ -8,13 +8,13 @@ margin: 0px 0px 20px 5%;
 }
 .pic{
 float: right;
-height:270px;
+height:250px;
 width:200px;
-margin: -65px 5% 15px 6%;
+margin: -90px 6% 5px 6%;
 background-image: url('./myPhoto.jpg');
 background-size: cover;
 border: 3px solid white;
-border-radius:  100px;
+border-radius:  40px;
 }
 .name{
 font-size: 40px;
@@ -35,16 +35,16 @@ text-indent: 50px;
 }
 @media only screen and (max-width: 850px){
 .container{margin-left:3%;}
-.pic{margin-top:20px;height:250px;width:150px;}
+.pic{margin-top:20px;margin-left:10px;height:175px;width:135px;}
 .name{margin-left:25%;font-size:36px;}
 .age{margin-left:50%;font-size:36px;}
 .text{font-size:26px;}
 }
 @media only screen and (max-width: 450px){
 	.container{width:100%;margin-top:24px;margin-left:-5%;	}
-	.pic{margin-top:30px;margin-right:3%;height: 135px;width: 100px;}
-	.picZoom{background-image: url('./myPhoto.jpg');background-size: cover;height:270px;
-width:200px;}
+	.pic{margin-top:20px;margin-right:3%;height: 135px;width: 100px;}
+	.picZoom{background-image: url('./myPhoto.jpg'); margin-left: 20%;
+	         background-size: cover; height:255px; width:210px;}
 	.name{margin-top:10px;margin-left:25%;font-size: 28px;}
 	.age{margin-top:-30px;margin-left:45%;font-size: 28px;}
 	.text{width:89%;font-size: 23px;text-indent:30px;}

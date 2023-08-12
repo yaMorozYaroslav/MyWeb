@@ -61,6 +61,6 @@ export const LgLaptopZoom = () =>
   img={picture}
   transitionTime={0.5}
   zoomScale={2.5}
-  width={300}
+  width={270}
   height={180} />
  </>

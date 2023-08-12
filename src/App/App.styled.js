@@ -9,7 +9,7 @@ export const Body = styled.div`
    ${({size}) => size.lapM &&`width:102%;`}
    ${({size}) => size.lapS &&`width:103%;`}
    ${({size}) => size.mobL &&`width:104%;`}
-   ${({size}) => size.mobM &&`width:104%;`}
+   ${({size}) => size.mobM &&`width:105%;`}
    ${({size}) => size.mobS &&`width:107%;`}
 `
 export const BackImg = styled.div`

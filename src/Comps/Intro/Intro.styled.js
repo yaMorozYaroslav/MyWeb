@@ -16,13 +16,13 @@ export const Container = styled.div`
                                                           margin-left:6%;
                                                           font-size: 36px;`}
     ${({size})    =>    size.mobL      &&                `width:85%;
-                                                          margin-left: 2.5%;
-                                                          font-size: 34px;
+                                                          margin-left: 4%;
+                                                          font-size: 32px;
                                                           margin-top:40px;`}
     ${props => (props.size.mobM || props.size.mobS)  &&  `width:90%;
                                                           margin-top:40px;
-                                                          margin-left: 0%;
-                                                          font-size: 28px;`}
+                                                          margin-left: 2.5%;
+                                                          font-size: 26px;`}
     `
 export const Text = styled.section`
     margin-top:10px;

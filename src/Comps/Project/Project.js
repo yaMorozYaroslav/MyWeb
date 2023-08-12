@@ -10,7 +10,7 @@ export function Project(){
 	function openApp(){window.open('https://the-funny-fair.netlify.app')}
 	function openBack(){window.open('https://item-auth-back-0555af6b9518.herokuapp.com')}
 	const screen = ScreenSize()
-	console.log(screen)
+	//console.log(screen)
     
 	return (<>
 

@@ -6,7 +6,7 @@ export const Profile = () => {
 	const [zoom, setZoom] = React.useState(false)
 	const screen = ScreenSize()
 	const onZoom =()=> {
-		if(screen.mobS)setZoom(true)
+		if(screen.mobS||screen.mobM)setZoom(!zoom)
 		}
 	return <>
 	            
