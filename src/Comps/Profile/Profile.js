@@ -24,7 +24,7 @@ export const Profile = () => {
            
           <section className={s.text}>
              The limitless educational potential of programming
-            and the ability to help people turn their ideas 
+            and the desire to help people turn their ideas 
             into websites motivate me to keep learning.     </section>
            <section className={s.text}>
              It is also enticing that the availability of information 
