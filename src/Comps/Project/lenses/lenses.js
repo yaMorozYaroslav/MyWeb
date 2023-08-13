@@ -4,18 +4,18 @@ import itemImg from './itemImg.jpg'
 import picture from './picture.jpg'
 
 export const LgLaptopZoom = () => 
- <> <section style={{margin:'5px'}}> <Zoom
+ <> <section style={{margin:'-10px'}}> <Zoom
   img={itemImg}
   transitionTime={0.5}
   zoomScale={1.8}
-  width={490}
+  width={550}
   height={240}
      /> </section>
-    <section style={{margin: '5px'}}> <Zoom
+    <section style={{margin: '-10px'}}> <Zoom
   img={picture}
   transitionTime={0.5}
   zoomScale={1.8}
-  width={490}
+  width={550}
   height={240}
      /> </section>
  </>
