@@ -8,7 +8,7 @@ import {ScreenSize} from '../../screen'
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
 	function openApp(){window.open('https://the-funny-fair.netlify.app')}
-	function openBack(){window.open('https://item-auth-back-0555af6b9518.herokuapp.com')}
+	function openBack(){window.open('https://auth-prod-back-7afcce7d449f.herokuapp.com')}
 	const screen = ScreenSize()
 	//console.log(screen)
     
