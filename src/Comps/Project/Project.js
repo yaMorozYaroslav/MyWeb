@@ -8,7 +8,7 @@ import {ScreenSize} from '../../screen'
 export function Project(){
 	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
 	function openApp(){window.open('https://the-funny-fair.netlify.app')}
-	function openBack(){window.open('https://auth-prod-back-7afcce7d449f.herokuapp.com')}
+	function openBack(){window.open('https://vite-auth-back-267a98071db5.herokuapp.com')}
 	const screen = ScreenSize()
 	//console.log(screen)
     
@@ -36,14 +36,14 @@ export function Project(){
 	basic login, managing items within user permissions,
 	                      and filtering the list of items. </section>
 	       
-	 <section className={s.text}> 
-	   I want to add that the instance is still in development 
-	to eventually become a full fledged ecommerce site.
-       In the future, it is planned to implement the concept
-    in NextJS, because "build-react-app" is deprecated.
+ <section className={s.text}> 
+     In the future it is planned to implement the concept
+  in NextJS because its server-side rendering, image optimization
+   and  code-splitting architecture provide advantages
+                  when developing e-commerce websites.
 	              </section>
 	      
-	 <section className={s.text}> 
+  <section className={s.text}> 
 	                     </section>
 	 </div>
 	 
