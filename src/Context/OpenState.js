@@ -17,7 +17,7 @@ export const OpenState =({children})=> {
     const nowContacts =()=> setOpen({...open, section: 'contacts'})
     
     return(
-    <OpenContext.Provider value={{alert: open.alert,
+    <OpenContext.Provider value={{alertState: open.alert,
 		                          mailForm: open.mail,
 		                          section: open.section,
 		                          openAlert, closeAlert,

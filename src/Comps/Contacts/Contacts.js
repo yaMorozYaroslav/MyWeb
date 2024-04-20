@@ -5,7 +5,7 @@ import {OpenContext} from '../../Context/OpenState'
 
 export function Contacts(){
 	
-	const {alert, mailForm, openAlert, closeAlert,
+	const {alertState, mailForm, openAlert, closeAlert,
 		    openMailForm, closeMailForm} = React.useContext(OpenContext)
     function openCode(){ window.open('https://github.com/yaMorozYaroslav/MyWeb')}
 	const MyData = () =>{
@@ -37,7 +37,7 @@ export function Contacts(){
 								  <button className={styles.clicker} onClick={openMailForm}>
 								                                         Click to email me</button>:null}
 								                                                                                            
-                                  {mailForm?<div ><Email  alert={alert} 
+                                  {mailForm?<div ><Email  alertState={alertState} 
 									                      openAlert={openAlert} 
 									                      closeAlert={closeAlert} 
 									                      closeMailForm={closeMailForm} /></div>:<MyData />}

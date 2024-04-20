@@ -6,9 +6,9 @@ import {LgLaptopZoom,MdLaptopZoom,TabletZoom,
 import {ScreenSize} from '../../screen'
 
 export function Project(){
-	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ItemAuth')}
-	function openApp(){window.open('https://the-funny-fair.netlify.app')}
-	function openBack(){window.open('https://vite-auth-back-267a98071db5.herokuapp.com')}
+	function openCode(){ window.open('https://github.com/yaMorozYaroslav/ProClient')}
+	function openApp(){window.open('https://flora-izyum.vercel.app')}
+	function openBack(){window.open('https://flora-store-ed448aa4183f.herokuapp.com')}
 	const screen = ScreenSize()
 	//console.log(screen)
     
@@ -59,7 +59,7 @@ export function Project(){
 	   <button className={s.butt} onClick={openCode}>
 	            <p className={s.butText}> Open Code on GitHub</p></button>
 	   <button className={s.butt} onClick={openApp}>
-	            <p className={s.butText}>Open Application on Netlify</p></button>
+	            <p className={s.butText}>Open Application on Vercel</p></button>
 	   <button className={s.butt} onClick={openBack}>
 	            <p className={s.butText}>Open Backend on Heroku</p></button>
    </section>
