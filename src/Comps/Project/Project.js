@@ -27,9 +27,9 @@ export function Project(){
 	<div className={s.description}>
 	 <h2 className={s.descTitle}>Description</h2>
 	 <section className={s.text}>
-	   This is the latest version of my full-stack project created 
-	with MERN to showcase my current skills and coding style.</section>
-	    
+	       This is the latest version of my full stack 
+	      project built with NextJS, ExpressJS and MongoDB. </section>
+	
 	 <section className={s.text}> 
 	   The app already has most of the features I was looking for,
 	including a shopping cart that the user can email me, 
@@ -37,10 +37,8 @@ export function Project(){
 	                      and filtering the list of items. </section>
 	       
  <section className={s.text}> 
-     In the future it is planned to implement the concept
-  in NextJS because its server-side rendering, image optimization
-   and  code-splitting architecture provide advantages
-                  when developing e-commerce websites.
+       In the future, I plan to optimize it for search engines,
+    expand user actions, add account settings and credit card payments.
 	              </section>
 	      
   <section className={s.text}> 
