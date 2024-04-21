@@ -27,18 +27,22 @@ export function Project(){
 	<div className={s.description}>
 	 <h2 className={s.descTitle}>Description</h2>
 	 <section className={s.text}>
-	       This is the latest version of my full stack 
+	       This is my full stack 
 	      project built with NextJS, ExpressJS and MongoDB. </section>
 	
 	 <section className={s.text}> 
 	   The app already has most of the features I was looking for,
 	including a shopping cart that the user can email me, 
 	basic login, managing items within user permissions,
-	                      and filtering the list of items. </section>
+	                      and filtering. </section>
 	       
  <section className={s.text}> 
        In the future, I plan to optimize it for search engines,
-    expand user actions, add account settings and credit card payments.
+    expand user actions, enable account settings and credit card payments.
+	              </section>
+ <section className={s.text}> 
+      Another idea is to develop tests to determine which product
+     the user needs in each case, since gardening requires precision.
 	              </section>
 	      
   <section className={s.text}> 
