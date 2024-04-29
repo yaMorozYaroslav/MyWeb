@@ -1,0 +1,56 @@
+.container{
+	color: white;
+	margin:10px 0px 30px 0px;
+}
+.zoomCon{margin:20px 2% -10px 1.5%; display:flex;justify-content:center;}
+.descTitle{margin-bottom: 30px;}
+.descAndButs{display:flex;flex-direction:row-reverse;text-align: center;}
+
+.description{
+   width:55%;
+   margin-left: 1%;
+   text-indent: 2%;
+   font-size:31px;
+ }
+ .text{
+   text-indent:5%;
+   margin:0px 5% 15px 2%;
+   
+ }
+ .buttons{width:38.5%;margin:5px 0px 0px 0%;}
+ .features{font-size: 34px}
+ .butt{
+ margin: 20px 2px 2px 0px;
+ font-size: 29px;
+ color:black;
+ width: 100%;
+ background: white;
+ border:3px solid black;
+ border-radius:5px;
+ }
+.butt:hover{cursor: pointer; color:dodgerblue;}
+.butText{margin:10px 10px 10px 10px;}
+@media only screen and (max-width: 1250px){
+.container{}
+.zoomCon{}
+.descAndButs{display: inline;}
+.descTitle{font-size: 44px;margin-bottom: 10px;}
+.description{width:90%;margin-left:5%;font-size:35px;}
+.buttons{width: 80%; margin-top:10px;margin-left:8%;}
+.butt{font-size:35px};
+}
+@media only screen and (max-width: 850px){
+.container{margin-top:30px;}
+.zoomCon{margin-left:3%;}
+.description{width:85%;margin-left:7%;font-size:31px;}
+.features{font-size: 30px}
+.butt{font-size:32px;margin-top:10px;}
+}
+@media only screen and (max-width:450px){
+.zoomCon{margin-bottom:-10px; margin-left:1.5%;}
+.descTitle{font-size: 36px;margin-bottom: 10px;}
+.description{width:96%;margin-left:2%;font-size:24.5px;}
+.text{margin-bottom:10px;}
+.features{font-size: 25px; width:100%; margin-left: -25px; margin-bottom:10px;}
+.butt{margin-top:10px;margin-left:2%;font-size:25px;}
+}

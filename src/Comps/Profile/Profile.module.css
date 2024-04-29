@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+.container{
+width:90%;
+color: white;
+font-family: 'Playfair Display', serif;
+margin: 0px 0px 20px 5%;
+}
+.pic{
+float: right;
+height:250px;
+width:200px;
+margin: -90px 6% 5px 6%;
+background-image: url('./myPhoto.jpg');
+background-size: cover;
+border: 3px solid white;
+border-radius:  40px;
+}
+.name{
+font-size: 40px;
+margin:35px 0px 25px 17%;;
+}
+.age{
+margin:-40px 0px 10px 40%;
+font-size:40px;
+}
+.text{
+margin:15px 40px 0px 40px;
+font-size:30px;
+text-indent: 50px;
+}
+@media only screen and (max-width: 1250px){
+.name{margin-left:5%;text-align:left;}
+.age{margin-left:20%;}
+}
+@media only screen and (max-width: 850px){
+.container{margin-left:3%;}
+.pic{margin-top:20px;margin-left:10px;height:175px;width:135px;}
+.name{margin-left:25%;font-size:36px;}
+.age{margin-left:50%;font-size:36px;}
+.text{font-size:26px;}
+}
+@media only screen and (max-width: 450px){
+	.container{width:100%;margin-top:24px;margin-left:-5%;	}
+	.pic{margin-top:20px;margin-right:3%;height: 135px;width: 100px;}
+	.picZoom{background-image: url('./myPhoto.jpg'); margin-left: 20%;
+	         background-size: cover; height:255px; width:210px;}
+	.name{margin-top:10px;margin-left:25%;font-size: 28px;}
+	.age{margin-top:-30px;margin-left:45%;font-size: 28px;}
+	.text{width:89%;font-size: 23px;text-indent:30px;}
+	
+}
+
+
