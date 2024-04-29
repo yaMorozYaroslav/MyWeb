@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
-import city from './city.jpg'
-import clouds from './clouds.jpg'
+import city from '/city.jpg'
+import clouds from '/clouds.jpg'
 
 export const Container = styled.div`
     display: flex;
