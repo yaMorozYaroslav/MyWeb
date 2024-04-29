@@ -1,7 +1,7 @@
 import React from 'react'
 import Zoom from 'react-img-zoom'
-import itemImg from './itemImg.jpg'
-import picture from './picture.jpg'
+import itemImg from '/project/itemImg.jpg'
+import picture from '/project/picture.jpg'
 
 export const LgLaptopZoom = () => 
  <> <section style={{margin:'-10px'}}> <Zoom

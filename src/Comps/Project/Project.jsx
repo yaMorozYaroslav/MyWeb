@@ -2,7 +2,7 @@ import React from 'react'
 import s from './Project.module.css'
 
 import {LgLaptopZoom,MdLaptopZoom,TabletZoom,
-	                 SmPhoneZoom,LgPhoneZoom} from './lenses/lenses.jsx'
+	                 SmPhoneZoom,LgPhoneZoom} from './lenses.jsx'
 import {ScreenSize} from '../../screen'
 
 export function Project(){

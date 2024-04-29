@@ -11,7 +11,7 @@ float: right;
 height:250px;
 width:200px;
 margin: -90px 6% 5px 6%;
-background-image: url('./myPhoto.jpg');
+background-image: url('/myPhoto.jpg');
 background-size: cover;
 border: 3px solid white;
 border-radius:  40px;
