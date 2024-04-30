@@ -11,8 +11,6 @@ float: right;
 height:250px;
 width:200px;
 margin: -90px 6% 5px 6%;
-background-image: url('/myPhoto.jpg');
-background-size: cover;
 border: 3px solid white;
 border-radius:  40px;
 }
@@ -43,8 +41,7 @@ text-indent: 50px;
 @media only screen and (max-width: 450px){
 	.container{width:100%;margin-top:24px;margin-left:-5%;	}
 	.pic{margin-top:20px;margin-right:3%;height: 135px;width: 100px;}
-	.picZoom{background-image: url('./myPhoto.jpg'); margin-left: 20%;
-	         background-size: cover; height:255px; width:210px;}
+	.picZoom{margin-left: 20%; height:255px; width:210px;}
 	.name{margin-top:10px;margin-left:25%;font-size: 28px;}
 	.age{margin-top:-30px;margin-left:45%;font-size: 28px;}
 	.text{width:89%;font-size: 23px;text-indent:30px;}

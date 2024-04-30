@@ -1,13 +1,18 @@
 import React from 'react';
 import s from './Profile.module.css'
 import {ScreenSize} from '../../screen'
+import imgSame from '/myPhoto.jpg'
 
 export const Profile = () => {
+	const imgUrl = new URL('/myPhoto.jpg', import.meta.url).href
+	console.log(imgUrl)
+	console.log(imgUrl)
 	const [zoom, setZoom] = React.useState(false)
 	const screen = ScreenSize()
 	const onZoom =()=> {
 		if(screen.mobS||screen.mobM)setZoom(!zoom)
 		}
+		 //~ <div onClick={onZoom} className={!zoom?s.pic:s.picZoom}/>
 	return <>
 	            
 	  <div  className={s.container}> 
@@ -15,7 +20,8 @@ export const Profile = () => {
 		   <h2 className={s.name}> Yaroslav Moroz,</h2>
 		   <h2 className={s.age}>24 years old</h2>
 		   
-		   <div onClick={onZoom} className={!zoom?s.pic:s.picZoom}/>
+		   <img onClick={onZoom} src={imgUrl}
+		        className={!zoom?s.pic:s.picZoom}/>
 		 
         <section className={s.text}>
              I am a web application developer looking for
