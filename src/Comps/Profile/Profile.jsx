@@ -20,7 +20,7 @@ export const Profile = () => {
 		   <h2 className={s.name}> Yaroslav Moroz,</h2>
 		   <h2 className={s.age}>24 years old</h2>
 		   
-		   <img onClick={onZoom} src={imgUrl}
+		   <img onClick={onZoom} src={imgSame}
 		        className={!zoom?s.pic:s.picZoom}/>
 		 
         <section className={s.text}>
