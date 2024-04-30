@@ -21,6 +21,7 @@ export const First = styled.div`
     background-image: url(${city});
     background-position: 10px -30px;
     background-size:cover;
+    
    @media (max-width: 850px) {
     width:70%;
     background-position: 10px -20px;
@@ -51,12 +52,10 @@ export const FontIcon = styled(FontAwesomeIcon)`
     font-size:40px; 
   }
   `
-export const Second = styled.div`
+export const Second = styled.img`
     width: 70%;
     border: 3px solid black;
-    background-image: url(${clouds});
-    background-position: 0px 0px;
-    background-size:cover;
+
    @media(max-width: 850px){
     width:30%;
    }

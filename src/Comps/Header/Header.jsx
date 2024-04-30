@@ -6,6 +6,7 @@ import { faGear } from '@fortawesome/free-solid-svg-icons'
 import {useMediaQuery} from 'react-responsive'
                  
 export const Header =()=> {
+  //~ const clouds = new URL('/header/clouds.jpg', import.meta.url).href
   const isTablet = useMediaQuery({ query: '(min-width: 800px)'  })
 
 
@@ -15,6 +16,8 @@ export const Header =()=> {
 	                             <FontIcon  icon={faGear}/>
 	                           </First>
 	                           
-	                           <Second tablet={isTablet} data-testid='second'/>
+	                           <Second src='/header/clouds.jpg'
+	                                   tablet={isTablet}
+	                                   data-testid='second'/>
 	                   </Container>
 	          )}

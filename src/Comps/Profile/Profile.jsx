@@ -1,7 +1,6 @@
 import React from 'react';
 import s from './Profile.module.css'
 import {ScreenSize} from '../../screen'
-import imgSame from '/myPhoto.jpg'
 
 export const Profile = () => {
 	const imgUrl = new URL('/myPhoto.jpg', import.meta.url).href
@@ -20,7 +19,7 @@ export const Profile = () => {
 		   <h2 className={s.name}> Yaroslav Moroz,</h2>
 		   <h2 className={s.age}>24 years old</h2>
 		   
-		   <img onClick={onZoom} src={imgSame}
+		   <img onClick={onZoom} src={imgUrl}
 		        className={!zoom?s.pic:s.picZoom}/>
 		 
         <section className={s.text}>
