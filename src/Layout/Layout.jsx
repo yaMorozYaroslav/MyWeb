@@ -13,6 +13,7 @@ export function Layout(){
 	const location = useLocation();
 	const {pathname} = location;
 	const splitLocation = pathname.split("/")
+	
 	const {nowIntro, nowProfile, nowProject, nowContacts} = React.useContext(OpenContext)
 	
 	React.useEffect(()=>{
