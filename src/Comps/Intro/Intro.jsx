@@ -8,10 +8,10 @@ export const Intro = () =>{
 	//~ confirm('layout?')
 	return <>
 	    <Container size={screen}>
-	    
+	  //~ <img style={{width:'100px'}} src='/header/clouds.jpg' alt='clouds'/>  
   <Text size={screen}>
 	Welcome to the site. </Text>
-	<img style={{width:'100px'}} src='/header/clouds.jpg' alt='clouds'/>
+	
   <Text size={screen}>  Here you will learn about my abilities 
                       and aspirations, which I reflected in examples
                                         of work.</Text>
