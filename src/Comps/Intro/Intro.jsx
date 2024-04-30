@@ -5,10 +5,11 @@ import {ScreenSize} from '../../screen'
 export const Intro = () =>{
 	
 	const screen = ScreenSize()
+	
+	//~ <img style={{width:'100px'}} src='/header/clouds.jpg' alt='clouds'/>  
 	//~ confirm('layout?')
 	return <>
 	    <Container size={screen}>
-	  //~ <img style={{width:'100px'}} src='/header/clouds.jpg' alt='clouds'/>  
   <Text size={screen}>
 	Welcome to the site. </Text>
 	
