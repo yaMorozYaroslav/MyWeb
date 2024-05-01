@@ -54,7 +54,7 @@ export const FontIcon = styled(FontAwesomeIcon)`
   `
 export const Second = styled.img`
     width: 70%;
-    height:110%;
+    height:120px;
     border: 3px solid black;
 
    @media(max-width: 850px){
