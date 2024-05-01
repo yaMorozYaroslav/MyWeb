@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 
-import city from '../../assets/city.jpg'
+import city from '/header/city.jpg'
 import clouds from '/header/clouds.jpg'
 
 
