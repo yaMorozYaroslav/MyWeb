@@ -5,7 +5,6 @@ import {ScreenSize} from '../../screen'
 export const Profile = () => {
 	const imgUrl = new URL('/myPhoto.jpg', import.meta.url).href
 	console.log(imgUrl)
-	console.log(imgUrl)
 	const [zoom, setZoom] = React.useState(false)
 	const screen = ScreenSize()
 	const onZoom =()=> {
