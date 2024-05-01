@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 
-import city from '/header/city.jpg'
-import clouds from '/header/clouds.jpg'
+//~ import city from '/header/city.jpg'
+const city = new URL('/header/city.jpg', import.meta.url).href
+//~ import clouds from '/header/clouds.jpg'
 
 
 export const Container = styled.div`
