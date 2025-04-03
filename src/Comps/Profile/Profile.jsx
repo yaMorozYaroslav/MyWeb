@@ -3,7 +3,7 @@ import s from './Profile.module.css'
 import {ScreenSize} from '../../screen'
 
 export const Profile = () => {
-	const imgUrl = new URL('/myPhoto.jpg', import.meta.url).href
+	const imgUrl = new URL('/myImg.jpg', import.meta.url).href
 	console.log(imgUrl)
 	const [zoom, setZoom] = React.useState(false)
 	const screen = ScreenSize()
@@ -16,40 +16,41 @@ export const Profile = () => {
 	  <div  className={s.container}> 
 		   
 		   <h2 className={s.name}> Yaroslav Moroz,</h2>
-		   <h2 className={s.age}>25 years old</h2>
+		   <h2 className={s.age}>26 years old</h2>
 		   
 		   <img onClick={onZoom} src={imgUrl}
 		        className={!zoom?s.pic:s.picZoom}/>
 		 
         <section className={s.text}>
-             I am a web application developer looking for
-            opportunities to develop great applications.
+          I’m a developer who learned by building things out of curiosity. I don’t have a traditional background, but I’ve always been drawn to understanding how things work and trying to make something better out of it.
         </section>
-           
-          <section className={s.text}>
-             The limitless educational potential of programming
-            and the desire to help people turn their ideas 
-            into websites motivate me to keep learning.     </section>
-           <section className={s.text}>
-             It is also enticing that the availability of information 
-            now allows anyone with Internet access to study online,
-            as I did, acquiring all knowledge from open sources.       </section>
-           
+
         <section className={s.text}>
-             Looking for a reliable operating system,
-           I settled on the Arch Linux distribution with 
-           the i3 window manager to take advantage 
-           of its advanced customization options.       </section>
-           
-        <section className={s.text}> 
-             The prospects of modern web technologies are impressive,
-           remote education and business have improved life beyond 
-           recognition. Human activity can be moved almost entirely 
-           online, making our efforts in haste through eternity more efficient. 
+         I didn’t have the chance to follow a traditional university path, but I found my own way — through open resources, trial and error, and persistence.
+         The web felt like a space where anyone could learn, create, and share. That’s what kept me going.   </section>
+
+        <section className={s.text}>
+          I’ve used Udemy, YouTube, ChatGPT along with other platforms and apps to teach myself everything I know. Over time, I’ve grown to love the simplicity of Arch Linux, the efficiency of the i3 window manager, and the challenge of figuring things out without hand-holding. 
         </section>
-        
+
         <section className={s.text}>
-               This is the future I want to contribute to.
+          I am an experienced Linux user and full-stack JavaScript developer. I’m comfortable working across the stack — from designing APIs and handling authentication to building responsive frontends and managing deployment. 
+        </section>
+
+        <section className={s.text}>
+          I’m motivated by ideas — not just mine, but other people’s too. I want to help turn good ideas into working products, and I care about the details that make things feel right. Whether it’s the structure of a page, the logic behind a form, or the clarity of a UI, I pay attention.
+        </section>
+
+        <section className={s.text}>
+          I often turn to AI for advice — in coding, in architecture, and in moments of confusion. It's like working with a thinking partner who’s always available. I'm not afraid to ask questions or get help when I need it, and I use that to move forward faster and smarter.
+        </section>
+
+        <section className={s.text}>
+          I’m looking for a place where I can contribute my best work, learn from others, and be part of something real. I don’t have all the answers, but I’m serious about the work and open to everything it can teach me.
+        </section>
+
+        <section className={s.text}>
+          That’s the kind of future I want to help shape.
         </section>
 	       
 	     </div>
