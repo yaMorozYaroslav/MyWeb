@@ -25,6 +25,13 @@ export const Email = ({ alertState, openAlert, closeAlert, closeMailForm }) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // ✅ Basic field validation before sending
+    if (!source.user_name || !source.user_email || !source.user_phone) {
+      alert('Please fill out all required fields.');
+      return;
+    }
+
     axios
       .post('https://idea-sphere-50bb3c5bc07b.herokuapp.com/email', source)
       .then((response) => {
@@ -32,8 +39,13 @@ export const Email = ({ alertState, openAlert, closeAlert, closeMailForm }) => {
         openAlert();
       })
       .catch((error) => {
-        console.error(error);
-        alert(error.message);
+        if (error.response) {
+          console.error("Server responded with:", error.response.data);
+          alert(`Failed to send: ${error.response.data.message}`);
+        } else {
+          console.error("Request error:", error.message);
+          alert("Could not send message. Please try again later.");
+        }
       });
   };
 
