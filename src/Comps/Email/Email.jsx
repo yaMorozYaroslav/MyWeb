@@ -95,7 +95,7 @@ export const Email = ({ alertState, openAlert, closeAlert, closeMailForm }) => {
               required
             />
 
-            <label className={s.label} htmlFor="items">
+            <label className={s.label0} htmlFor="items">
               Message
             </label>
             <textarea
