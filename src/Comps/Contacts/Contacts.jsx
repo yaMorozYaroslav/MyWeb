@@ -11,7 +11,7 @@ export function Contacts(){
 	const MyData = () =>{
 		return (<>
 		         <h1 className={styles.label}>Number</h1>
-			      <p className={styles.discr}>+1 902 877 5222</p>
+			      <p className={styles.discr}>+48 579 232 090</p>
 			      
 			      <h1 className={styles.label}>Email</h1>
 		          <p className={styles.discr}>ya.moroz.yaroslav@gmail.com</p>
@@ -23,7 +23,7 @@ export function Contacts(){
                    <h1 className={styles.label}>GitHub</h1>
     	          <p className={styles.discr}>github.com/yaMorozYaroslav</p>
 			      
-			      <h1 className={styles.city}>NS, Dartmouth</h1>
+			      <h1 className={styles.city}>Warsaw, Poland</h1>
 			      <button className={styles.link} onClick={openCode}>
 			      Link To Source Code</button>
 			      </>)};
