@@ -9,7 +9,7 @@ margin: 0px 0px 20px 5%;
 .pic{
 float: right;
 height:400px;
-width:300px;
+width:33%;
 margin: -90px 6% 5px 6%;
 border: 3px solid white;
 border-radius:  40px;
@@ -19,7 +19,7 @@ font-size: 40px;
 margin:35px 0px 25px 17%;;
 }
 .age{
-margin:-40px 0px 10px 40%;
+margin:-40px 0px 10px 35%;
 font-size:40px;
 }
 .text{
@@ -33,19 +33,24 @@ text-indent: 50px;
 }
 @media only screen and (max-width: 850px){
 .container{margin-left:3%;}
-.pic{margin-top:20px;margin-left:10px;height:175px;width:135px;}
+.pic{margin-top:20px;margin-left:40px;margin-right:5px;height:350px;width:40%;}
 .name{margin-left:25%;font-size:36px;}
 .age{margin-left:50%;font-size:36px;}
 .text{font-size:26px;}
 }
+@media only screen and (max-width: 650px){
+.pic{float:none;margin-top:20px;margin-left:8%;height: 400px;width: 85%;}
+}
 @media only screen and (max-width: 450px){
 	.container{width:100%;margin-top:24px;margin-left:-5%;	}
-	.pic{margin-top:20px;margin-right:3%;height: 135px;width: 100px;}
+	.pic{float:none;margin-top:20px;margin-left:14%;height: 400px;width: 80%;}
 	.picZoom{margin-left: 20%; height:255px; width:210px;}
 	.name{margin-top:10px;margin-left:25%;font-size: 28px;}
 	.age{margin-top:-30px;margin-left:45%;font-size: 28px;}
-	.text{width:89%;font-size: 23px;text-indent:30px;}
+	.text{width:85%;font-size: 23px;text-indent:30px;margin-right:20px;}
 	
 }
-
+@media only screen and (max-width: 350px){
+.pic{height: 300px;margin-left:12%;}
+}
 

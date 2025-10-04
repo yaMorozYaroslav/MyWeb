@@ -21,37 +21,38 @@ export const Profile = () => {
 		   <img onClick={onZoom} src={imgUrl}
 		        className={!zoom?s.pic:s.picZoom}/>
 		 
-        <section className={s.text}>
-          I’m a developer who learned by building things out of curiosity. I don’t have a traditional background, but I’ve always been drawn to understanding how things work and trying to make something better out of it.
-        </section>
+<section className={s.text}>
+  I’m a developer shaped by curiosity and practice, learning by building and exploring how things work. The path hasn’t been traditional, but persistence and hands-on experience kept me moving forward.
+</section>
 
-        <section className={s.text}>
-         I didn’t have the chance to follow a traditional university path, but I found my own way — through open resources, trial and error, and persistence.
-         The web felt like a space where anyone could learn, create, and share. That’s what kept me going.   </section>
+<section className={s.text}>
+  My knowledge comes from open resources, trial and error, and the belief that the web is a space where anyone can learn, create, and share.
+</section>
 
-        <section className={s.text}>
-          I’ve used Udemy, YouTube, ChatGPT along with other platforms and apps to teach myself everything I know. Over time, I’ve grown to love the simplicity of Arch Linux, the efficiency of the i3 window manager, and the challenge of figuring things out without hand-holding. 
-        </section>
+<section className={s.text}>
+  I’ve taught myself through Udemy, YouTube, ChatGPT and other platforms, while developing a preference for the simplicity of Arch Linux and the efficiency of the i3 window manager.
+</section>
 
-        <section className={s.text}>
-          I am an experienced Linux user and full-stack JavaScript developer. I’m comfortable working across the stack — from designing APIs and handling authentication to building responsive frontends and managing deployment. 
-        </section>
+<section className={s.text}>
+  As an experienced Linux user and full-stack JavaScript developer, I work across the stack from APIs and authentication to responsive frontends and deployment.
+</section>
 
-        <section className={s.text}>
-          I’m motivated by ideas — not just mine, but other people’s too. I want to help turn good ideas into working products, and I care about the details that make things feel right. Whether it’s the structure of a page, the logic behind a form, or the clarity of a UI, I pay attention.
-        </section>
+<section className={s.text}>
+  Motivation comes from ideas — with close attention to the details that make products work, from page structure and form logic to UI clarity.
+</section>
 
-        <section className={s.text}>
-          I often turn to AI for advice — in coding, in architecture, and in moments of confusion. It's like working with a thinking partner who’s always available. I'm not afraid to ask questions or get help when I need it, and I use that to move forward faster and smarter.
-        </section>
+<section className={s.text}>
+  I often treat AI as a thinking partner in coding, architecture, and decision-making, using it to move forward faster and smarter.
+</section>
 
-        <section className={s.text}>
-          I’m looking for a place where I can contribute my best work, learn from others, and be part of something real. I don’t have all the answers, but I’m serious about the work and open to everything it can teach me.
-        </section>
+<section className={s.text}>
+  My goal is to contribute meaningful work, grow with others, and build real products while staying serious about the craft and open to learning.
+</section>
 
-        <section className={s.text}>
-          That’s the kind of future I want to help shape.
-        </section>
+<section className={s.text}>
+  The future I want to help shape is one where the availability of information on the internet, the simplicity that technology brings to daily routines, and the constant possibilities for improvement and upgrades are embraced and expanded.
+</section>
+
 	       
 	     </div>
 	 </>;
