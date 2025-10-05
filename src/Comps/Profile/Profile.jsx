@@ -22,38 +22,47 @@ export const Profile = () => {
 		        className={!zoom?s.pic:s.picZoom}/>
 		 
 <section className={s.text}>
-  I’m a developer shaped by curiosity and practice, learning by building and exploring how things work. The path hasn’t been traditional, but persistence and hands-on experience kept me moving forward.
+  I’m a developer shaped by curiosity and practice — building projects, solving problems,
+  and learning how technology fits together. My path has been self-directed, guided by
+  persistence and a genuine interest in understanding how things work.
 </section>
 
 <section className={s.text}>
-  My knowledge comes from open resources, trial and error, and the belief that the web is a space where anyone can learn, create, and share.
+  Much of what shaped me comes from open resources and continuous experimentation.
+  I see the web as a place where anyone can learn, create, and share what they build.
 </section>
 
 <section className={s.text}>
-  I’ve taught myself through Udemy, YouTube, ChatGPT and other platforms, while developing a preference for the simplicity of Arch Linux and the efficiency of the i3 window manager.
+  My learning has been fueled by Udemy, YouTube, ChatGPT, and other platforms,
+  forming a practical and flexible approach to growth. I enjoy using Arch Linux
+  and the i3 window manager for their efficiency and simplicity.
 </section>
 
 <section className={s.text}>
-  As an experienced Linux user and full-stack JavaScript developer, I work across the stack from APIs and authentication to responsive frontends and deployment.
+  I work across the full JavaScript stack — building APIs, managing authentication,
+  designing responsive interfaces, and deploying applications in Linux environments.
 </section>
 
 <section className={s.text}>
-  Motivation comes from ideas — with close attention to the details that make products work, from page structure and form logic to UI clarity.
+  Attention to clarity, structure, and detail helps me create web experiences that
+  are both reliable and enjoyable to use.
 </section>
 
 <section className={s.text}>
-  I often treat AI as a thinking partner in coding, architecture, and decision-making, using it to move forward faster and smarter.
+  AI tools often assist me in refining ideas, testing assumptions, and improving
+  development speed and consistency.
 </section>
 
 <section className={s.text}>
-  My goal is to contribute meaningful work, grow with others, and build real products while staying serious about the craft and open to learning.
+  My goal is to keep growing as a developer, collaborate with others,
+  and contribute to projects that bring real value.
 </section>
 
 <section className={s.text}>
-  The future I want to help shape is one where the availability of information on the internet, the simplicity that technology brings to daily routines, and the constant possibilities for improvement and upgrades are embraced and expanded.
+  The future I want to help shape is one where technology stays open, accessible,
+  and constantly improving — making everyday life simpler and more connected.
 </section>
 
-	       
 	     </div>
 	 </>;
 }
