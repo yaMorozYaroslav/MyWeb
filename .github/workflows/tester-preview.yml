@@ -1,0 +1,59 @@
+name: MyWeb Tester CI/CD
+
+on:
+  push:
+    branches: [tester]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: myweb-tester
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: team_1DAoV4Hsd18k01VxAMYRshvO
+      VERCEL_PROJECT_ID: prj_2hqogN1tbZPQr1Bkkj9wAzBoTy0C
+      VERCEL_TOKEN: ${{ secrets.MYWEB_DEV_VERCEL_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Enable Yarn
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Validate TypeScript and Vite build
+        run: yarn build
+
+      - name: Install Vercel CLI
+        if: env.VERCEL_TOKEN != ''
+        run: npm install -g vercel@65.17.0
+
+      - name: Pull preview configuration
+        if: env.VERCEL_TOKEN != ''
+        run: vercel pull --yes --environment=preview --token="$VERCEL_TOKEN" --scope=yamorozyaroslavs-projects
+
+      - name: Build deployment
+        if: env.VERCEL_TOKEN != ''
+        run: vercel build --token="$VERCEL_TOKEN" --scope=yamorozyaroslavs-projects
+
+      - name: Deploy Tester preview
+        if: env.VERCEL_TOKEN != ''
+        run: vercel deploy --prebuilt --token="$VERCEL_TOKEN" --scope=yamorozyaroslavs-projects
+
+      - name: Missing deployment credential
+        if: env.VERCEL_TOKEN == ''
+        run: |
+          echo "::error::MYWEB_DEV_VERCEL_TOKEN is missing"
+          exit 1
