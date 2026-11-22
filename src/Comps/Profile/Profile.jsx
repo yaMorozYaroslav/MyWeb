@@ -3,6 +3,9 @@ import s from './Profile.module.css'
 import {ScreenSize} from '../../screen'
 
 export const Profile = () => {
+  const today = new Date()
+  const age = today.getFullYear() - 1999 -
+    (today.getMonth() < 2 || (today.getMonth() === 2 && today.getDate() < 17) ? 1 : 0)
 	const imgUrl = new URL('/myImg.jpg', import.meta.url).href
 	console.log(imgUrl)
 	const [zoom, setZoom] = React.useState(false)
@@ -16,7 +19,7 @@ export const Profile = () => {
 	  <div  className={s.container}> 
 		   
 		   <h2 className={s.name}> Yaroslav Moroz,</h2>
-		   <h2 className={s.age}>26 years old</h2>
+		   <h2 className={s.age}>{age} years old</h2>
 		   
 		   <img onClick={onZoom} src={imgUrl}
 		        className={!zoom?s.pic:s.picZoom}/>

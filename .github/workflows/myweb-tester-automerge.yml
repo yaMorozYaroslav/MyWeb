@@ -1,0 +1,181 @@
+# Managed by myweb_tester_autonomy_bootstrap.sh, revision 1.
+# Only trusted same-repo nyx/* source PRs targeting tester are eligible.
+# Production master, CI config, package manifests and secrets are NEVER auto-merged.
+name: MyWeb Tester PR - Validate Merge Deploy
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+    branches: [tester]
+
+concurrency:
+  group: myweb-tester-pr-merge-deploy
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    # Gate on the PR's AUTHOR, not merely on github.actor, which can be a third party.
+    if: >-
+      github.repository == 'yaMorozYaroslav/MyWeb' &&
+      github.event.pull_request.draft == false &&
+      github.event.pull_request.base.ref == 'tester' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      startsWith(github.event.pull_request.head.ref, 'nyx/') &&
+      (github.event.pull_request.user.login == 'nestnyx[bot]' ||
+       github.event.pull_request.user.login == 'yaMorozYaroslav')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate immutable dependencies and frontend build
+        run: |
+          set -euo pipefail
+          corepack enable
+          yarn install --immutable
+          yarn build
+
+  merge:
+    needs: verify
+    if: ${{ needs.verify.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: write
+      pull-requests: write
+      checks: read
+    outputs:
+      merged_sha: ${{ steps.promote.outputs.merged_sha }}
+    steps:
+      - name: Verify PR, source files, security check and SHA lease; squash merge
+        id: promote
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PR_REF: ${{ github.event.pull_request.head.ref }}
+          PR_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          [[ "$PR_REPO" == 'yaMorozYaroslav/MyWeb' ]]
+          [[ "$PR_NUMBER" =~ ^[0-9]+$ ]]
+          [[ "$PR_HEAD" =~ ^[a-f0-9]{40}$ ]]
+          [[ "$PR_BASE" =~ ^[a-f0-9]{40}$ ]]
+          [[ "$PR_REF" == nyx/* ]]
+
+          pr_json="$(gh api "repos/$PR_REPO/pulls/$PR_NUMBER")"
+          jq -e --arg head "$PR_HEAD" --arg base "$PR_BASE" --arg ref "$PR_REF" --arg repo "$PR_REPO" '
+            .state == "open" and .draft == false and
+            .head.sha == $head and .base.sha == $base and
+            .head.ref == $ref and .base.ref == "tester" and
+            .head.repo.full_name == $repo and .base.repo.full_name == $repo and
+            (.user.login == "nestnyx[bot]" or .user.login == "yaMorozYaroslav") and
+            .mergeable == true
+          ' <<< "$pr_json" >/dev/null
+
+          # Never merge PRs that alter CI/CD, hosting or build infrastructure.
+          # Check both old and new filenames to prevent unsafe rename bypasses.
+          count=0
+          while IFS=$'\t' read -r new_path old_path; do
+            [[ -n "$new_path" ]] || continue
+            for path in "$new_path" "$old_path"; do
+              case "$path" in
+                src/*|public/*|index.html|README.md) ;;
+                *) echo "Blocked changed path: $path" >&2; exit 1 ;;
+              esac
+            done
+            count=$((count + 1))
+            (( count <= 40 )) || { echo 'More than 40 changed files' >&2; exit 1; }
+          done < <(gh api --paginate "repos/$PR_REPO/pulls/$PR_NUMBER/files?per_page=100" \
+            --jq '.[] | [.filename, (.previous_filename // .filename)] | @tsv')
+          (( count >= 1 )) || { echo 'PR has no changed files' >&2; exit 1; }
+
+          # Security check must complete successfully on the exact PR HEAD.
+          security_ok=0
+          for attempt in $(seq 1 24); do
+            status="$(gh api "repos/$PR_REPO/commits/$PR_HEAD/check-runs?per_page=100" \
+              --jq '[.check_runs[] | select(.name == "GitGuardian Security Checks")] | last | if . == null then "pending" else (.conclusion // "pending") end')"
+            case "$status" in
+              success) security_ok=1; break ;;
+              failure|cancelled|timed_out|action_required) echo "Security check failed: $status" >&2; exit 1 ;;
+              *) sleep 15 ;;
+            esac
+          done
+          (( security_ok == 1 )) || { echo 'GitGuardian did not report success on PR HEAD' >&2; exit 1; }
+
+          # Ensure tester has not moved since this workflow evaluated its PR merge commit.
+          current_base="$(gh api "repos/$PR_REPO/branches/tester" --jq .commit.sha)"
+          [[ "$current_base" == "$PR_BASE" ]] || { echo "Tester moved ($current_base); refuse stale merge" >&2; exit 1; }
+          [[ "$(gh api "repos/$PR_REPO/branches/tester" --jq .protected)" == 'false' ]]
+          comparison="$(gh api "repos/$PR_REPO/compare/$PR_BASE...$PR_HEAD")"
+          jq -e '.behind_by == 0 and .ahead_by >= 1 and .status == "ahead"' <<< "$comparison" >/dev/null
+
+          # Recheck PR tip immediately before only privileged repository change.
+          gh api "repos/$PR_REPO/pulls/$PR_NUMBER" --jq .head.sha | grep -Fxq "$PR_HEAD"
+          merged="$(gh api --method PUT "repos/$PR_REPO/pulls/$PR_NUMBER/merge" \
+            -f sha="$PR_HEAD" -f merge_method='squash')"
+          jq -e '.merged == true and (.sha | test("^[a-f0-9]{40}$"))' <<< "$merged" >/dev/null
+          sha="$(jq -r .sha <<< "$merged")"
+          echo "merged_sha=$sha" >> "$GITHUB_OUTPUT"
+          echo "Tester merge confirmed: $sha"
+
+  deploy:
+    # A GITHUB_TOKEN merge does not trigger push-based Actions workflows.
+    # Deploy the exact newly merged Tester SHA in this same workflow instead.
+    needs: merge
+    if: ${{ needs.merge.result == 'success' && needs.merge.outputs.merged_sha != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    env:
+      VERCEL_ORG_ID: team_1DAoV4Hsd18k01VxAMYRshvO
+      VERCEL_PROJECT_ID: prj_2hqogN1tbZPQr1Bkkj9wAzBoTy0C
+    steps:
+      - name: Checkout exact merged Tester commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.merge.outputs.merged_sha }}
+          persist-credentials: false
+      - name: Verify merged SHA is still Tester HEAD and expose Tester branch name
+        env:
+          EXPECTED_MERGE_SHA: ${{ needs.merge.outputs.merged_sha }}
+        run: |
+          set -euo pipefail
+          [[ "$(git rev-parse HEAD)" == "$EXPECTED_MERGE_SHA" ]]
+          actual="$(git ls-remote origin refs/heads/tester | cut -f1)"
+          [[ "$actual" == "$EXPECTED_MERGE_SHA" ]] || { echo 'Tester moved after merge; refuse deployment' >&2; exit 1; }
+          git switch -C tester "$EXPECTED_MERGE_SHA"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install and build the exact merged commit
+        run: |
+          set -euo pipefail
+          corepack enable
+          yarn install --immutable
+          yarn build
+      - name: Install reviewed Vercel CLI version
+        run: npm install -g vercel@65.17.0
+      - name: Pull Tester preview build configuration
+        env:
+          VERCEL_TOKEN: ${{ secrets.MYWEB_DEV_VERCEL_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "$VERCEL_TOKEN"
+          vercel pull --yes --environment=preview --scope=yamorozyaroslavs-projects
+      - name: Build and deploy Tester preview
+        env:
+          VERCEL_TOKEN: ${{ secrets.MYWEB_DEV_VERCEL_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "$VERCEL_TOKEN"
+          vercel build --scope=yamorozyaroslavs-projects
+          vercel deploy --prebuilt --scope=yamorozyaroslavs-projects
