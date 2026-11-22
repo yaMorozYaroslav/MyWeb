@@ -6,13 +6,14 @@ export const Body = styled.div`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Neutralize default 8px body margins without viewport overflow. */
     width: calc(100% + 16px);
     margin: -8px;
 `
 export const BackImg = styled.div`
-  flex: 1;
+  flex: 1 0 auto;
   min-width: 0;
+  min-height: 0;
+  display: flow-root;
  ${({current}) => current === 'intro' && `
    background-image: url(${pics.intro});
    background-size: cover;
