@@ -1,51 +1,49 @@
+/* Keep the original composition: action on the right, headings left of details. */
 .can {
   box-sizing: border-box;
-  width: 100%;
+  width: 95%;
+  max-width: 1100px;
   min-width: 0;
   height: auto;
   margin: 0 auto;
-  padding: 24px clamp(14px, 3vw, 36px) 36px;
+  padding: 18px clamp(12px, 2vw, 24px) 32px;
   color: white;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  display: flow-root;
 }
 
 .label {
   box-sizing: border-box;
-  width: min(100%, 520px);
-  margin: 16px auto 8px;
-  padding: 5px 12px;
-  font-size: clamp(28px, 3.5vw, 44px);
+  width: 45%;
+  min-width: 0;
+  margin: 12px 0 8px 20%;
+  padding: 4px 12px;
+  font-size: clamp(26px, 3.2vw, 44px);
   background: dodgerblue;
   border-radius: 5px;
 }
 
 .discr {
   box-sizing: border-box;
-  width: min(100%, 700px);
+  width: 65%;
   min-width: 0;
-  margin: 0 auto 12px;
-  padding: 8px 14px;
-  font-size: clamp(18px, 2.6vw, 30px);
+  margin: 8px 5% 12px 30%;
+  padding: 7px 12px;
+  font-size: clamp(19px, 2.2vw, 30px);
   background: black;
   border-radius: 10px;
   overflow-wrap: anywhere;
 }
 
-.discr:hover {
-  color: black;
-  background: white;
-}
+.discr:hover { color: black; background: white; }
 
 .city {
   box-sizing: border-box;
-  max-width: 100%;
   width: fit-content;
-  margin: 14px auto;
-  padding: 6px 16px;
-  font-size: clamp(24px, 3vw, 36px);
+  max-width: 100%;
+  margin: 20px 0 20px 20px;
+  padding: 5px 15px;
+  font-size: clamp(24px, 2.6vw, 36px);
   color: black;
   background: white;
   border-radius: 10px;
@@ -53,53 +51,69 @@
 
 .clicker {
   box-sizing: border-box;
-  align-self: flex-end;
-  float: none;
+  display: block;
+  float: right;
   position: static;
-  margin: 0 0 20px auto;
-  padding: 6px 14px;
-  font-size: clamp(16px, 2vw, 24px);
+  margin: 8px 0 24px 12px;
+  padding: 8px 14px;
+  font-size: clamp(16px, 1.8vw, 24px);
   color: white;
   background: green;
   border: 3px solid black;
   border-radius: 20px;
 }
-
-.clicker:hover {
-  cursor: pointer;
-  border-color: white;
-}
+.clicker:hover { cursor: pointer; border-color: white; }
 
 .link {
   box-sizing: border-box;
-  align-self: center;
-  max-width: 100%;
-  margin: 4px auto 0;
+  display: block;
+  max-width: calc(100% - 20px);
+  margin: 8px 0 0 30%;
   padding: 6px 12px;
-  font-size: clamp(18px, 2.5vw, 27px);
+  font-size: clamp(18px, 2vw, 27px);
   color: white;
   background: none;
   border: none;
+  text-align: left;
 }
+.link:hover { cursor: pointer; background: grey; }
 
-.link:hover {
-  cursor: pointer;
-  background: grey;
-}
+.can > div { box-sizing: border-box; max-width: 100%; min-width: 0; }
 
-.can > div {
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
+@media (max-width: 850px) {
+  .can { width: 100%; padding: 18px 16px 28px; }
+  .label { width: 55%; margin-left: 8%; }
+  .discr { width: 82%; margin-left: 18%; margin-right: 0; }
+  .city { margin-left: 8%; }
+  .link { margin-left: 18%; }
 }
 
 @media (max-width: 600px) {
-  .can {
-    padding: 20px 12px 28px;
-  }
+  .label { width: 76%; margin-left: 4%; }
+  .discr { width: 92%; margin-left: 8%; }
+  .clicker { float: none; margin-left: auto; margin-right: 0; }
+  .city { margin-left: 4%; }
+  .link { margin-left: 8%; }
+}
 
-  .clicker {
-    align-self: center;
-    margin: 0 auto 14px;
-  }
+/* Final bottom-of-panel containment: keep location and source link in the
+   Contacts section, not visually in the page footer. */
+.can {
+  padding-bottom: 44px;
+}
+.city {
+  display: table;
+  clear: both;
+  margin-top: 22px;
+  margin-bottom: 18px;
+  text-align: left;
+}
+.link {
+  clear: both;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+@media (max-width: 600px) {
+  .can { padding-bottom: 32px; }
+  .city { margin-top: 18px; }
 }
