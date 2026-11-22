@@ -1,5 +1,5 @@
 # Managed by myweb_tester_autonomy_bootstrap.sh, revision 1.
-# Only trusted same-repo nyx/* source PRs targeting tester are eligible.
+# Only trusted same-repo nyx/* or fix/* source PRs targeting tester are eligible.
 # Production master, CI config, package manifests and secrets are NEVER auto-merged.
 name: MyWeb Tester PR - Validate Merge Deploy
 
@@ -20,9 +20,11 @@ jobs:
       github.event.pull_request.draft == false &&
       github.event.pull_request.base.ref == 'tester' &&
       github.event.pull_request.head.repo.full_name == github.repository &&
-      startsWith(github.event.pull_request.head.ref, 'nyx/') &&
+      (startsWith(github.event.pull_request.head.ref, 'nyx/') ||
+       startsWith(github.event.pull_request.head.ref, 'fix/')) &&
       (github.event.pull_request.user.login == 'nestnyx[bot]' ||
-       github.event.pull_request.user.login == 'yaMorozYaroslav')
+       github.event.pull_request.user.login == 'yaMorozYaroslav' ||
+       github.event.pull_request.user.login == 'linuxofpower')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -68,7 +70,7 @@ jobs:
           [[ "$PR_NUMBER" =~ ^[0-9]+$ ]]
           [[ "$PR_HEAD" =~ ^[a-f0-9]{40}$ ]]
           [[ "$PR_BASE" =~ ^[a-f0-9]{40}$ ]]
-          [[ "$PR_REF" == nyx/* ]]
+          [[ "$PR_REF" == nyx/* || "$PR_REF" == fix/* ]]
 
           pr_json="$(gh api "repos/$PR_REPO/pulls/$PR_NUMBER")"
           jq -e --arg head "$PR_HEAD" --arg base "$PR_BASE" --arg ref "$PR_REF" --arg repo "$PR_REPO" '
@@ -76,7 +78,8 @@ jobs:
             .head.sha == $head and .base.sha == $base and
             .head.ref == $ref and .base.ref == "tester" and
             .head.repo.full_name == $repo and .base.repo.full_name == $repo and
-            (.user.login == "nestnyx[bot]" or .user.login == "yaMorozYaroslav") and
+            (.user.login == "nestnyx[bot]" or .user.login == "yaMorozYaroslav" or
+             .user.login == "linuxofpower") and
             .mergeable == true
           ' <<< "$pr_json" >/dev/null
 
