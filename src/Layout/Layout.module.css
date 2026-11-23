@@ -1,13 +1,15 @@
+/* Header occupies 80px above the nav. Keep navigation in document flow. */
 .nav {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   width: 100%;
   min-width: 0;
-  margin-top: 80px; /* reserve the fixed Header's height in normal flow */
+  margin-top: 80px;
   padding: 0 8px;
-  background-color: black;
+  background: black;
 }
+
 .idle, .active {
   box-sizing: border-box;
   min-width: 0;
@@ -16,9 +18,11 @@
   padding: 3px;
   border-radius: 5px;
 }
-.idle { border: 3px solid transparent; background-color: black; }
+
+.idle { border: 3px solid transparent; background: black; }
 .idle:hover { border-color: white; }
-.active { border: 3px solid white; background-color: white; }
+.active { border: 3px solid white; background: white; }
+
 .link, .alink {
   display: block;
   font-family: Times, serif;
@@ -28,36 +32,33 @@
 }
 .link { color: white; }
 .alink { color: black; }
-.outlet {
-  box-sizing: border-box;
-  display: flex;
-  width: 85%;
-  max-width: 1200px;
-  min-width: 0;
-  margin: 16px auto 28px;
-  border-radius: 10px;
-  background: rgba(0,0,0,0.9);
-}
-.outlet > * { min-width: 0; }
-@media (max-width: 850px) {
-  .outlet { width: 94%; }
-}
-@media (max-width: 600px) {
-  .nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; }
-  .idle, .active { min-height: 40px; margin: 0; }
-  .outlet { width: 100%; margin-top: 12px; }
-}
 
-/* The outer route wrapper must contain the outlet's margins and content.
-   Without a formatting context the final contact elements can visually
-   escape into the footer even when the card itself has auto height. */
 .double {
   display: flow-root;
   width: 100%;
   min-width: 0;
   padding-bottom: 20px;
 }
+
 .outlet {
+  box-sizing: border-box;
+  display: flex;
   align-items: stretch;
-  margin-bottom: 18px;
+  width: 85%;
+  max-width: 1200px;
+  min-width: 0;
+  margin: 16px auto 18px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.9);
+}
+.outlet > * { min-width: 0; }
+
+@media (max-width: 850px) {
+  .outlet { width: 94%; }
+}
+
+@media (max-width: 600px) {
+  .nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; }
+  .idle, .active { min-height: 40px; margin: 0; }
+  .outlet { width: 100%; margin-top: 12px; }
 }
