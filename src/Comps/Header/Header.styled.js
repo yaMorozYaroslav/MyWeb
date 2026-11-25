@@ -54,6 +54,8 @@ export const Second = styled.img`
   height: 100%;
   border: 3px solid black;
   object-fit: cover;
+  /* Keep the cloud photo's pale lower area out of the visible header. */
+  object-position: center top;
 
   @media (max-width: 450px) { display: none; }
 `
