@@ -19,12 +19,12 @@ export function Profile() {
           </p>
           <h1 className={styles.title}>
             Curious by nature.
-            <span>Developer by practice.</span>
+            <span>Systems designer by practice.</span>
           </h1>
           <p className={styles.lead}>
-            I'm Yaroslav Moroz, {age}, a self-taught IT specialist and web
-            developer based in Warsaw. I enjoy understanding technology
-            and turning that curiosity into useful projects.
+            I'm Yaroslav Moroz, {age}, a self-taught software developer and
+            systems designer based in Warsaw. I design and build web
+            applications, integrations, and automation workflows.
           </p>
           <p className={styles.sublead}>
             My path has been self-directed, shaped by hands-on practice,
@@ -89,8 +89,9 @@ export function Profile() {
               efficiency and simplicity.
             </p>
             <p>
-              AI tools often assist me in refining ideas, testing assumptions,
-              and improving development speed and consistency.
+              I use AI assistance, including ChatGPT, for ideation, coding,
+              debugging, testing, and documentation. I guide the development
+              process, review the changes, and take responsibility for the results.
             </p>
           </article>
 
