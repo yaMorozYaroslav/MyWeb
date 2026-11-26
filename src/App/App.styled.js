@@ -2,17 +2,18 @@ import styled from 'styled-components'
 import {pics} from './pics'
 
 export const Body = styled.div`
-    height: 100%;
-    width: 101.2%;
-    margin: -8px 0px 0px -8px;
-   ${({size}) => size.lapL &&`width: 102%;`}
-   ${({size}) => size.lapM &&`width:102%;`}
-   ${({size}) => size.lapS &&`width:103%;`}
-   ${({size}) => size.mobL &&`width:104%;`}
-   ${({size}) => size.mobM &&`width:105%;`}
-   ${({size}) => size.mobS &&`width:107%;`}
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: calc(100% + 16px);
+    margin: -8px;
 `
 export const BackImg = styled.div`
+  flex: 1 0 auto;
+  min-width: 0;
+  min-height: 0;
+  display: flow-root;
  ${({current}) => current === 'intro' && `
    background-image: url(${pics.intro});
    background-size: cover;
