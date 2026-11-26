@@ -22,12 +22,13 @@ export function Profile() {
             <span>Developer by practice.</span>
           </h1>
           <p className={styles.lead}>
-            I'm Yaroslav Moroz, {age}, based in Warsaw. I enjoy understanding
-            how technology works and turning that understanding into useful projects.
+            I'm Yaroslav Moroz, {age}, a self-taught IT specialist and web
+            developer based in Warsaw. I enjoy understanding technology
+            and turning that curiosity into useful projects.
           </p>
           <p className={styles.sublead}>
-            My path has been self-directed, guided by persistence and a
-            genuine interest in building things that work.
+            My path has been self-directed, shaped by hands-on practice,
+            persistence, and a genuine interest in making things work.
           </p>
           <div className={styles.tags} aria-label="Areas I work with">
             <span>JavaScript</span>
