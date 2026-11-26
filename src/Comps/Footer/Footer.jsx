@@ -8,7 +8,7 @@ export const Footer = () => (
         <span className={s.monogram} aria-hidden="true">YM<span>.</span></span>
         <div className={s.identityText}>
           <strong>Yaroslav Moroz</strong>
-          <span>Self-taught IT specialist & web developer · Warsaw</span>
+          <span>Software Developer & Systems Designer · Warsaw</span>
         </div>
       </div>
 
@@ -27,7 +27,7 @@ export const Footer = () => (
       <div className={s.legal}>
         <span>© {new Date().getFullYear()} Yaroslav Moroz. All rights reserved.</span>
         <span className={s.separator} aria-hidden="true">·</span>
-        <span>Built by Yaroslav Moroz with assistance from ChatGPT.</span>
+        <span>Website designed and developed by Yaroslav Moroz with AI assistance, including ChatGPT.</span>
       </div>
     </div>
   </footer>
