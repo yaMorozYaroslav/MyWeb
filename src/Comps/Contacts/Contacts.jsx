@@ -76,10 +76,6 @@ export function Contacts() {
               </a>
             </div>
 
-            <p className={styles.location}>
-              <span className={styles.locationDot} aria-hidden="true" />
-              Warsaw, Poland
-            </p>
           </div>
 
           <div className={styles.channels} aria-label="Contact options">
@@ -98,6 +94,14 @@ export function Contacts() {
                 <span className={styles.cardNote}>{note}</span>
               </a>
             ))}
+          </div>
+
+          <div className={styles.bottomBar}>
+            <p className={styles.collaboration}>
+              <span className={styles.locationDot} aria-hidden="true" />
+              Open to interesting collaborations
+            </p>
+            <p className={styles.location}>Based in Warsaw, Poland</p>
           </div>
         </div>
       )}
