@@ -1,30 +1,80 @@
-import React from "react";
-import {Container, Text} from './Intro.styled'
-import {ScreenSize} from '../../screen'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Intro.module.css';
 
-export const Intro = () =>{
-	
-	const screen = ScreenSize()
-	
-	//~ <img style={{width:'100px'}} src='/header/clouds.jpg' alt='clouds'/>  
-	//~ confirm('layout?')
-	return <>
-	    <Container size={screen}>
-  <Text size={screen}>
-	Welcome to the site. </Text>
-	
-  <Text size={screen}>  Here you will learn about my abilities 
-                      and aspirations, which I reflected in examples
-                                        of work.</Text>
-  
-  <Text size={screen}>Full-stack project and its 
-                             source code are available via links.</Text>
-  
-  <Text size={screen}>I also made it possible to write
-     me an email directly from the "Contacts" section.</Text>
-     
-  <Text size={screen}>All photos are copyrighted.</Text>
-  
-    </Container>
-    </>
+export function Intro() {
+  return (
+    <section className={styles.page} aria-label="Introduction">
+      <div className={styles.surface}>
+        <div className={styles.copy}>
+          <p className={styles.eyebrow}>
+            <span className={styles.dot} aria-hidden="true" />
+            WELCOME TO MY PORTFOLIO
+          </p>
+          <h1 className={styles.title}>
+            Building ideas
+            <span>into working software.</span>
+          </h1>
+          <p className={styles.lead}>
+            I'm Yaroslav Moroz. I enjoy building web applications, exploring
+            new ideas, and turning curiosity into practical projects.
+          </p>
+          <p className={styles.supporting}>
+            Here you can explore examples of my work, learn about my approach,
+            and find the source code behind the projects. You can also reach me
+            directly through the Contacts page.
+          </p>
+          <div className={styles.actions}>
+            <Link className={styles.primary} to="/project">
+              Explore projects <span aria-hidden="true">↗</span>
+            </Link>
+            <Link className={styles.secondary} to="/profile">
+              About me <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+
+        <div className={styles.showcase}>
+          <article className={styles.projectCard}>
+            <div className={styles.cardOverline}>
+              <span>FEATURED WORK / 01</span>
+              <span aria-hidden="true">✳</span>
+            </div>
+            <h2>Idea-Sphere</h2>
+            <p>
+              A full-stack space for questions, answers, and ideas that last.
+              Explore the app, its features, and the source code.
+            </p>
+            <div className={styles.tech} aria-label="Technologies used">
+              <span>Next.js</span>
+              <span>Express.js</span>
+              <span>MongoDB</span>
+            </div>
+            <Link className={styles.cardLink} to="/project">
+              View project details <span aria-hidden="true">↗</span>
+            </Link>
+          </article>
+
+          <div className={styles.highlightGrid}>
+            <Link className={styles.highlightCard} to="/profile">
+              <span>MY BACKGROUND</span>
+              <strong>Profile <span aria-hidden="true">↗</span></strong>
+            </Link>
+            <Link className={styles.highlightCard} to="/contacts">
+              <span>LET'S CONNECT</span>
+              <strong>Contact me <span aria-hidden="true">↗</span></strong>
+            </Link>
+          </div>
+        </div>
+
+        <div className={styles.bottom}>
+          <span className={styles.availability}>
+            <span className={styles.availableDot} aria-hidden="true" />
+            Interested in meaningful collaborations
+          </span>
+          <p>All photos are copyrighted.</p>
+        </div>
+      </div>
+    </section>
+  );
 }
