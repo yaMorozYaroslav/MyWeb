@@ -12,7 +12,7 @@ export const Header =()=> {
 
 	    return (       <Container data-testid='container'>
 	                           <First data-testid='first'>
-	                             <Text>Development</Text>
+	                             <Text>YaRoute <span>Studio</span></Text>
 	                             <FontIcon  icon={faGear}/>
 	                           </First>
 	                           

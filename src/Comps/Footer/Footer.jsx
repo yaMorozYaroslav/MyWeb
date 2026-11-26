@@ -8,7 +8,7 @@ export const Footer = () => (
         <span className={s.monogram} aria-hidden="true">YM<span>.</span></span>
         <div className={s.identityText}>
           <strong>Yaroslav Moroz</strong>
-          <span>Developer · Warsaw, Poland</span>
+          <span>Software Developer & Systems Designer · Warsaw</span>
         </div>
       </div>
 
@@ -25,9 +25,9 @@ export const Footer = () => (
       </nav>
 
       <div className={s.legal}>
-        <span>© {new Date().getFullYear()} Yaroslav Moroz</span>
+        <span>© {new Date().getFullYear()} Yaroslav Moroz. All rights reserved.</span>
         <span className={s.separator} aria-hidden="true">·</span>
-        <span>Designed & built with care</span>
+        <span>Website designed and developed by Yaroslav Moroz with AI assistance, including ChatGPT.</span>
       </div>
     </div>
   </footer>

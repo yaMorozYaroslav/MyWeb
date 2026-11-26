@@ -36,8 +36,12 @@ export const Text = styled.h1`
   font-family: 'Sorts Mill Goudy', serif;
   font-size: clamp(24px, 3.1vw, 42px);
   line-height: 1.1;
+  white-space: nowrap;
+  letter-spacing: -.035em;
 
-  @media (max-width: 450px) { margin-left: 10px; }
+  & > span { color: #85c2ff; }
+
+  @media (max-width: 450px) { margin-left: 10px; font-size: clamp(21px, 6.7vw, 30px); }
 `
 
 export const FontIcon = styled(FontAwesomeIcon)`

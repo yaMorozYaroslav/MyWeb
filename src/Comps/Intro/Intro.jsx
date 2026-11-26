@@ -9,20 +9,21 @@ export function Intro() {
         <div className={styles.copy}>
           <p className={styles.eyebrow}>
             <span className={styles.dot} aria-hidden="true" />
-            WELCOME TO MY PORTFOLIO
+            YAROUTE STUDIO / INDEPENDENT SOFTWARE DEVELOPMENT
           </p>
           <h1 className={styles.title}>
             Building ideas
             <span>into working software.</span>
           </h1>
           <p className={styles.lead}>
-            I'm Yaroslav Moroz. I enjoy building web applications, exploring
-            new ideas, and turning curiosity into practical projects.
+            I'm Yaroslav Moroz, a self-taught software developer and systems
+            designer. I build web applications, integrations, and automation
+            tools that turn practical ideas into working software.
           </p>
           <p className={styles.supporting}>
-            Here you can explore examples of my work, learn about my approach,
-            and find the source code behind the projects. You can also reach me
-            directly through the Contacts page.
+            I use AI tools, including ChatGPT, to assist with design, coding,
+            debugging, testing, and documentation, while directing the work
+            and reviewing the results. Explore my projects or get in touch.
           </p>
           <div className={styles.actions}>
             <Link className={styles.primary} to="/project">
@@ -72,7 +73,7 @@ export function Intro() {
             <span className={styles.availableDot} aria-hidden="true" />
             Interested in meaningful collaborations
           </span>
-          <p>All photos are copyrighted.</p>
+          <p>© {new Date().getFullYear()} Yaroslav Moroz</p>
         </div>
       </div>
     </section>
