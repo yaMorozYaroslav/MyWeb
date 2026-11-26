@@ -3,15 +3,16 @@ import styled from 'styled-components'
 
 const city = new URL('/header/city.jpg', import.meta.url).href
 
-// The header is one 80px row. Neither image may overflow into the navigation.
+// The header remains in document flow so it never covers navigation or page content.
 export const Container = styled.header`
   box-sizing: border-box;
   display: flex;
-  position: fixed;
-  inset: 0 0 auto;
+  position: sticky;
+  top: 0;
+  flex: 0 0 80px;
   width: 100%;
   height: 80px;
-  z-index: 20;
+  z-index: 30;
   overflow: hidden;
   background: black;
 `

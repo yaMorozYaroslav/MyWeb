@@ -1,64 +1,82 @@
-/* Header occupies 80px above the nav. Keep navigation in document flow. */
+/* Header (80px) and navigation reserve separate space; never stack on content. */
 .nav {
   box-sizing: border-box;
+  position: sticky;
+  top: 80px;
+  z-index: 29;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 8px;
   width: 100%;
   min-width: 0;
-  margin-top: 80px;
-  padding: 0 8px;
-  background: black;
+  margin: 0;
+  padding: 7px clamp(8px, 2vw, 30px);
+  border-bottom: 1px solid rgba(144, 181, 234, .15);
+  background: rgba(5, 10, 19, .97);
+  backdrop-filter: blur(12px);
 }
-
 .idle, .active {
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: 0;
-  min-height: 50px;
-  margin: 0 6px;
-  padding: 3px;
-  border-radius: 5px;
-}
-
-.idle { border: 3px solid transparent; background: black; }
-.idle:hover { border-color: white; }
-.active { border: 3px solid white; background: white; }
-
-.link, .alink {
-  display: block;
-  font-family: Times, serif;
-  font-size: clamp(18px, 2.3vw, 32px);
+  min-height: 47px;
+  margin: 0;
+  padding: 8px 5px;
+  border-radius: 9px;
+  overflow: hidden;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(15px, 1.55vw, 20px);
+  font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
+  transition: border-color .18s ease, background-color .18s ease;
 }
-.link { color: white; }
-.alink { color: black; }
-
+.idle {
+  border: 1px solid transparent;
+  background: transparent;
+  color: #b9c8df;
+}
+.idle:hover {
+  border-color: rgba(155, 192, 246, .45);
+  background: rgba(120, 166, 224, .11);
+}
+.active {
+  border: 1px solid rgba(148, 202, 255, .55);
+  background: rgba(130, 186, 255, .15);
+  color: #eaf5ff;
+}
 .double {
+  box-sizing: border-box;
   display: flow-root;
   width: 100%;
   min-width: 0;
-  padding-bottom: 20px;
+  padding: 0 0 24px;
 }
-
 .outlet {
   box-sizing: border-box;
   display: flex;
   align-items: stretch;
-  width: 85%;
+  width: min(94%, 1200px);
   max-width: 1200px;
   min-width: 0;
-  margin: 16px auto 18px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.9);
+  margin: clamp(18px, 3vw, 36px) auto 12px;
+  border-radius: 22px;
+  background: transparent;
 }
 .outlet > * { min-width: 0; }
-
-@media (max-width: 850px) {
-  .outlet { width: 94%; }
-}
-
 @media (max-width: 600px) {
-  .nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; }
-  .idle, .active { min-height: 40px; margin: 0; }
+  .nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    padding: 6px;
+  }
+  .idle, .active { min-height: 40px; }
+  .idle, .active { min-height: 39px; font-size: 16px; }
   .outlet { width: 100%; margin-top: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .idle, .active { transition: none; }
 }
