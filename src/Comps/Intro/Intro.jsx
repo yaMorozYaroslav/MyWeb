@@ -16,8 +16,9 @@ export function Intro() {
             <span>into working software.</span>
           </h1>
           <p className={styles.lead}>
-            I'm Yaroslav Moroz. I enjoy building web applications, exploring
-            new ideas, and turning curiosity into practical projects.
+            I'm Yaroslav Moroz, a self-taught IT specialist focused on web
+            development. I build applications, explore ideas, and turn
+            curiosity into useful software.
           </p>
           <p className={styles.supporting}>
             Here you can explore examples of my work, learn about my approach,
@@ -72,7 +73,7 @@ export function Intro() {
             <span className={styles.availableDot} aria-hidden="true" />
             Interested in meaningful collaborations
           </span>
-          <p>All photos are copyrighted.</p>
+          <p>© {new Date().getFullYear()} Yaroslav Moroz</p>
         </div>
       </div>
     </section>
