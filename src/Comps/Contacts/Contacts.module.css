@@ -79,10 +79,13 @@
   line-height: 1.7;
 }
 .actions {
+  /* Normal flow: the message button never floats over the phone card. */
+  position: static;
   display: flex;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
+  min-width: 0;
 }
 .primaryButton, .secondaryLink {
   box-sizing: border-box;
@@ -116,12 +119,10 @@
 .secondaryLink:hover { border-color: #7ab8ff; background: rgba(96, 165, 250, .11); }
 .primaryButton:hover { box-shadow: 0 12px 28px rgba(46, 137, 246, .35); }
 .location {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  margin: 31px 0 0;
-  font-size: 14px;
-  color: #a7b7ce;
+  margin: 0;
+  color: #92a8c5;
+  font-size: 13px;
+  line-height: 1.5;
 }
 .locationDot {
   width: 7px;
@@ -130,8 +131,11 @@
   box-shadow: 0 0 0 4px rgba(107, 212, 187, .1);
 }
 .channels {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-self: stretch;
+  min-width: 0;
   gap: 14px;
 }
 .contactCard {
@@ -197,6 +201,32 @@
   outline: 3px solid #a2d3ff;
   outline-offset: 3px;
 }
+
+/* Lower edge is a real grid row, not an absolutely positioned overlay. */
+.bottomBar {
+  box-sizing: border-box;
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  min-width: 0;
+  margin-top: 2px;
+  padding-top: 19px;
+  border-top: 1px solid rgba(141, 186, 244, .17);
+}
+.collaboration {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0;
+  color: #c4d5e9;
+  font-size: 13px;
+  font-weight: 580;
+  line-height: 1.5;
+}
+
 @media (max-width: 1050px) {
   .surface { grid-template-columns: minmax(0, 1fr); }
   .intro { max-width: 670px; }
@@ -212,7 +242,8 @@
   .channels { grid-template-columns: minmax(0, 1fr); gap: 10px; }
   .contactCard { min-height: 114px; padding: 16px 18px; }
   .cardValue { margin-top: 12px; }
-  .location { margin-top: 22px; }
+  .bottomBar { align-items: flex-start; padding-top: 16px; margin-top: 0; }
+  .collaboration, .location { font-size: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .primaryButton, .secondaryLink, .contactCard, .cardArrow { transition: none; }
